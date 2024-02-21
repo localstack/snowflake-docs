@@ -1,0 +1,571 @@
+// Same as .taxonomy-terms-cloud > .taxonomy-title
+.toc-title {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary;
+    border-bottom: 1px $primary solid;
+    margin-bottom: 1em;
+    padding-bottom: 0.375rem;
+    margin-top: 1em;
+}
+
+.command-prefix {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// workaround for https://github.com/google/docsy/issues/694
+@import "/css/shortcodes.css";
+
+
+body > header {
+    & nav {
+        border-bottom: 1px solid $gray-200;
+    }
+
+    & .td-navbar {
+        background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
+
+        .td-navbar-nav-scroll {
+            margin-top: 0 !important;
+            height: auto;
+            @media (max-width: 991.98px) {
+                .navbar-nav {
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+
+        #docsearch {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        & .navbar-brand {
+            color: $black;
+        }
+
+        & .navbar-brand:hover {
+            color: $primary;
+        }
+
+        & .td-search-input {
+            border: 1px solid $gray-300;
+
+            @include placeholder {
+                color: $gray-500;
+                border: none;
+            }
+        }
+
+        & .navbar-brand svg {
+            margin-right: 0;
+        }
+
+        & .navbar-brand .home-link {
+            font-size: 95%;
+            margin-left: 3px;
+        }
+
+        & .nav-link {
+            color: #1d2d35;
+            transition: color 0.15s ease-in-out;
+        }
+        & .nav-link:hover {
+            color: $primary;
+        }
+    }
+
+    // best-effort replication of the doks theme nav bar button
+    & .btn-doks {
+        display: inline-block;
+        border: 1px solid rgb(57, 68, 138);
+        background-color: #4755AC;
+        color: $white;
+        font-size: 14px;
+        border-radius: 4px;
+        line-height: 24px;
+        padding: 6px 12px;
+        margin-left: 4px;
+    }
+    & .btn-doks:hover {
+        color: $white;
+        background-color: #3c4892;
+    }
+}
+
+// doc overview grid (TODO: move to separate scss file)
+.doc-overview-grid {
+
+    & .card {
+        max-width: 100%;
+        background: $gray-100;
+        margin-bottom: 1rem;
+
+        & .card-text {
+            font-size: 90%;
+        }
+
+        & p {
+            color: $black;
+        }
+
+        & h5 {
+            color: $primary;
+        }
+    }
+
+    & a.card {
+        min-height: 220px;
+        display: block;
+        transition: transform 100ms ease-in-out;
+
+        & h5 {
+            margin-top: 75px;
+            font-weight: 600;
+        }
+
+        & .card-body {
+            background-repeat: no-repeat;
+            background-size: auto 60px;
+            background-origin: content-box; // makes sure the parent padding is respected
+        }
+    }
+
+    & a.card:hover {
+        transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        border-color: $gray-500;
+    }
+
+    & .card-getting-started .card-body {
+        background-image: url("/images/rocket.svg");
+    }
+
+    & .card-integrations .card-body {
+        background-image: url("/images/integrations.svg");
+    }
+
+    & .card-localstack-in-ci .card-body {
+        background-image: url("/images/ci.svg");
+    }
+
+    & .card-local-aws-services .card-body {
+        background-image: url("/images/aws.svg");
+    }
+
+    & .card-localstack-tools .card-body {
+        background-image: url("/images/tools.svg");
+    }
+
+    & .card-understanding-localstack .card-body {
+        background-image: url("/images/understanding.svg");
+    }
+
+    & .card-tutorials .card-body {
+        background-image: url("/images/understanding.svg");
+    }
+
+    & .card-applications .card-body {
+        background-image: url("/images/aws.svg");
+    }
+
+    & .card-title i {
+        font-size: 85%;
+    }
+
+    & h5.card-title {
+        font-weight: 600;
+    }
+}
+
+// custom footer that looks similar to that of the doks template
+footer.footer-localstack {
+    min-height: 200px;
+
+    border-top: 1px solid #ced4da;
+
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    color: $gray-500;
+    background: linear-gradient(77.63deg, #12123E 23.04%, #12123E 23.05%, #3E3174 122.36%);
+    margin-left: -24px;
+    margin-right: -24px;
+
+    & .footer-logo {
+        max-height: 55px;
+        opacity: 0.7;
+    }
+    & .link-lists li {
+        font-size: 1.3rem;
+
+        & a {
+            color: $gray-500;
+        }
+        & a:hover {
+            color: white;
+        }
+    }
+
+    & hr {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.taxonomy-terms-cloud {
+
+    .taxonomy-title {
+        font-weight: 600;
+    }
+}
+
+.btn-signup {
+    /* custom anchor in the nav bar for visual similarity with the website */
+    background: linear-gradient(280deg, rgb(99, 236, 211) 0%, rgb(131, 90, 247) 95%);
+    color: white;
+    border-radius: 0.5rem;
+    display: block;
+    padding: 8px 20px;
+    font-size: 90%;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: transform 100ms ease-in-out;
+}
+.btn-signup:hover {
+    color: white;
+    transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.navbar-suffix {
+  position: relative;
+  bottom: 0.1em;
+  left: 0.15em;
+  color: rgb(99, 236, 211);
+}
+.navbar-suffix:hover {
+  color: white;
+}
+
+table {
+    @extend .table-striped;
+
+    @extend .table-responsive;
+
+    @extend .table;
+}
+
+@import "components/details";
+
+.coverage-report table thead,
+table tfoot {
+  position: sticky;
+}
+
+.coverage-report table thead {
+  inset-block-start: 0;
+}
+
+.coverage-report table thead tr th {
+    border: 0px;
+}
+
+.coverage-report table thead tr {
+    // sticky header
+    background-color: white;
+    left: 0;
+    position: sticky;
+    z-index: 9999;
+}
+
+.coverage-report-header-2 {
+    background-color: rgba($blue-dark, .1);
+}
+
+.coverage-report-header-1 {
+    background-color: rgba($blue-dark, .2);
+}
+
+.coverage-operation-not-implemented {
+    color: $gray-500;
+}
+
+.coverage-operation-details-icon {
+    text-align: center;
+    color: rgba(100%, 0%, 0%, 0);
+
+}
+
+.coverage-operation-details-icon-unavail{
+    @extend .coverage-operation-details-icon;
+    text-shadow: 0 0 0 $gray-400;
+    font-size: 0.9em;
+}
+
+.coverage-shadow-overlay-green {
+    @extend .coverage-operation-details-icon;
+    text-shadow: 0 0 0 $lighter-green;
+}
+
+.coverage-report-tag {
+    border-radius: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.coverage-report-tag-aws-validated {
+    @extend .coverage-report-tag;
+    color: white;
+    background-color: $lighter-green;
+}
+
+.coverage-report-tag-snapshot {
+    @extend .coverage-report-tag;
+    color: white;
+    background-color: $green;
+}
+
+.coverage-report-tag-snapshot-partial {
+    @extend .coverage-report-tag;
+    color: white;
+    background-color: $dark-green;
+}
+
+.coverage-report-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted $black; /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+.coverage-report-tooltip .coverage-report-tooltiptext {
+    visibility: hidden;
+    background-color: $black;
+    color: #fff;
+    text-align: left;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.coverage-report-tooltip:hover .coverage-report-tooltiptext {
+    visibility: visible;
+}
+
+.coverage-report-details-test li:before {
+    content: "\2714";
+    font-size: 0.8em;
+    padding-right: 5px;
+    color: rgba(100%, 0%, 0%, 0);
+    text-shadow: 0 0 0 #00ad00;
+}
+
+.coverage-report-details-test {
+    list-style: none;
+    padding: 0px;
+}
+
+.coverage-report-http-code {
+    color: $gray-600;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+#td-sidebar-menu {
+    padding-top: 0.5rem
+}
+
+.td-sidebar-nav {
+    padding-top: 0.5rem
+}
+
+.td-content {
+    a {
+        font-weight: bold
+    }
+    a:hover {
+        text-decoration: underline
+    }
+}
+
+.td-breadcrumbs__single {
+    visibility: hidden !important
+}
+
+#m-tutorials-li {
+    .ul-2 {
+        display: none !important
+    }
+    label:before {
+        display: none !important
+    }
+}
+
+#m-referencescoverage-li {
+    .ul-3 {
+        display: none !important
+    }
+    label:before {
+        display: none !important
+    }
+}
+
+#tutorial-page + .section-index {
+    > .entry {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        > h5 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+#coverage-page + .section-index {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20rem, 1fr) );
+    > .panel-line {
+            position: absolute;
+    }
+    > .entry {
+        border: 1px solid $primary;
+        padding: 1rem;
+        margin: 0.5rem;
+        > p {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+#serviceNameCoverageInput {
+    width: 99%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 2px solid $primary;
+    color: $primary;
+    font-size: 110%;
+    background-color: rgba($primary, .1);
+    border-radius: 2rem;
+}
+
+#serviceNameCoverageInput:focus{
+    background-color: rgba($primary, .2);
+    border: 3px solid $primary;
+    outline: none !important;
+}
+
+.feedback--title {
+    margin-top: 3rem;
+}
+
+.no-text-decoration,.no-text-decoration:hover{
+  text-decoration: none !important;
+}
+.tooltip.show {
+  opacity: 1;
+}
+
+.filters-group{
+  margin-bottom: 25px;
+  h6{
+    font-weight: 600;
+  }
+  .custom-control{
+    &:not(:first-child){
+      margin-top: 4px;
+    }
+  }
+}
+
+.min-height-100vh{
+  min-height: 100vh;
+}
+
+.clear-filters-container{
+  display: flex;
+  font-size: 0.75rem;
+  color: $body-color;
+  transition: .3s ease;
+  &:hover{
+    color: $primary;
+  }
+  i{
+    font-size: 1rem;
+  }
+}
+
+.application-card{
+  .application-icon{
+    border-radius: 4px;
+    max-width: 30px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+.reading-time-in-card{
+  .reading-time{
+    margin-bottom: 0;
+  }
+}
+.td-content, body{
+  .code-container {
+    .code-copy-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(#2b1a5c, 0.8);
+      padding: 4px 10px;
+      color: #fff !important;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      opacity: 0;
+      &:hover,
+      &:active {
+        transition: 0.3s ease;
+        background-color: rgba(#2b1a5c, 1);
+      }
+      &:active {
+        transform: none;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+    &:hover {
+      .code-copy-button {
+        transition: 0.3s ease;
+        opacity: 1;
+      }
+    }
+  }
+}
+.disable-copy-btn {
+  .code-copy-button{
+    display: none !important;
+  }
+}
+
+.disable-copy{
+  display: inline;
+}
+
+@import "modules/academy-styles.scss";

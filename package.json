@@ -1,0 +1,29 @@
+{
+  "name": "localstack-docs",
+  "version": "0.0.1",
+  "description": "Hugo theme for technical documentation.",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "hugo server --watch=true --disableFastRender -D",
+    "aws": "node scripts/create-aws-guide.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localstack/docs.git"
+  },
+  "author": "",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/localstack/docs/issues"
+  },
+  "homepage": "https://github.com/localstack/docs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "dedent": "^1.5.1",
+    "inquirer": "^8.2.6",
+    "postcss": "^8.3.7",
+    "postcss-cli": "^9.0.2",
+    "stylelint-config-standard": "^34.0.0"
+  }
+}
