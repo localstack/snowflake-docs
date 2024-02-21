@@ -1,7 +1,7 @@
 ---
-title: "Getting Started"
-linkTitle: "Getting Started"
-weight: 2
+title: "Introduction"
+linkTitle: "Introduction"
+weight: 1
 description: >
   This section describes how to install LocalStack using a variety of options, and provides details on how LocalStack can be configured to fit the needs of a local cloud sandbox for development, testing, and experimentation!
 cascade:
