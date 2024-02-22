@@ -45,8 +45,6 @@ Create a new Python file named `main.py` and use the following code to connect t
 ```python
 import snowflake.connector as sf
 
-print("Insert lot of rows from a list object to Snowflake table")
-print("1. Creating a connection object")
 sf_conn_obj = sf.connect(
     user="test",
     password="test",
