@@ -38906,12 +38906,6 @@ table tfoot {
 .td-breadcrumbs__single {
   visibility: hidden !important; }
 
-#m-tutorials-li .ul-2 {
-  display: none !important; }
-
-#m-tutorials-li label:before {
-  display: none !important; }
-
 #m-referencescoverage-li .ul-3 {
   display: none !important; }
 
