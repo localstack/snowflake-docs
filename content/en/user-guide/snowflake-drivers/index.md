@@ -19,7 +19,7 @@ To install the Snowflake Connector for Python, execute the following command:
 $ pip install snowflake-connector-python
 {{< /command >}}
 
-The LocalStack Snowflake emulator operates on `snowflake.localhost.localstack.cloud`. Connect to the emulator using the following Python code:
+The LocalStack Snowflake emulator operates on `snowflake.localhost.localstack.cloud` - note that this is a DNS name that resolves to a local IP address (`127.0.0.1`) to make sure the connector interacts with the local APIs. Connect to the emulator using the following Python code:
 
 ```python
 import snowflake.connector as sf
