@@ -1,6 +1,6 @@
 ---
-title: "Configure Snowflake emulator in CI"
-linkTitle: "Configure Snowflake emulator in CI"
+title: "Continuous Integration"
+linkTitle: "Continuous Integration"
 weight: 2
 description: Get started with Snowflake emulator in continuous integration (CI) environments
 ---

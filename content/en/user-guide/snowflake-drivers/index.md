@@ -1,6 +1,6 @@
 ---
-title: "Connect Snowflake emulator with Drivers"
-linkTitle: "Connect Snowflake emulator with Drivers"
+title: "Snowflake Drivers"
+linkTitle: "Snowflake Drivers"
 weight: 1
 description: Get started with connecting the LocalStack Snowflake emulator with various drivers
 ---
