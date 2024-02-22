@@ -9,18 +9,14 @@ description: Basic installation guide to get started with LocalStack Snowflake e
 
 You can set up the LocalStack Snowflake emulator by utilizing LocalStack's Extension mechanism. There are two methods for installing the LocalStack Snowflake emulator:
 
-1. Using the `localstack` CLI
-2. Using Docker Compose
+1. Using the [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
+2. Using [Docker Compose](https://docs.docker.com/compose/install/)
 
 This guide provides step-by-step instructions for installing the emulator using both methods.
 
-## Prerequisites
-
-- [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
-- [LocalStack Web Application account](https://app.localstack.cloud/sign-up)
-- [Docker](https://docs.docker.com/get-docker/)
-
+{{<alert type="info">}}
 Before starting, ensure you have a valid `LOCALSTACK_AUTH_TOKEN` to access the LocalStack Snowflake emulator. Refer to the [Auth Token guide](https://docs.localstack.cloud/getting-started/auth-token/) to obtain your Auth Token and specify it in the `LOCALSTACK_AUTH_TOKEN` environment variable.
+{{</alert>}}
 
 ## `localstack` CLI
 
