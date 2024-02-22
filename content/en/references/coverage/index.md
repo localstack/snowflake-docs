@@ -1,13 +1,17 @@
 ---
-title: "Feature Coverage"
-linkTitle: "Feature Coverage"
-weight: 3
+title: "Functions Coverage"
+linkTitle: "Functions Coverage"
+weight: 1
 description: >
-  Overview of the implemented Snowflake features in LocalStack
+  Overview of the implemented Snowflake functions in LocalStack
 cascade:
   type: docs
 hide_readingtime: true
 ---
+
+## Overview
+
+This table provides a list of all Snowflake system-defined functions, scalar or table, emulated by LocalStack. The table is a work in progress and will be updated as more functions are implemented.
 
 |Function|Supported|Tested|
 |----|----|----|
