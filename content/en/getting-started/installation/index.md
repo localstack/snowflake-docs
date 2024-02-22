@@ -2,7 +2,7 @@
 title: "Installation"
 linkTitle: "Installation"
 weight: 1
-description: Basic installation guide to get started with LocalStack Snowflake emulator
+description: Basic installation guide to get started with the LocalStack Snowflake emulator
 ---
 
 ## Introduction
