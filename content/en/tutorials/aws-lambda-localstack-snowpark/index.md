@@ -14,6 +14,8 @@ In this tutorial, you will explore how to connect Snowpark to AWS Lambda locally
 - Insert rows and execute an insert query with executemany and a query to select data from the table.
 - Fetch the results and execute a query to get the current timestamp.
 
+The code in this tutorial is available on [GitHub](https://github.com/localstack-samples/localstack-snowflake-samples/tree/main/lambda-snowpark-connector).
+
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli) with a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
