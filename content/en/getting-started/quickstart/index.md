@@ -133,4 +133,8 @@ LocalStack is ephemeral and doesn't persist data across restarts. It runs inside
 
 ## Next steps
 
-Lorem Ipsum
+You can now explore the following resources to learn more about the LocalStack Snowflake emulator:
+
+- [User Guide]({{< ref "user-guide" >}}): Learn about the LocalStack Snowflake emulator's features and how to use them.
+- [Tutorials]({{< ref "tutorials" >}}): Explore tutorials to use the LocalStack Snowflake emulator for local development and testing.
+- [References]({{< ref "references" >}}): Find information about the LocalStack Snowflake emulator's configuration, changelog, and function coverage.

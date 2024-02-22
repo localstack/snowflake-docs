@@ -22,4 +22,4 @@ LocalStack Snowflake emulator supports the following features:
 * [**JavaScript and Python UDFs**](https://docs.snowflake.com/en/developer-guide/udf/javascript/udf-javascript-introduction)
 * ... and more!
 
-Integrating the LocalStack Snowflake emulator into your existing CI/CD pipeline allows you to run integration tests and identify issues early, reducing surprises during production deployment. Check our [Feature Coverage]({{< ref "coverage" >}}) page for a comprehensive list of supported APIs.
+Integrating the LocalStack Snowflake emulator into your existing CI/CD pipeline allows you to run integration tests and identify issues early, reducing surprises during production deployment. Check our [Function Coverage]({{< ref "coverage" >}}) page for a comprehensive list of supported functions.
