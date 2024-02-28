@@ -1,7 +1,7 @@
 ---
 title: "Snowpark"
 linkTitle: "Snowpark"
-weight: 1
+weight: 2
 description: Get started with LocalStack Snowflake emulator and Snowpark
 ---
 
