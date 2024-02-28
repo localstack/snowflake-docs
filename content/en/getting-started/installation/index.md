@@ -10,7 +10,7 @@ description: Basic installation guide to get started with the LocalStack Snowfla
 You can set up the LocalStack Snowflake emulator by utilizing LocalStack's Extension mechanism. There are two methods for installing the LocalStack Snowflake emulator:
 
 - [Snowflake Docker image](https://hub.docker.com/r/localstack/snowflake)
-- [LocalStack Extension mechanism]()
+- [LocalStack Extension mechanism](https://docs.localstack.cloud/user-guide/extensions/)
 
 {{<alert type="info">}}
 Before starting, ensure you have a valid `LOCALSTACK_AUTH_TOKEN` to access the LocalStack Snowflake emulator. Refer to the [Auth Token guide](https://docs.localstack.cloud/getting-started/auth-token/) to obtain your Auth Token and specify it in the `LOCALSTACK_AUTH_TOKEN` environment variable.
@@ -47,7 +47,6 @@ To start the Snowflake Docker container using the `docker` CLI, execute the foll
 $ docker run \
     --rm -it \
     -p 4566:4566 \
-    -p 4510-4559:4510-4559 \
     -e LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:?} \
     localstack/snowflake
 {{< / command >}}
@@ -65,12 +64,10 @@ services:
     image: localstack/snowflake
     ports:
       - "127.0.0.1:4566:4566"
-      - "127.0.0.1:4510-4559:4510-4559"
     environment:
       - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:?}
     volumes:
       - "./volume:/var/lib/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
 ```
 
 Start the Snowflake Docker container with the following command:
