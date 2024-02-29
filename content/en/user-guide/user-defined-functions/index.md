@@ -11,7 +11,7 @@ User-Defined Functions (UDFs) are functions that you can create to extend the fu
 
 LocalStack Snowflake emulator supports User-Defined Functions (UDFs) in JavaScript and Python. You can create UDFs to extend the functionality of your SQL queries. This guide demonstrates how to create and execute UDFs in JavaScript and Python.
 
-## Node.js
+## JavaScript
 
 In LocalStack Snowflake emulator, you can create User-Defined Functions (UDFs) in Node.js to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to the Snowflake emulator using an SQL client.
 
