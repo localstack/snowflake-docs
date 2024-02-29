@@ -38,7 +38,7 @@ The result of the query is `15`.
 
 ## Python
 
-In LocalStack Snowflake emulator, you can create User-Defined Functions (UDFs) in Python to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to the Snowflake emulator using an SQL client.
+In LocalStack Snowflake emulator, you can create User-Defined Functions (UDFs) in Python to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to it using a SQL client to execute the queries below.
 
 ### Create a Python UDF
 
