@@ -14,6 +14,7 @@ LocalStack Snowflake emulator provides a CRUD (Create, Read, Update, Delete) int
 - [`CREATE TASK`](https://docs.snowflake.com/en/sql-reference/sql/create-task)
 - [`DESCRIBE TASK`](https://docs.snowflake.com/en/sql-reference/sql/desc-task)
 - [`DROP TASK`](https://docs.snowflake.com/en/sql-reference/sql/drop-task)
+- [`SHOW TASKS`](https://docs.snowflake.com/en/sql-reference/sql/show-tasks)
 
 ## Getting started
 
