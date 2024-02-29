@@ -17,7 +17,7 @@ In LocalStack Snowflake emulator, you can create JavaScript UDFs to extend the f
 
 ### Create a JavaScript UDF
 
-You can create a Node.js UDF using the `CREATE FUNCTION` statement. The following example creates a Node.js UDF that takes a number and adds 5 to it.
+You can create a JavaScript UDF using the `CREATE FUNCTION` statement. The following example creates a JavaScript UDF that receives a number as input and adds 5 to it.
 
 ```sql
 CREATE OR REPLACE FUNCTION add5(n double)
