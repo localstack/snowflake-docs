@@ -19,7 +19,7 @@ This example guide you through a simple example of using Streams to track change
 
 ### Create tables
 
-To create tables, use the `CREATE TABLE` statement. The following example demonstrates how to create a table named `members` to store the names and fees paid by members of a gym, and a table named `signup` to store the dates when gym members joined.
+The following SQL snippet demonstrates how to create a table named `members` to store the names and fees paid by members of a gym, and a table named `signup` to store the dates when gym members joined.
 
 ```sql
 -- Create a table to store the names and fees paid by members of a gym
