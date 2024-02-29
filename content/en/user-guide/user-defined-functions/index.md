@@ -42,7 +42,7 @@ In LocalStack Snowflake emulator, you can create User-Defined Functions (UDFs) i
 
 ### Create a Python UDF
 
-You can create a Python UDF using the `CREATE FUNCTION` statement. The following example creates a Python UDF that takes a string as input and returns a string with a prefix.
+You can create a Python UDF using the `CREATE FUNCTION` statement. The following example creates a Python UDF that takes a string as input and returns the string with a prefix.
 
 ```sql
 CREATE OR REPLACE FUNCTION sample_func(sample_arg TEXT)
