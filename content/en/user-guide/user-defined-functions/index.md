@@ -28,7 +28,7 @@ CREATE OR REPLACE FUNCTION add5(n double)
 
 ### Execute a JavaScript UDF
 
-You can execute a Node.js UDF using the `SELECT` statement. The following example executes the Node.js UDF created in the previous step.
+You can execute a JavaScript UDF using the `SELECT` statement. The following example executes the UDF created in the previous step.
 
 ```sql
 SELECT add5(10);
