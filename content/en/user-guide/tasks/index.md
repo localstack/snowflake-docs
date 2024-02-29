@@ -41,7 +41,7 @@ DROP TASK IF EXISTS test_task;
 
 ### Resume a Task
 
-To resume a task, use the `ALTER TASK` statement. The following example demonstrates how to resume the `test_task` task.
+To start or resume a task, use the `ALTER TASK` statement. The following example demonstrates how to resume the `test_task` task.
 
 ```sql
 ALTER TASK test_task RESUME;
