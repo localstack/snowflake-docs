@@ -7,7 +7,7 @@ description: Get started with User-Defined Functions in Node.js & Python with Lo
 
 ## Introduction
 
-User-Defined Functions (UDFs) are functions that you can create to extend the functionality of your SQL queries. You can write UDFs in Node.js, Python, Java, Scala, and SQL.
+User-Defined Functions (UDFs) are functions that you can create to extend the functionality of your SQL queries. Snowflake supports UDFs in different programming languages, including JavaScript, Python, Java, Scala, and SQL.
 
 LocalStack Snowflake emulator supports User-Defined Functions (UDFs) in Node.js and Python. You can create UDFs to extend the functionality of your SQL queries. This guide demonstrates how to create and execute UDFs in Node.js and Python.
 
