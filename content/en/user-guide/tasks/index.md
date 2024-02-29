@@ -9,7 +9,7 @@ description: Get started with Tasks in LocalStack Snowflake emulator
 
 Tasks are user-defined objects that enable the automation of repetitive SQL operations in Snowflake. You can use tasks to schedule SQL statements, such as queries, DDL, and DML operations, to run at a specific time or at regular intervals.
 
-LocalStack Snowflake emulator provides a CRUD (Create, Read, Update, Delete) interface to manage tasks. The following tasks are supported:
+LocalStack Snowflake emulator provides a CRUD (Create, Read, Update, Delete) interface to manage tasks. The following operations are supported:
 
 - [`CREATE TASK`](https://docs.snowflake.com/en/sql-reference/sql/create-task)
 - [`DESCRIBE TASK`](https://docs.snowflake.com/en/sql-reference/sql/desc-task)
