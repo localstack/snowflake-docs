@@ -15,7 +15,7 @@ LocalStack Snowflake emulator supports User-Defined Functions (UDFs) in JavaScri
 
 In LocalStack Snowflake emulator, you can create JavaScript UDFs to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to it using a SQL client to execute the queries below.
 
-### Create a Node.js UDF
+### Create a JavaScript UDF
 
 You can create a Node.js UDF using the `CREATE FUNCTION` statement. The following example creates a Node.js UDF that takes a number and adds 5 to it.
 
