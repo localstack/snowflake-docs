@@ -15,7 +15,7 @@ LocalStack Snowflake emulator supports managed streams. You can create a stream 
 
 This guide is designed for users new to Streams and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to it using an SQL client to execute the queries below..
 
-This example guide you through a simple example of using Streams to track changes in a table that stores information about gym members. We will create tables to store member information and their signup dates, and then use a stream to capture changes made to the members' table.
+The following sections guide you through a simple example of using Streams to track changes in a table that stores information about gym members. We will create tables to store member information and their signup dates, and then use a stream to capture changes made to the members' table.
 
 ### Create tables
 
