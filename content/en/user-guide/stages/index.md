@@ -45,16 +45,25 @@ CREATE OR REPLACE TABLE employees (
    );
 ```
 
-### Load data into a stage
+### Create a stage
 
-You can now create a stage using the `CREATE STAGE` command. In this example, you can upload the CSV files to the table stage provided for `employees` table.
+You can now create a stage using the `CREATE STAGE` command. In this example, you can create a stage called `employees_stage`:
+
+```sql
+CREATE OR REPLACE STAGE employees_stage
+FILE_FORMAT = csv;
+```
+
+### Upload data to the stage
+
+In this example, you can upload the CSV files to the table stage provided for `employees` table.
 
 {{< tabpane >}}
 {{< tab header="Linux/macOS" lang="sql" >}}
-PUT file://./employees0*.csv @snowflake_tutorials.public.%employees;
+PUT file://./employees0*.csv @@employees_stage AUTO_COMPRESS=TRUE;
 {{< /tab >}}
 {{< tab header="Windows" lang="sql" >}}
-PUT file://C:\temp\employees0*.csv @snowflake_tutorials.public.%employees;
+PUT file://C:\temp\employees0*.csv @@employees_stage AUTO_COMPRESS=TRUE;
 {{< /tab >}}
 {{< /tabpane >}}
 
