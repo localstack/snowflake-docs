@@ -1,0 +1,48 @@
+---
+title: "Terraform"
+linkTitle: "Terraform"
+weight: 2
+description: Use Terraform to interact with the LocalStack Snowflake emulator
+---
+
+## Introduction
+
+[Terraform](https://terraform.io/) is an Infrastructure-as-Code (IaC) framework developed by HashiCorp. It enables users to define and provision infrastructure using a high-level configuration language. Terraform uses HashiCorp Configuration Language (HCL) as its configuration syntax.
+
+LocalStack Snowflake emulator supports Terraform, allowing you to define and provision Snowflake resources using the same commands and syntax as the Snowflake service. You can use Terraform to create, update, and delete Snowflake resources locally, such as databases, schemas, tables, and stages.
+
+## Configuring Terraform
+
+In this guide, you will learn how to configure Terraform to interact with the LocalStack Snowflake emulator.
+
+### Setup Snowflake provider
+
+To use Terraform with the LocalStack Snowflake emulator, you need to configure the Snowflake provider in your Terraform configuration file. The following example shows how to configure the Snowflake provider:
+
+```hcl
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "Snowflake-Labs/snowflake"
+      version = "~> 0.61"
+    }
+  }
+}
+
+provider "snowflake" {
+  account  = "test"
+  user     = "test"
+  password = "test"
+  role     = "test"
+}
+```
+
+### Deploy the Terraform configuration
+
+You can now deploy the Terraform configuration using the following command:
+
+{{< command >}}
+$ export SNOWFLAKE_HOST=snowflake.localhost.localstack.cloud
+$ terraform init
+$ terraform apply
+{{< /command >}}
