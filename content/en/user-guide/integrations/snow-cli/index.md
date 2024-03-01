@@ -12,7 +12,7 @@ Snow CLI is a command-line interface (CLI) for Snowflake. You can use Snow CLI t
 You can connect Snow CLI to the LocalStack Snowflake emulator using a connection profile. A connection profile is a set of parameters that define the connection to a Snowflake account. You can create, list, and test connection profiles using Snow CLI.
 
 {{<alert type="info">}}
-Snow CLI is not yet production-ready and is under active development. The commands and features might change in future releases.
+Snow CLI is still under active development, hence the commands and features might change in future releases.
 {{</alert>}}
 
 ## Installation
