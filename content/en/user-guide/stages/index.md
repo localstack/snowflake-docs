@@ -71,3 +71,29 @@ The expected output is:
 | employees05.csv | employees05.csv.gz |         404 |           0 | NONE               | GZIP               | SKIPPED  |         |
 +-----------------+--------------------+-------------+-------------+--------------------+--------------------+----------+---------+
 ```
+
+## Loading files from S3
+
+You can also load data from an S3 bucket using the `CREATE STAGE` command. Create a new S3 bucket named `testbucket` and upload the [employees CSV files](./getting-started.zip) to the bucket. You can use LocalStack's `awslocal` CLI to create the S3 bucket and upload the files.
+
+{{< command >}}
+awslocal s3 mb s3://testbucket
+awslocal s3 cp employees0*.csv s3://testbucket
+{{< /command >}}
+
+In this example, you can create a stage called `my_s3_stage` to load data from an S3 bucket:
+
+```sql
+CREATE STAGE my_s3_stage
+STORAGE_INTEGRATION = s3_int
+URL = 's3://testbucket/'
+FILE_FORMAT = csv;
+```
+
+You can further copy data from the S3 stage to the table using the `COPY INTO` command:
+
+```sql
+COPY INTO mytable
+FROM @my_s3_stage
+PATTERN='.*employees.*.csv';
+```
