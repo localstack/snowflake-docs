@@ -26,16 +26,16 @@ You can download the sample data by [right-clicking on this link](./getting-star
 
 ### Create a database & table
 
-You can create a database using the `CREATE DATABASE` command. In this example, you can create a database called `sf_tuts`:
+You can create a database using the `CREATE DATABASE` command. In this example, you can create a database called `snowflake_tutorials`:
 
 ```sql
-CREATE OR REPLACE DATABASE sf_tuts;
+CREATE OR REPLACE DATABASE snowflake_tutorials;
 ```
 
-Similarly, you can create a table using the `CREATE TABLE` command. In this example, you can create a table called `emp_basic` in `sf_tuts.public`:
+Similarly, you can create a table using the `CREATE TABLE` command. In this example, you can create a table called `employees` in `snowflake_tutorials.public`:
 
 ```sql
-CREATE OR REPLACE TABLE emp_basic (
+CREATE OR REPLACE TABLE employees (
    first_name STRING ,
    last_name STRING ,
    email STRING ,
@@ -47,14 +47,14 @@ CREATE OR REPLACE TABLE emp_basic (
 
 ### Load data into a stage
 
-You can now create a stage using the `CREATE STAGE` command. In this example, you can upload the CSV files to the table stage provided for `emp_basic` table.
+You can now create a stage using the `CREATE STAGE` command. In this example, you can upload the CSV files to the table stage provided for `employees` table.
 
 {{< tabpane >}}
 {{< tab header="Linux/macOS" lang="sql" >}}
-PUT file://./employees0*.csv @sf_tuts.public.%emp_basic;
+PUT file://./employees0*.csv @snowflake_tutorials.public.%employees;
 {{< /tab >}}
 {{< tab header="Windows" lang="sql" >}}
-PUT file://C:\temp\employees0*.csv @sf_tuts.public.%emp_basic;
+PUT file://C:\temp\employees0*.csv @snowflake_tutorials.public.%employees;
 {{< /tab >}}
 {{< /tabpane >}}
 
