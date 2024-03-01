@@ -16,7 +16,7 @@ LocalStack Snowflake emulator supports stages, allowing you to load data into Sn
 
 ## Getting started
 
-This guide is designed for users new to Stages and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to the Snowflake emulator using an SQL client.
+This guide is designed for users new to Stages and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
 
 In this guide, you will create a database and a table for storing data. You will then create a stage to load data into the table.
 
