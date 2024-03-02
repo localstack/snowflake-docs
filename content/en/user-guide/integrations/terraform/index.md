@@ -34,6 +34,26 @@ provider "snowflake" {
   user     = "test"
   password = "test"
   role     = "test"
+  host     = "snowflake.localhost.localstack.cloud"
+}
+```
+
+{{< alert type="info" title="Note" >}}
+Instead of manually specifying the `host`, you can export the `SNOWFLAKE_HOST` environment variable to set the Snowflake host. Here is an example:
+{{< command >}}
+$ export SNOWFLAKE_HOST=snowflake.localhost.localstack.cloud
+{{< /command >}}
+{{< /alert >}}
+
+### Create Snowflake resources
+
+You can now use Terraform to create Snowflake resources using the Snowflake provider. The following example shows how to create a Snowflake database using Terraform:
+
+```hcl
+resource "snowflake_database" "example" {
+  name                        = "example"
+  comment                     = "example database"
+  data_retention_time_in_days = 3
 }
 ```
 
@@ -42,7 +62,8 @@ provider "snowflake" {
 You can now deploy the Terraform configuration using the following command:
 
 {{< command >}}
-$ export SNOWFLAKE_HOST=snowflake.localhost.localstack.cloud
 $ terraform init
 $ terraform apply
 {{< /command >}}
+
+The `terraform init` command initializes the Terraform configuration, and the `terraform apply` command creates the Snowflake database.
