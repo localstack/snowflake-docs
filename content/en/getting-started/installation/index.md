@@ -146,6 +146,17 @@ $ localstack extensions install localstack-extension-snowflake
 
 For Docker Compose, update the extension by restarting the LocalStack container.
 
+## Troubleshooting
+
+### How to check if the LocalStack Snowflake emulator is running?
+
+You can check if the LocalStack Snowflake emulator is running by executing the following command:
+
+{{< command >}}
+$ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
+{"success": true}
+{{< / command >}}
+
 ## Next steps
 
 Now that the LocalStack Snowflake emulator is installed, you can use it for developing and testing your Snowflake data pipelines. Refer to our [Quickstart]({{< ref "quickstart" >}}) guide to get started.
