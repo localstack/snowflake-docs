@@ -27,7 +27,7 @@ $ pulumi config set snowflake:password test
 $ pulumi config set snowflake:host snowflake.localhost.localstack.cloud
 {{< /command >}}
 
-You can install the Snowflake provider in any of the programming languages supported by Pulumi, such as Python, JavaScript, TypeScript, and Go. The following example shows how to install the Snowflake provider for your Typescript project:
+You can install the Snowflake provider in any of the programming languages supported by Pulumi, such as Python, JavaScript, TypeScript, and Go. The following example shows how to install the Snowflake provider for your TypeScript project:
 
 {{< command >}}
 $ npm install @pulumi/snowflake
