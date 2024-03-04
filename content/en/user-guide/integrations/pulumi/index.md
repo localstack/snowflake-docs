@@ -15,7 +15,7 @@ LocalStack Snowflake emulator supports Pulumi, allowing you to define and provis
 
 In this guide, you will learn how to configure Pulumi to interact with the LocalStack Snowflake emulator.
 
-### Setup Snowflake provider
+### Set up Snowflake provider
 
 To use Pulumi with the LocalStack Snowflake emulator, you need to configure the Snowflake provider in your Pulumi configuration file. Create a blank Pulumi project, and add the following environment variables to your Pulumi stack:
 
