@@ -146,6 +146,27 @@ $ localstack extensions install localstack-extension-snowflake
 
 For Docker Compose, update the extension by restarting the LocalStack container.
 
+## Troubleshooting
+
+### How to check if the LocalStack Snowflake emulator is running?
+
+You can check if the LocalStack Snowflake emulator is running by executing the following command:
+
+{{< command >}}
+$ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
+{"success": true}
+{{< / command >}}
+
+### How to enable detailed debug logs?
+
+You can set the `SF_LOG=trace` environment variable in the LocalStack Snowflake container to enable detailed trace logs that show all the request/response message.
+
+When using `docker-compose` then simply add this variable to the `environment` section of the YAML configuration file. If you're starting up via the `localstack start` CLI, then make sure to start up via the following configuration: 
+
+{{< command >}}
+$ DOCKER_FLAGS='-e SF_LOG=trace' DEBUG=1 IMAGE_NAME=localstack/snowflake localstack start
+{{< / command >}}
+
 ## Next steps
 
 Now that the LocalStack Snowflake emulator is installed, you can use it for developing and testing your Snowflake data pipelines. Refer to our [Quickstart]({{< ref "quickstart" >}}) guide to get started.
