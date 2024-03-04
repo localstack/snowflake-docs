@@ -11,7 +11,7 @@ description: Use Pulumi to interact with the LocalStack Snowflake emulator
 
 LocalStack Snowflake emulator supports Pulumi, allowing you to define and provision Snowflake resources using the same commands and syntax as the Snowflake service. You can use Pulumi to create, update, and delete Snowflake resources locally, such as databases, schemas, tables, and stages.
 
-## Configuring Terraform
+## Configuring Pulumi
 
 In this guide, you will learn how to configure Pulumi to interact with the LocalStack Snowflake emulator.
 
