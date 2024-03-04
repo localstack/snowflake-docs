@@ -163,9 +163,9 @@ You can set the `SF_LOG=trace` environment variable in the LocalStack Snowflake 
 
 When using `docker-compose` then simply add this variable to the `environment` section of the YAML configuration file. If you're starting up via the `localstack start` CLI, then make sure to start up via the following configuration: 
 
-```
+{{< command >}}
 $ DOCKER_FLAGS='-e SF_LOG=trace' DEBUG=1 IMAGE_NAME=localstack/snowflake localstack start
-```
+{{< / command >}}
 
 ## Next steps
 
