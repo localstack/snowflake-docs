@@ -82,7 +82,7 @@ $ IMAGE_NAME=localstack/snowflake localstack --profile=dev start
 {{< / command >}}
 
 If no profile is specified, the `default.env` profile will be loaded.
-While explicitly specified, the environment variables will always overwrite the profile.
+If explicitly specified, any environment variables will overwrite the configurations defined in the profile.
 
 To display the config environment variables, you can use the following command:
 
