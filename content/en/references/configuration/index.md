@@ -78,7 +78,7 @@ You can load a profile by either setting the `env` variable `CONFIG_PROFILE=<pro
 Let's take an example to load the `dev.env` profile file if it exists:
 
 {{< command >}}
-$ IMAGE_NAME=localstack/snowflake python -m localstack.cli.main --profile=dev start
+$ IMAGE_NAME=localstack/snowflake localstack --profile=dev start
 {{< / command >}}
 
 If no profile is specified, the `default.env` profile will be loaded.
