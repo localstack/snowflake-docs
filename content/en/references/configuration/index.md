@@ -53,7 +53,7 @@ Options to configure how LocalStack interacts with Docker.
 ## Profiles
 
 LocalStack supports configuration profiles which are stored in the `~/.localstack` config directory.
-A configuration profile is a set of environment variables stored in an `.env` file in the LocalStack config directory.
+A configuration profile is a set of environment variables stored in a `*.env` file in the LocalStack config directory.
 
 Here is an example of what configuration profiles might look like:
 
