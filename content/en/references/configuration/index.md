@@ -25,3 +25,73 @@ Options that affect the core LocalStack Snowflake emulator functionality.
 |----------|----------------------|-------------------------------------------------------------------------------------------------------------|
 | `DEBUG`  | `0` (default) \| `1` | Flag to increase log level and print more verbose logs (useful for troubleshooting issues)                  |
 | `SF_LOG` | `trace`              | Specify the log level. Currently overrides the `DEBUG` configuration. `trace` for detailed request/response |
+| `SF_S3_ENDPOINT` | `s3.localhost.localstack.cloud:4566` (default) | Specify the S3 endpoint to use for the Snowflake emulator. |
+
+## CLI
+
+These options are applicable when using the CLI to start LocalStack.
+
+| Variable | Example Values | Description |
+| - | - | - |
+| `LOCALSTACK_VOLUME_DIR` | `~/.cache/localstack/volume` (on Linux) | The location on the host of the LocalStack volume directory mount. |
+| `CONFIG_PROFILE` | | The configuration profile to load. See [Profiles]({{< ref "#profiles" >}}) |
+| `CONFIG_DIR` | `~/.localstack` | The path where LocalStack can find configuration profiles and other CLI-specific configuration |
+
+## Docker
+
+Options to configure how LocalStack interacts with Docker.
+
+| Variable | Example Values | Description |
+| - | - | - |
+| `DOCKER_FLAGS` | | Allows to pass custom flags (e.g., volume mounts) to "docker run" when running LocalStack in Docker. |
+| `DOCKER_SOCK` | `/var/run/docker.sock` | Path to local Docker UNIX domain socket |
+| `DOCKER_BRIDGE_IP` | `172.17.0.1` | IP of the Docker bridge used to enable access between containers |
+| `LEGACY_DOCKER_CLIENT` | `0`\|`1` | Whether LocalStack should use the command-line Docker client and subprocess execution to run Docker commands, rather than the Docker SDK. |
+| `DOCKER_CMD` | `docker` (default), `sudo docker`| Shell command used to run Docker containers (only used in combination with `LEGACY_DOCKER_CLIENT`) |
+| `FORCE_NONINTERACTIVE` | | When running with Docker, disables the `--interactive` and `--tty` flags. Useful when running headless. |
+
+## Profiles
+
+LocalStack supports configuration profiles which are stored in the `~/.localstack` config directory.
+A configuration profile is a set of environment variables stored in a `*.env` file in the LocalStack config directory.
+
+Here is an example of what configuration profiles might look like:
+
+{{< command >}}
+$ tree ~/.localstack
+/home/username/.localstack
+├── default.env
+├── dev.env
+└── pro.env
+{{< / command >}}
+
+Here is an example of what a specific environment profile looks like
+
+{{< command >}}
+$ cat ~/.localstack/pro-debug.env
+LOCALSTACK_AUTH_TOKEN=XXXXX
+SF_LOG=trace
+SF_S3_ENDPOINT=s3.localhost.localstack.cloud:4566
+{{< / command >}}
+
+You can load a profile by either setting the environment variable `CONFIG_PROFILE=<profile>` or the `--profile=<profile>` CLI flag when using the CLI.
+Let's take an example to load the `dev.env` profile file if it exists:
+
+{{< command >}}
+$ IMAGE_NAME=localstack/snowflake localstack --profile=dev start
+{{< / command >}}
+
+If no profile is specified, the `default.env` profile will be loaded.
+If explicitly specified, any environment variables will overwrite the configurations defined in the profile.
+
+To display the config environment variables, you can use the following command:
+
+{{< command >}}
+$ localstack --profile=dev config show
+{{< / command >}}
+
+{{< alert title="Note" >}}
+The `CONFIG_PROFILE` is a CLI feature and cannot be used directly with a docker-compose setup.
+You can look at [alternative means of setting environment variables](https://docs.docker.com/compose/environment-variables/set-environment-variables/) for your Docker Compose setups.
+For Docker setups, we recommend passing the environment variables directly to the `docker run` command.
+{{< /alert >}}
