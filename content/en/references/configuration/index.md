@@ -87,7 +87,7 @@ If explicitly specified, any environment variables will overwrite the configurat
 To display the config environment variables, you can use the following command:
 
 {{< command >}}
-$ python -m localstack.cli.main --profile=dev config show
+$ localstack --profile=dev config show
 {{< / command >}}
 
 {{< alert title="Note" >}}
