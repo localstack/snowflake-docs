@@ -45,7 +45,7 @@ Options to configure how LocalStack interacts with Docker.
 | - | - | - |
 | `DOCKER_FLAGS` | | Allows to pass custom flags (e.g., volume mounts) to "docker run" when running LocalStack in Docker. |
 | `DOCKER_SOCK` | `/var/run/docker.sock` | Path to local Docker UNIX domain socket |
-| `DOCKER_BRIDGE_IP` | `172.17.0.1` | IP of the docker bridge used to enable access between containers |
+| `DOCKER_BRIDGE_IP` | `172.17.0.1` | IP of the Docker bridge used to enable access between containers |
 | `LEGACY_DOCKER_CLIENT` | `0`\|`1` | Whether LocalStack should use the command-line Docker client and subprocess execution to run Docker commands, rather than the Docker SDK. |
 | `DOCKER_CMD` | `docker` (default), `sudo docker`| Shell command used to run Docker containers (only used in combination with `LEGACY_DOCKER_CLIENT`) |
 | `FORCE_NONINTERACTIVE` | | When running with Docker, disables the `--interactive` and `--tty` flags. Useful when running headless. |
