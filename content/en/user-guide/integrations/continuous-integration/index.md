@@ -1,7 +1,7 @@
 ---
 title: "Continuous Integration"
 linkTitle: "Continuous Integration"
-weight: 3
+weight: 4
 description: Get started with Snowflake emulator in continuous integration (CI) environments
 ---
 
