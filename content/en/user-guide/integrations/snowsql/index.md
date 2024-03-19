@@ -24,6 +24,7 @@ To install SnowSQL, follow the instructions in the [official SnowSQL documentati
 To start SnowSQL, execute the following command:
 
 {{< command >}}
+$ export SNOWSQL_PWD=test
 $ snowsql \
     -a test \
     -u test \
