@@ -54,7 +54,7 @@ We are actively working on a solution for this problem.
 
 ## Export/Import State
 
-The Export/Import State feature enables you to export the state of your LocalStack instance into a file and import it into another LocalStack instance. This feature is useful when you want to save your LocalStack instance’s state for later use.
+The Export/Import State feature enables you to export the state of your LocalStack instance into a file, and then later import it into another LocalStack instance. This feature is useful when you want to save your LocalStack instance’s state for later use.
 
 ### Export the State
 
