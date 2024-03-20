@@ -21,7 +21,7 @@ State Management is an essential feature that supports various use-cases, such a
 
 LocalStack’s Persistence mechanism enables the saving and restoration of the entire LocalStack state. It functions as a **pause and resume** feature, allowing you to take a snapshot of your LocalStack instance and save this data to disk. This mechanism ensures a quick and efficient way to preserve and continue your work with Snowflake resources locally.
 
-To start snapshot-based persistence, launch LocalStack with the configuration option `PERSISTENCE=1`. This setting instructs LocalStack to save all Snowflake resources and their respective application states into the LocalStack Volume Directory. Upon restarting LocalStack, you'll be able to resume your activities exactly where you left off.
+To start snapshot-based persistence, launch LocalStack with the configuration option `PERSISTENCE=1`. This setting instructs LocalStack to save all local Snowflake resources and their respective application states into the LocalStack Volume Directory. Upon restarting LocalStack, you'll be able to resume your activities exactly where you left off.
 
 {{< tabpane >}}
 {{< tab header="LocalStack CLI" lang="bash" >}}
