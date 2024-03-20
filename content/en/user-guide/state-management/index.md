@@ -48,7 +48,7 @@ docker run \
 
 {{< alert title="Note">}}
 Snapshots may not be compatible across different versions of LocalStack.
-It is possible that snapshots from older versions can be restored, but there are no guarantees to whether LocalStack will start into a consistent state.
+It is possible that snapshots from older versions can be restored, but there are no guarantees as to whether LocalStack will start into a consistent state.
 We are actively working on a solution for this problem.
 {{< /alert >}}
 
