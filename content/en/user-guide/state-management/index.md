@@ -92,7 +92,7 @@ You can save and load the persistent state of Cloud Pods, using the Cloud Pods C
 To create the Cloud Pod, you can run the following command:
 
 {{< command >}}
-$ localstack pod save <pod-name>
+$ localstack pod save '<pod-name>'
 {{< /command >}}
 
 ### Load an existing Cloud Pod
