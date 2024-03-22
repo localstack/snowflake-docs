@@ -71,7 +71,7 @@ You can specify a file path to export the state to. If you do not specify a file
 To import the state, you can run the following command:
 
 {{< command >}}
-$ localstack state import <file-name>
+$ localstack state import '<file-name>'
 {{< /command >}}
 
 The `<file-name>` argument is required and specifies the file path to import the state from. The file should be generated from a previous export.
