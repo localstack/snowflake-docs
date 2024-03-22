@@ -95,7 +95,7 @@ To create the Cloud Pod, you can run the following command:
 $ localstack pod save <pod-name>
 {{< /command >}}
 
-### Load a new Cloud Pod
+### Load an existing Cloud Pod
 
 To load the Cloud Pod, you can run the following command:
 
