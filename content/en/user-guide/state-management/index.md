@@ -100,5 +100,5 @@ $ localstack pod save <pod-name>
 To load the Cloud Pod, you can run the following command:
 
 {{< command >}}
-$ localstack pod load <pod-name>
+$ localstack pod load '<pod-name>'
 {{< /command >}}
