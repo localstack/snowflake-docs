@@ -61,7 +61,7 @@ The Export/Import State feature enables you to export the state of your LocalSta
 To export the state, you can run the following command:
 
 {{< command >}}
-$ localstack state export <file-name>
+$ localstack state export '<file-name>'
 {{< /command >}}
 
 You can specify a file path to export the state to. If you do not specify a file path, the state will be exported to the current working directory into a file named `ls-state-export`.
