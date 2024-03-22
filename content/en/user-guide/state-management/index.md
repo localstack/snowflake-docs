@@ -64,7 +64,7 @@ To export the state, you can run the following command:
 $ localstack state export '<file-name>'
 {{< /command >}}
 
-You can specify a file path to export the state to. If you do not specify a file path, the state will be exported to the current working directory into a file named `ls-state-export`.
+You can use the `<file-name>` argument to specify a file path to export the state to. If you do not specify a file path, the state will be exported to the current working directory into a file named `ls-state-export`.
 
 ### Import the State
 
