@@ -24,7 +24,7 @@ To create a CI key, follow these steps:
 
 ## Setup the CI configuration
 
-The following examples demonstrates how to set up the emulator in GitHub Actions, CircleCI, and GitLab CI.
+The following examples demonstrate how to set up the emulator in GitHub Actions, CircleCI, and GitLab CI.
 
 {{< tabpane >}}
 {{< tab header="GitHub Actions" lang="yaml" >}}
