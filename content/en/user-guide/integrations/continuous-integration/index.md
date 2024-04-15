@@ -9,7 +9,7 @@ description: Get started with Snowflake emulator in continuous integration (CI) 
 
 This guide explains how to set up the LocalStack Snowflake emulator in a continuous integration (CI) environment. You can use the emulator to test your Snowflake integration without connecting to the real Snowflake instance.
 
-To install the LocalStack Snowflake emulator, you need to set up the LocalStack CLI and download the extension. The emulator provides an endpoint to connect to the emulated Snowflake instance, which you can use to test your Snowflake integration in CI environments.
+To install the LocalStack Snowflake emulator, you need to set up the LocalStack CLI and pull the Docker image. After starting the Docker container, an endpoint (`snowflake.localhost.localstack.cloud`) is made available to connect to the emulated Snowflake instance, which you can use to test your data integrations in CI environments.
 
 ## Configure the LocalStack CI Key
 
@@ -24,7 +24,7 @@ To create a CI key, follow these steps:
 
 ## Setup the CI configuration
 
-To set up the LocalStack Snowflake emulator in your CI environment, you need to install the LocalStack CLI and download the Snowflake emulator extension. The following examples demonstrates how to set up the emulator in GitHub Actions, CircleCI, and GitLab CI.
+The following examples demonstrates how to set up the emulator in GitHub Actions, CircleCI, and GitLab CI.
 
 {{< tabpane >}}
 {{< tab header="GitHub Actions" lang="yaml" >}}
@@ -38,16 +38,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Start LocalStack
-        uses: LocalStack/setup-localstack@main
-        with:
-          image-tag: 'latest'
-          configuration: DEBUG=1
+      - name: Start LocalStack Snowflake emulator
+        run:
+          docker pull localstack/snowflake:latest
+          pip install localstack
+          IMAGE_NAME=localstack/snowflake localstack start -d
+          echo "Waiting for LocalStack startup..."
+          localstack wait -t 15
+          echo "Startup complete"
         env:
           LOCALSTACK_API_KEY: ${{ secrets.LOCALSTACK_API_KEY }}
-
-      - name: Install Snowflake Emulator
-        run: localstack extensions install localstack-extension-snowflake
 {{< /tab >}}
 {{< tab header="CircleCI" lang="yaml" >}}
 version: 2.1
@@ -67,16 +67,12 @@ jobs:
           name: Start LocalStack
           command: |
             pip3 install localstack
-            docker pull localstack/localstack-pro
-            localstack start -d                     
+            docker pull localstack/snowflake
+            IMAGE_NAME=localstack/snowflake localstack start -d                     
 
             echo "Waiting for LocalStack startup..."  
             localstack wait -t 30                     
-            echo "Startup complete"
-                        
-      - run:
-          name: Install Snowflake Emulator
-          command: localstack extensions install localstack-extension-snowflake          
+            echo "Startup complete"      
 
 workflows:
   version: 2
@@ -107,11 +103,10 @@ test:
     - apk add gcc musl-dev linux-headers py3-pip python3 python3-dev
     - python3 -m pip install localstack
   script:
-    - docker pull localstack/localstack-pro:latest
+    - docker pull localstack/snowflake:latest
     - dind_ip="$(getent hosts docker | cut -d' ' -f1)"
     - echo "${dind_ip} localhost.localstack.cloud " >> /etc/hosts
-    - DOCKER_HOST="tcp://${dind_ip}:2375" localstack start -d
+    - DOCKER_HOST="tcp://${dind_ip}:2375" IMAGE_NAME=localstack/snowflake localstack start -d
     - localstack wait -t 15
-    - localstack extensions install localstack-extension-snowflake
 {{< /tab >}}
 {{< /tabpane >}}
