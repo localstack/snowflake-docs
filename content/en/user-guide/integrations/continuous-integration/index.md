@@ -40,7 +40,7 @@ jobs:
 
       - name: Start LocalStack Snowflake emulator
         run:
-          docker pull localstack/snowflake:latest
+          docker pull localstack/snowflake:latest &
           pip install localstack
           IMAGE_NAME=localstack/snowflake localstack start -d
           echo "Waiting for LocalStack startup..."
