@@ -26,9 +26,6 @@ To create a new connection in DBeaver, follow these steps:
 -   Open DBeaver. Go to the top menu, select **Database**, and choose **New Database Connection**. In the **Connect to database** window, pick **All** databases and search for **Snowflake**, then click **Next**.
 -   In the **Connect to database** window, switch to the **Main** tab. Enter your Snowflake user details: 
     - **Host**: `snowflake.localhost.localstack.cloud`
-    - **Database**: `test`
-    - **Warehouse**: `test`
-    - **Schema**: `test`
     - **User**: `test`
     - **Password**: `test`
     <img src="dbeaver-new-connection.png" alt="New connection in DBeaver" width="700"/>
