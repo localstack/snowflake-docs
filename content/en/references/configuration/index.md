@@ -26,7 +26,7 @@ Options that affect the core LocalStack Snowflake emulator functionality.
 | `DEBUG`  | `0` (default) \| `1` | Flag to increase log level and print more verbose logs (useful for troubleshooting issues)                  |
 | `SF_LOG` | `trace`              | Specify the log level. Currently overrides the `DEBUG` configuration. `trace` for detailed request/response |
 | `SF_S3_ENDPOINT` | `s3.localhost.localstack.cloud:4566` (default) | Specify the S3 endpoint to use for the Snowflake emulator. |
-| `DNS_NAME_PATTERNS_TO_RESOLVE_UPSTREAM` | `*.s3.amazonaws.com` (example) | List of domain names that should NOT be resolved to the LocalStack container, but instead always forwarded to the upstream resolver (S3 for example). Comma-separated list of Python-flavored regex patterns. |
+| `DNS_NAME_PATTERNS_TO_RESOLVE_UPSTREAM` | `*.s3.amazonaws.com` (example) | List of domain names that should NOT be resolved to the LocalStack container, but instead always forwarded to the upstream resolver (S3 for example). this would be required when importing data into a stage from an external S3 bucket on the real AWS cloud. Comma-separated list of Python-flavored regex patterns. |
 
 ## CLI
 
