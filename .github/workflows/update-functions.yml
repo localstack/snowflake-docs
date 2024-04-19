@@ -1,0 +1,44 @@
+name: Update function coverage docs
+
+on:
+  schedule:
+    # “At 00:00 on Sunday.”
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  update-function-coverage:
+    name: Update function coverage docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Checkout private tools
+        uses: actions/checkout@v4
+        with:
+          repository: localstack/snowflake
+          token: ${{ secrets.GH_PAT }}
+          path: .
+
+      - name: Run the script 
+        run: |
+          ls
+          python3 snowflake/etc/coverage.py
+
+      - name: Move the generated files
+        run: |
+          rm -f content/en/references/coverage/index.md && mv index.md content/en/references/coverage/
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: 'LocalStack Bot'
+          author_email: localstack-bot@users.noreply.github.com
+          message: 'Updated function coverage docs'
+          add: 'content/'
