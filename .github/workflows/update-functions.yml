@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          path: snowflake-docs
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -23,15 +25,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: localstack/snowflake
-          path: .
+          path: snowflake
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Run the script 
         run: |
-          ls
-          python3 snowflake/etc/coverage.py
+          cd snowflake-docs
+          pip install localstack lxml requests
+          python ../snowflake/etc/coverage.py
 
       - name: Move the generated files
         run: |
+          cd snowflake-docs
           rm -f content/en/references/coverage/index.md && mv index.md content/en/references/coverage/
 
       - name: Commit changes
@@ -40,4 +45,5 @@ jobs:
           author_name: 'LocalStack Bot'
           author_email: localstack-bot@users.noreply.github.com
           message: 'Updated function coverage docs'
+          cwd: snowflake-docs
           add: 'content/'
