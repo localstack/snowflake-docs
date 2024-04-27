@@ -23,7 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: localstack/snowflake
-          token: ${{ secrets.GH_PAT }}
           path: .
 
       - name: Run the script 
