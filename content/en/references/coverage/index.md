@@ -4,7 +4,7 @@ title: "Functions Coverage"
 linkTitle: "Functions Coverage"
 weight: 1
 description: >
-  Overview of the implemented Snowflake functions in LocalStack
+  Overview of the implemented Snowflake SQL functions in LocalStack
 cascade:
   type: docs
 hide_readingtime: true
@@ -12,7 +12,7 @@ hide_readingtime: true
 
 ## Overview
 
-This table provides a list of all Snowflake system-defined functions, scalar or table, emulated by LocalStack. The table is a work in progress and will be updated as more functions are implemented.
+This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack. The table is a work in progress and will be updated as more functions are implemented.
 |Function|Supported|Tested|
 |----|----|----|
 |ABS|❓|❓|
@@ -128,7 +128,7 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |CONDITIONAL_CHANGE_EVENT|❓|❓|
 |CONDITIONAL_TRUE_EVENT|❓|❓|
 |CONTAINS|❓|❓|
-|CONVERT_TIMEZONE|❓|❓|
+|CONVERT_TIMEZONE|✅|✅|
 |COPY_HISTORY|❓|❓|
 |CORR|❓|❓|
 |COS|❓|❓|
@@ -210,6 +210,7 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |GENERATOR|❓|❓|
 |GET|❓|❓|
 |GET_ABSOLUTE_PATH|❓|❓|
+|GET_ANACONDA_PACKAGES_REPODATA|❓|❓|
 |GET_CONDITION_QUERY_UUID|❓|❓|
 |GET_DDL|❓|❓|
 |GET_IGNORE_CASE|❓|❓|
@@ -231,6 +232,8 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |H3_CELL_TO_CHILDREN_STRING|❓|❓|
 |H3_CELL_TO_PARENT|❓|❓|
 |H3_CELL_TO_POINT|❓|❓|
+|H3_COMPACT_CELLS|❓|❓|
+|H3_COMPACT_CELLS_STRINGS|❓|❓|
 |H3_COVERAGE|❓|❓|
 |H3_COVERAGE_STRINGS|❓|❓|
 |H3_GET_RESOLUTION|❓|❓|
@@ -238,6 +241,8 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |H3_GRID_DISTANCE|❓|❓|
 |H3_GRID_PATH|❓|❓|
 |H3_INT_TO_STRING|❓|❓|
+|H3_IS_PENTAGON|❓|❓|
+|H3_IS_VALID_CELL|❓|❓|
 |H3_LATLNG_TO_CELL|❓|❓|
 |H3_LATLNG_TO_CELL_STRING|❓|❓|
 |H3_POINT_TO_CELL|❓|❓|
@@ -245,6 +250,10 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |H3_POLYGON_TO_CELLS|❓|❓|
 |H3_POLYGON_TO_CELLS_STRINGS|❓|❓|
 |H3_STRING_TO_INT|❓|❓|
+|H3_TRY_GRID_DISTANCE|❓|❓|
+|H3_TRY_GRID_PATH|❓|❓|
+|H3_UNCOMPACT_CELLS|❓|❓|
+|H3_UNCOMPACT_CELLS_STRINGS|❓|❓|
 |HASH|❓|❓|
 |HASH_AGG|❓|❓|
 |HAVERSINE|❓|❓|
@@ -258,7 +267,7 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |HLL_EXPORT|❓|❓|
 |HLL_IMPORT|❓|❓|
 |HOUR / MINUTE / SECOND|❓|❓|
-|IFF|❓|❓|
+|IFF|✅|✅|
 |IFNULL|❓|❓|
 |[ NOT ] ILIKE|❓|❓|
 |ILIKE ANY|❓|❓|
@@ -514,7 +523,7 @@ This table provides a list of all Snowflake system-defined functions, scalar or 
 |SYSTEM$AUTHORIZE_STAGE_PRIVATELINK_ACCESS|❓|❓|
 |SYSTEM$BEHAVIOR_CHANGE_BUNDLE_STATUS|❓|❓|
 |SYSTEM$BLOCK_INTERNAL_STAGES_PUBLIC_ACCESS|❓|❓|
-|SYSTEM$CANCEL_ALL_QUERIES|❓|❓|
+|SYSTEM$CANCEL_ALL_QUERIES|✅|✅|
 |SYSTEM$CANCEL_QUERY|❓|❓|
 |SYSTEM$CLEANUP_DATABASE_ROLE_GRANTS|❓|❓|
 |SYSTEM$CLIENT_VERSION_INFO|❓|❓|
