@@ -16,7 +16,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |Function|Supported|Tested|
 |----|----|----|
 |ABS|❓|❓|
-|ACOS|❓|❓|
+|ACOS|✅|✅|
 |ACOSH|❓|❓|
 |ADD_MONTHS|✅|✅|
 |ALERT_HISTORY|❓|❓|
@@ -73,9 +73,9 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |AS_TIME|❓|❓|
 |AS_TIMESTAMP_*|❓|❓|
 |ASCII|❓|❓|
-|ASIN|❓|❓|
+|ASIN|✅|✅|
 |ASINH|❓|❓|
-|ATAN|❓|❓|
+|ATAN|✅|✅|
 |ATAN2|❓|❓|
 |ATANH|❓|❓|
 |AUTO_REFRESH_REGISTRATION_HISTORY|❓|❓|
@@ -131,7 +131,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |CONVERT_TIMEZONE|✅|✅|
 |COPY_HISTORY|❓|❓|
 |CORR|❓|❓|
-|COS|❓|❓|
+|COS|✅|✅|
 |COSH|❓|❓|
 |COT|❓|❓|
 |COUNT|✅|✅|
@@ -272,7 +272,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |[ NOT ] ILIKE|❓|❓|
 |ILIKE ANY|❓|❓|
 |[ NOT ] IN|❓|❓|
-|INFER_SCHEMA|❓|❓|
+|INFER_SCHEMA|✅|✅|
 |INITCAP|❓|❓|
 |INSERT|✅|✅|
 |INVOKER_ROLE|❓|❓|
@@ -372,7 +372,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |PERCENT_RANK|❓|❓|
 |PERCENTILE_CONT|❓|❓|
 |PERCENTILE_DISC|❓|❓|
-|PI|❓|❓|
+|PI|✅|✅|
 |PIPE_USAGE_HISTORY|❓|❓|
 |POLICY_CONTEXT|❓|❓|
 |POLICY_REFERENCES|❓|❓|
@@ -381,7 +381,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |PREVIOUS_DAY|❓|❓|
 |QUERY_ACCELERATION_HISTORY|❓|❓|
 |QUERY_HISTORY , QUERY_HISTORY_BY_*|❓|❓|
-|RADIANS|❓|❓|
+|RADIANS|✅|✅|
 |RANDOM|❓|❓|
 |RANDSTR|❓|❓|
 |RANK|❓|❓|
@@ -432,7 +432,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |SHA2_BINARY|❓|❓|
 |SHOW_PYTHON_PACKAGES_DEPENDENCIES|❓|❓|
 |SIGN|❓|❓|
-|SIN|❓|❓|
+|SIN|✅|✅|
 |SINH|❓|❓|
 |SKEW|❓|❓|
 |SOUNDEX|❓|❓|
@@ -603,7 +603,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |TAG_REFERENCES|❓|❓|
 |TAG_REFERENCES_ALL_COLUMNS|❓|❓|
 |TAG_REFERENCES_WITH_LINEAGE|❓|❓|
-|TAN|❓|❓|
+|TAN|✅|✅|
 |TANH|❓|❓|
 |TASK_DEPENDENTS|❓|❓|
 |TASK_HISTORY|❓|❓|
