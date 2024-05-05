@@ -272,7 +272,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |[ NOT ] ILIKE|❓|❓|
 |ILIKE ANY|❓|❓|
 |[ NOT ] IN|❓|❓|
-|INFER_SCHEMA|✅|✅|
+|INFER_SCHEMA|❓|❓|
 |INITCAP|❓|❓|
 |INSERT|✅|✅|
 |INVOKER_ROLE|❓|❓|
@@ -413,7 +413,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |REST_EVENT_HISTORY|❓|❓|
 |RESULT_SCAN|✅|✅|
 |REVERSE|❓|❓|
-|RIGHT|❓|❓|
+|RIGHT|✅|✅|
 |[ NOT ] RLIKE|❓|❓|
 |ROUND|❓|❓|
 |ROW_COUNT|❓|❓|
