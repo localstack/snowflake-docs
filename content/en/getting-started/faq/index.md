@@ -19,6 +19,8 @@ The LocalStack Snowflake emulator is in **preview** and may not support all Snow
 
 The LocalStack Snowflake emulator operates on `snowflake.localhost.localstack.cloud`. This is a DNS name that resolves to a local IP address (`127.0.0.1`) to make sure the connector interacts with the local APIs. In addition, we also publish an SSL certificate that is automatically used inside LocalStack, in order to enable HTTPS endpoints with valid certificates.
 
+Note: In case you are deploying the Snowflake emulator in a Kubernetes cluster or some other non-local environment, you may need to add an entry to the `/etc/hosts` file of any client machine or Kubernetes pod that attempts to connect to the Snowflake emulator pod via the `snowflake.localhost.localstack.cloud` domain name.
+
 ## Integration FAQs
 
 ### Why are my CI pipelines failing with `license.not_enough_credits` error?
