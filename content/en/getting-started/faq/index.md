@@ -9,7 +9,7 @@ description: This page answers the frequently asked questions about LocalStack S
 
 ### Are Snowflake v2 APIs supported?
 
-Yes, the LocalStack Snowflake emulator supports the Snowflake v2 APIs. Currently, the `/api/v2/statements` endpoints are supported. In future releases, we plan to add support for more APIs.
+Yes, the LocalStack Snowflake emulator supports the Snowflake v2 SQL API (`/api/v2/*` endpoints), as well as the legacy v1 SQL API (which is still being used by a large portion of Snowflake client libraries and SDKs) 
 
 ### Why are my Snowflake tests failing?
 
