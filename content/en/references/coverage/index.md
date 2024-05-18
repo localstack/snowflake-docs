@@ -12,7 +12,8 @@ hide_readingtime: true
 
 ## Overview
 
-This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack. The table is a work in progress and will be updated as more functions are implemented.
+This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack.
+The table is a work in progress and will be updated as more functions are implemented.
 |Function|Supported|Tested|
 |----|----|----|
 |ABS|❓|❓|
@@ -22,6 +23,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |ALERT_HISTORY|❓|❓|
 |ALL_USER_NAMES|❓|❓|
 |ANY_VALUE|❓|❓|
+|APPLICATION_JSON|❓|❓|
 |APPROX_COUNT_DISTINCT|❓|❓|
 |APPROX_PERCENTILE|❓|❓|
 |APPROX_PERCENTILE_ACCUMULATE|❓|❓|
@@ -80,7 +82,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |ATANH|❓|❓|
 |AUTO_REFRESH_REGISTRATION_HISTORY|❓|❓|
 |AUTOMATIC_CLUSTERING_HISTORY|❓|❓|
-|AVG|❓|❓|
+|AVG|✅|✅|
 |BASE64_DECODE_BINARY|❓|❓|
 |BASE64_DECODE_STRING|❓|❓|
 |BASE64_ENCODE|❓|❓|
@@ -155,7 +157,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |CURRENT_SECONDARY_ROLES|✅|✅|
 |CURRENT_SESSION|✅|✅|
 |CURRENT_STATEMENT|✅|✅|
-|CURRENT_TASK_GRAPHS|❓|❓|
+|CURRENT_TASK_GRAPHS|✅|✅|
 |CURRENT_TIME|✅|✅|
 |CURRENT_TIMESTAMP|✅|✅|
 |CURRENT_TRANSACTION|✅|✅|
@@ -189,6 +191,8 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |DYNAMIC_TABLE_REFRESH_HISTORY|❓|❓|
 |DYNAMIC_TABLES|❓|❓|
 |EDITDISTANCE|❓|❓|
+|EMAIL_INTEGRATION_CONFIG|❓|❓|
+|EMBED_TEXT_768 (SNOWFLAKE.CORTEX)|❓|❓|
 |ENCRYPT|❓|❓|
 |ENCRYPT_RAW|❓|❓|
 |ENDSWITH|❓|❓|
@@ -202,12 +206,13 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |EXTRACT_ANSWER (SNOWFLAKE.CORTEX)|❓|❓|
 |EXTRACT_SEMANTIC_CATEGORIES|❓|❓|
 |FACTORIAL|❓|❓|
+|FILTER|❓|❓|
 |FIRST_VALUE|❓|❓|
 |FLATTEN|❓|❓|
 |FLOOR|❓|❓|
 |FRESHNESS|❓|❓|
 |GENERATE_COLUMN_DESCRIPTION|❓|❓|
-|GENERATOR|❓|❓|
+|GENERATOR|✅|✅|
 |GET|❓|❓|
 |GET_ABSOLUTE_PATH|❓|❓|
 |GET_ANACONDA_PACKAGES_REPODATA|❓|❓|
@@ -272,9 +277,10 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |[ NOT ] ILIKE|❓|❓|
 |ILIKE ANY|❓|❓|
 |[ NOT ] IN|❓|❓|
-|INFER_SCHEMA|❓|❓|
+|INFER_SCHEMA|✅|✅|
 |INITCAP|❓|❓|
 |INSERT|✅|✅|
+|INTEGRATION|❓|❓|
 |INVOKER_ROLE|❓|❓|
 |INVOKER_SHARE|❓|❓|
 |IS [ NOT ] DISTINCT FROM|❓|❓|
@@ -282,7 +288,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |IS_<object_type>|❓|❓|
 |IS_ARRAY|✅|✅|
 |IS_BINARY|❓|❓|
-|IS_BOOLEAN|❓|❓|
+|IS_BOOLEAN|✅|✅|
 |IS_CHAR , IS_VARCHAR|❓|❓|
 |IS_DATABASE_ROLE_IN_SESSION|❓|❓|
 |IS_DATE , IS_DATE_VALUE|❓|❓|
@@ -342,7 +348,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |MIN_BY|✅|✅|
 |MINHASH|❓|❓|
 |MINHASH_COMBINE|❓|❓|
-|MOD|❓|❓|
+|MOD|✅|✅|
 |MODE|❓|❓|
 |MONTHNAME|✅|✅|
 |MONTHS_BETWEEN|❓|❓|
@@ -549,6 +555,8 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |SYSTEM$GET_AWS_SNS_IAM_POLICY|❓|❓|
 |SYSTEM$GET_CLASSIFICATION_RESULT|❓|❓|
 |SYSTEM$GET_CMK_AKV_CONSENT_URL|❓|❓|
+|SYSTEM$GET_CMK_CONFIG|❓|❓|
+|SYSTEM$GET_CMK_INFO|❓|❓|
 |SYSTEM$GET_CMK_KMS_KEY_POLICY|❓|❓|
 |SYSTEM$GET_COMPUTE_POOL_STATUS|❓|❓|
 |SYSTEM$GET_DIRECTORY_TABLE_STATUS|❓|❓|
@@ -577,7 +585,8 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |SYSTEM$PIPE_STATUS|❓|❓|
 |SYSTEM$QUERY_REFERENCE|❓|❓|
 |SYSTEM$REFERENCE|❓|❓|
-|SYSTEM$REGISTRY_LIST_IMAGES|❓|❓|
+|SYSTEM$REGISTER_CMK_INFO|❓|❓|
+|SYSTEM$REGISTRY_LIST_IMAGES — Deprecated|❓|❓|
 |SYSTEM$REVOKE_PRIVATELINK|❓|❓|
 |SYSTEM$REVOKE_STAGE_PRIVATELINK_ACCESS|❓|❓|
 |SYSTEM$SET_RETURN_VALUE|❓|❓|
@@ -595,6 +604,8 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |SYSTEM$TYPEOF|❓|❓|
 |SYSTEM$UNBLOCK_INTERNAL_STAGES_PUBLIC_ACCESS|❓|❓|
 |SYSTEM$USER_TASK_CANCEL_ONGOING_EXECUTIONS|❓|❓|
+|SYSTEM$VALIDATE_STORAGE_INTEGRATION|❓|❓|
+|SYSTEM$VERIFY_CMK_INFO|❓|❓|
 |SYSTEM$VERIFY_EXTERNAL_OAUTH_TOKEN|❓|❓|
 |SYSTEM$WAIT|❓|❓|
 |SYSTEM$WHITELIST — Deprecated|❓|❓|
@@ -607,6 +618,8 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |TANH|❓|❓|
 |TASK_DEPENDENTS|❓|❓|
 |TASK_HISTORY|❓|❓|
+|TEXT_HTML|❓|❓|
+|TEXT_PLAIN|❓|❓|
 |TIME_FROM_PARTS|❓|❓|
 |TIME_SLICE|❓|❓|
 |TIMEADD|❓|❓|
@@ -624,12 +637,13 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |TO_GEOGRAPHY|❓|❓|
 |TO_GEOMETRY|❓|❓|
 |TO_JSON|❓|❓|
-|TO_OBJECT|❓|❓|
+|TO_OBJECT|✅|✅|
 |TO_TIME , TIME|❓|❓|
 |TO_TIMESTAMP / TO_TIMESTAMP_*|❓|❓|
 |TO_VARIANT|✅|✅|
 |TO_XML|❓|❓|
 |TOP_INSIGHTS (SNOWFLAKE.ML)|❓|❓|
+|TRANSFORM|❓|❓|
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|❓|
 |TRANSLATE|❓|❓|
 |TRIM|❓|❓|
@@ -642,7 +656,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |TRY_DECRYPT_RAW|❓|❓|
 |TRY_HEX_DECODE_BINARY|❓|❓|
 |TRY_HEX_DECODE_STRING|❓|❓|
-|TRY_PARSE_JSON|❓|❓|
+|TRY_PARSE_JSON|✅|✅|
 |TRY_TO_BINARY|❓|❓|
 |TRY_TO_BOOLEAN|❓|❓|
 |TRY_TO_DATE|❓|❓|
@@ -657,13 +671,16 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 |UNIFORM|❓|❓|
 |UNIQUE_COUNT|❓|❓|
 |UPPER|❓|❓|
-|UUID_STRING|❓|❓|
+|UUID_STRING|✅|✅|
 |VALIDATE|❓|❓|
 |VALIDATE_PIPE_LOAD|❓|❓|
 |VAR_POP|❓|❓|
 |VAR_SAMP|❓|❓|
 |VARIANCE , VARIANCE_SAMP|❓|❓|
 |VARIANCE_POP|❓|❓|
+|VECTOR_COSINE_SIMILARITY|❓|❓|
+|VECTOR_INNER_PRODUCT|❓|❓|
+|VECTOR_L2_DISTANCE|❓|❓|
 |WAREHOUSE_LOAD_HISTORY|❓|❓|
 |WAREHOUSE_METERING_HISTORY|❓|❓|
 |WIDTH_BUCKET|❓|❓|
