@@ -2,18 +2,18 @@
 title: "User-Defined Functions"
 linkTitle: "User-Defined Functions"
 weight: 5
-description: Get started with User-Defined Functions in Node.js & Python with LocalStack Snowflake emulator
+description: Get started with User-Defined Functions in Node.js & Python with LocalStack for Snowflake
 ---
 
 ## Introduction
 
 User-Defined Functions (UDFs) are functions that you can create to extend the functionality of your SQL queries. Snowflake supports UDFs in different programming languages, including JavaScript, Python, Java, Scala, and SQL.
 
-LocalStack Snowflake emulator supports User-Defined Functions (UDFs) in JavaScript and Python. You can create UDFs to extend the functionality of your SQL queries. This guide demonstrates how to create and execute UDFs in JavaScript and Python.
+The Snowflake emulator supports User-Defined Functions (UDFs) in JavaScript and Python. You can create UDFs to extend the functionality of your SQL queries. This guide demonstrates how to create and execute UDFs in JavaScript and Python.
 
 ## JavaScript
 
-In LocalStack Snowflake emulator, you can create JavaScript UDFs to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to it using a SQL client to execute the queries below.
+In the Snowflake emulator, you can create JavaScript UDFs to extend the functionality of your SQL queries. Start your Snowflake emulator and connect to it using a SQL client to execute the queries below.
 
 ### Create a JavaScript UDF
 
@@ -38,7 +38,7 @@ The result of the query is `15`.
 
 ## Python
 
-In LocalStack Snowflake emulator, you can create User-Defined Functions (UDFs) in Python to extend the functionality of your SQL queries. Start your LocalStack Snowflake emulator and connect to it using a SQL client to execute the queries below.
+In the Snowflake emulator, you can create User-Defined Functions (UDFs) in Python to extend the functionality of your SQL queries. Start your Snowflake emulator and connect to it using a SQL client to execute the queries below.
 
 ### Create a Python UDF
 

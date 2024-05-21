@@ -2,26 +2,26 @@
 title: "Snowpark"
 linkTitle: "Snowpark"
 weight: 2
-description: Get started with LocalStack Snowflake emulator and Snowpark
+description: Get started with Snowpark in LocalStack for Snowflake
 ---
 
 ## Introduction
 
-Snowpark library is a developer library for querying and processing data at scale in Snowflake. Snowflake currently provides Snowpark libraries for three languages: Java, Python, and Scala. The LocalStack Snowflake emulator facilitates testing Snowpark queries without connecting to the actual Snowflake instance. This guide provides instructions on using the LocalStack Snowflake emulator in conjunction with Snowpark.
+Snowpark library is a developer library for querying and processing data at scale in Snowflake. Snowflake currently provides Snowpark libraries for three languages: Java, Python, and Scala. The Snowflake emulator facilitates testing Snowpark queries without connecting to the actual Snowflake instance. This guide provides instructions on using the Snowflake emulator in conjunction with Snowpark.
 
 ## Snowpark for Python
 
-The LocalStack Snowflake emulator supports the development and testing of Snowpark Python code in a local development environment. You can install the Snowpark Python library using the following command:
+The Snowflake emulator supports the development and testing of Snowpark Python code in a local development environment. You can install the Snowpark Python library using the following command:
 
 {{< command >}}
 $ pip install snowflake-snowpark-python
 {{< /command >}}
 
-In this getting started guide, we'll use the Snowpark Python library to establish a connection to the LocalStack Snowflake emulator and employ a DataFrame to query a table named `sample_product_data`.
+In this getting started guide, we'll use the Snowpark Python library to establish a connection to the Snowflake emulator and employ a DataFrame to query a table named `sample_product_data`.
 
 ### Create a Snowpark Session
 
-The LocalStack Snowflake emulator operates on `snowflake.localhost.localstack.cloud`. To create a Snowpark session in Python, use the following code:
+The Snowflake emulator operates on `snowflake.localhost.localstack.cloud`. To create a Snowpark session in Python, use the following code:
 
 ```python
 from snowflake.snowpark import *

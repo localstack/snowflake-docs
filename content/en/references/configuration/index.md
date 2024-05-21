@@ -3,7 +3,7 @@ title: "Configuration"
 linkTitle: "Configuration"
 weight: 3
 description: >
-  Overview of configuration options in LocalStack Snowflake emulator
+  Overview of configuration options in LocalStack for Snowflake
 cascade:
   type: docs
 hide_readingtime: true
@@ -19,7 +19,7 @@ $ DEBUG=1 localstack start
 
 ## Core
 
-Options that affect the core LocalStack Snowflake emulator functionality.
+Options that affect the core Snowflake emulator functionality.
 
 | Variable | Example Values       | Description                                                                                                 |
 |----------|----------------------|-------------------------------------------------------------------------------------------------------------|

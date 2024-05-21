@@ -2,25 +2,25 @@
 title: "Credit Scoring with Snowpark & LocalStack"
 linkTitle: "Credit Scoring with Snowpark & LocalStack"
 weight: 1
-description: In this tutorial, you will explore how you can use LocalStack Snowflake emulator with Snowpark for data analysis and visualization
+description: In this tutorial, you will explore how you can use LocalStack for Snowflake with Snowpark for data analysis and visualization
 ---
 
 ## Introduction
 
-In this tutorial, you will learn how you can use LocalStack Snowflake emulator with Snowpark for Python and your favorite Python libraries for data analysis.
+In this tutorial, you will learn how you can use the Snowflake emulator with Snowpark for Python and your favorite Python libraries for data analysis.
 
 The Jupyter Notebook and the dataset used in this tutorial are available on [GitHub](https://github.com/localstack-samples/localstack-snowflake-samples/tree/main/credit-scoring-with-snowpark).
 
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli) with a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
-- [LocalStack Snowflake emulator]({{< ref "installation" >}})
+- [LocalStack for Snowflake]({{< ref "installation" >}})
 - [Snowpark]({{< ref "snowpark" >}}) with other Python libraries
 - [Jupyter Notebook](https://jupyter.org/install#jupyter-notebook)
 
 You should also download [`credit_files.csv`](https://github.com/localstack-samples/localstack-snowflake-samples/blob/main/credit-scoring-with-snowpark/credit_files.csv) and [`credit_request.csv`](https://github.com/localstack-samples/localstack-snowflake-samples/blob/main/credit-scoring-with-snowpark/credit_request.csv) files from the LocalStack repository. The files should be present in the same directory as your Jupyter Notebook.
 
-## Start the LocalStack Snowflake emulator
+## Start the Snowflake emulator
 
 Start your LocalStack container in your preferred terminal/shell.
 
@@ -45,9 +45,9 @@ $ localstack extensions list
 
 ## Create a Snowpark session
 
-The next step is to configure LocalStack's Snowflake. LocalStack Snowflake emulator runs on `snowflake.localhost.localstack.cloud`. You can use the Snowpark to connect to the locally running Snowflake server.
+The next step is to configure the Snowflake emulator. The Snowflake emulator runs on `snowflake.localhost.localstack.cloud`. You can use the Snowpark to connect to the locally running Snowflake server.
 
-Start Jupyter Notebook and create a new notebook. Add the following code to connect to the LocalStack Snowflake emulator:
+Start Jupyter Notebook and create a new notebook. Add the following code to connect to the Snowflake emulator:
 
 ```python
 from snowflake.snowpark import *
@@ -172,4 +172,4 @@ The following output is displayed:
 
 ## Conclusion
 
-You can now perform further experimentations with LocalStack's Snowflake emulation. For example, you can use the Snowpark API to run queries to get various insights, such as determining the range of loans per different category.
+You can now perform further experimentations with the Snowflake emulator. For example, you can use the Snowpark API to run queries to get various insights, such as determining the range of loans per different category.

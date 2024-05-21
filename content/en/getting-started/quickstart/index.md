@@ -2,23 +2,23 @@
 title: "Quickstart"
 linkTitle: "Quickstart"
 weight: 2
-description: Get started with the LocalStack Snowflake emulator in a few simple steps
+description: Get started with LocalStack for Snowflake in a few simple steps
 ---
 
 ## Introduction
 
-This guide explains how to set up the LocalStack Snowflake emulator and develop a Python program using the Snowflake Connector for Python (`snowflake-connector-python`) to interact with emulated Snowflake running on your local machine.
+This guide explains how to set up the Snowflake emulator and develop a Python program using the Snowflake Connector for Python (`snowflake-connector-python`) to interact with emulated Snowflake running on your local machine.
 
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
-- [LocalStack Snowflake emulator]({{< ref "installation" >}})
+- [LocalStack for Snowflake]({{< ref "installation" >}})
 - Python 3.10 or later 
 - [`snowflake-connector-python` library](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-install)
 
 ## Instructions
 
-Before you begin, install the LocalStack Snowflake emulator and start the LocalStack container with the following commands:
+Before you begin, install the Snowflake emulator and start the LocalStack container with the following commands:
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
@@ -38,9 +38,9 @@ $ localstack extensions list
 </disable-copy>
 {{< / command >}}
 
-### Connect to LocalStack Snowflake emulator
+### Connect to the Snowflake emulator
 
-Create a new Python file named `main.py` and use the following code to connect to the LocalStack Snowflake emulator:
+Create a new Python file named `main.py` and use the following code to connect to the Snowflake emulator:
 
 ```python
 import snowflake.connector as sf
@@ -133,8 +133,8 @@ LocalStack is ephemeral and doesn't persist data across restarts. It runs inside
 
 ## Next steps
 
-You can now explore the following resources to learn more about the LocalStack Snowflake emulator:
+You can now explore the following resources to learn more about the Snowflake emulator:
 
-- [User Guide]({{< ref "user-guide" >}}): Learn about the LocalStack Snowflake emulator's features and how to use them.
-- [Tutorials]({{< ref "tutorials" >}}): Explore tutorials to use the LocalStack Snowflake emulator for local development and testing.
-- [References]({{< ref "references" >}}): Find information about the LocalStack Snowflake emulator's configuration, changelog, and function coverage.
+- [User Guide]({{< ref "user-guide" >}}): Learn about the Snowflake emulator's features and how to use them.
+- [Tutorials]({{< ref "tutorials" >}}): Explore tutorials to use the Snowflake emulator for local development and testing.
+- [References]({{< ref "references" >}}): Find information about the Snowflake emulator's configuration, changelog, and function coverage.
