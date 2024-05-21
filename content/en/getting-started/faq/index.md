@@ -31,6 +31,6 @@ A CI key allows you to use LocalStack in your CI environment. Every activation o
 
 ## Support FAQs
 
-### How can I get help with Snowflake emulator?
+### How can I get help with the Snowflake emulator?
 
 The Snowflake emulator is currently in **preview**. To get help, you can join the [Slack community](https://localstack.cloud/slack) and share your feedback, questions, and suggestions with the LocalStack team on the `#help` channel. If your team is using LocalStack for Snowflake, you can also request support by [contacting us](https://localstack.cloud/contact). We would be happy to setup a private Slack channel for your team to provide dedicated support.
