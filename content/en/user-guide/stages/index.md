@@ -2,21 +2,21 @@
 title: "Stages"
 linkTitle: "Stages"
 weight: 7
-description: Get started with Stages in LocalStack Snowflake emulator
+description: Get started with Stages in LocalStack for Snowflake
 ---
 
 ## Introduction
 
 Stages are a way to load data into Snowflake. You can use stages to load data from files in a variety of formats, including CSV, JSON, and Parquet. You can also use stages to load data from external cloud storage services, such as Amazon S3, Google Cloud Storage, and Microsoft Azure Blob Storage.
 
-LocalStack Snowflake emulator supports stages, allowing you to load data into Snowflake using the same commands and syntax as the Snowflake service. The following operations are supported:
+The Snowflake emulator supports stages, allowing you to load data into Snowflake using the same commands and syntax as the Snowflake service. The following operations are supported:
 
 - [`CREATE STAGE`](https://docs.snowflake.com/en/sql-reference/sql/create-stage.html)
 - [`DROP STAGE`](https://docs.snowflake.com/en/sql-reference/sql/drop-stage.html)
 
 ## Getting started
 
-This guide is designed for users new to Stages and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
+This guide is designed for users new to Stages and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
 
 In this guide, you will create a database and a table for storing data. You will then create a stage to load data into the table.
 

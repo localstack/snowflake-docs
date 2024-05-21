@@ -2,18 +2,18 @@
 title: "SnowSQL"
 linkTitle: "SnowSQL"
 weight: 4
-description: Use SnowSQL to interact with the LocalStack Snowflake emulator
+description: Use SnowSQL to interact with the Snowflake emulator
 ---
 
 ## Introduction
 
 [SnowSQL](https://docs.snowflake.com/en/user-guide/snowsql.html) is a command-line client for Snowflake that allows you to interact with the Snowflake service using SQL commands. SnowSQL provides a wide range of features, such as executing SQL statements, loading data, unloading data, and more.
 
-LocalStack Snowflake emulator supports SnowSQL, allowing you to interact with the Snowflake emulator using the same commands and syntax as the Snowflake service. You can use SnowSQL to connect to the Snowflake emulator, execute SQL commands, and manage Snowflake resources locally, such as databases, schemas, tables, stages, and more.
+The Snowflake emulator supports SnowSQL, allowing you to interact with the Snowflake emulator using the same commands and syntax as the Snowflake service. You can use SnowSQL to connect to the Snowflake emulator, execute SQL commands, and manage Snowflake resources locally, such as databases, schemas, tables, stages, and more.
 
 ## Configuring SnowSQL
 
-In this guide, you will learn how to configure SnowSQL to interact with the LocalStack Snowflake emulator.
+In this guide, you will learn how to configure SnowSQL to interact with the Snowflake emulator.
 
 ### Install SnowSQL
 
@@ -47,7 +47,7 @@ In the above command:
 - `-r` specifies the role name.
 - `-s` specifies the schema name.
 
-After a successful configuration, you can use SnowSQL to interact with the LocalStack Snowflake emulator.
+After a successful configuration, you can use SnowSQL to interact with the Snowflake emulator.
 
 ```bash
 * SnowSQL * v1.2.32

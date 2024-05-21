@@ -2,18 +2,18 @@
 title: "Streams"  
 linkTitle: "Streams"
 weight: 6
-description: Get started with Streams in LocalStack Snowflake emulator
+description: Get started with Streams in LocalStack for Snowflake
 ---
 
 ## Introduction
 
 Streams allow you to track changes made to a table. Streams capture changes made to a table, such as inserts, updates, and deletes, and store the changes in a log that you can query to see what changes have been made. 
 
-LocalStack Snowflake emulator supports managed streams. You can create a stream locally to track changes made to an emulated Snowflake table and query the stream to see what changes have been made.
+The Snowflake emulator supports managed streams. You can create a stream locally to track changes made to an emulated Snowflake table and query the stream to see what changes have been made.
 
 ## Getting started
 
-This guide is designed for users new to Streams and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to it using an SQL client to execute the queries below..
+This guide is designed for users new to Streams and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client to execute the queries below..
 
 The following sections guide you through a simple example of using Streams to track changes in a table that stores information about gym members. We will create tables to store member information and their signup dates, and then use a stream to capture changes made to the members' table.
 

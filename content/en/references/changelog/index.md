@@ -3,7 +3,7 @@ title: "Changelog"
 linkTitle: "Changelog"
 weight: 2
 description: >
-  Changelog for the latest releases of the LocalStack Snowflake emulator
+  Changelog for the latest releases of the LocalStack for Snowflake
 cascade:
   type: docs
 hide_readingtime: true

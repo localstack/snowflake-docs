@@ -2,7 +2,7 @@
 title: "State Management"
 linkTitle: "State Management"
 weight: 8
-description: Get started with State Management in LocalStack Snowflake emulator
+description: Get started with State Management in LocalStack for Snowflake
 ---
 
 ## Introduction

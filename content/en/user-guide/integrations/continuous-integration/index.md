@@ -7,9 +7,9 @@ description: Get started with Snowflake emulator in continuous integration (CI) 
 
 ## Introduction
 
-This guide explains how to set up the LocalStack Snowflake emulator in a continuous integration (CI) environment. You can use the emulator to test your Snowflake integration without connecting to the real Snowflake instance.
+This guide explains how to set up the Snowflake emulator in a continuous integration (CI) environment. You can use the emulator to test your Snowflake integration without connecting to the real Snowflake instance.
 
-To install the LocalStack Snowflake emulator, you need to set up the LocalStack CLI and pull the Docker image. After starting the Docker container, an endpoint (`snowflake.localhost.localstack.cloud`) is made available to connect to the emulated Snowflake instance, which you can use to test your data integrations in CI environments.
+To install the Snowflake emulator, you need to set up the LocalStack CLI and pull the Docker image. After starting the Docker container, an endpoint (`snowflake.localhost.localstack.cloud`) is made available to connect to the emulated Snowflake instance, which you can use to test your data integrations in CI environments.
 
 ## Configure the LocalStack CI Key
 
@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Start LocalStack Snowflake emulator
+      - name: Start Snowflake emulator
         run:
           docker pull localstack/snowflake:latest &
           pip install localstack

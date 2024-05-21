@@ -2,22 +2,22 @@
 title: "Pulumi"
 linkTitle: "Pulumi"
 weight: 3
-description: Use Pulumi to interact with the LocalStack Snowflake emulator
+description: Use Pulumi to interact with the Snowflake emulator
 ---
 
 ## Introduction
 
 [Pulumi](https://pulumi.com/) is an Infrastructure-as-Code (IaC) framework that allows you to define and provision infrastructure using familiar programming languages. Pulumi supports a wide range of cloud providers and services, including AWS, Azure, Google Cloud, and more.
 
-LocalStack Snowflake emulator supports Pulumi, allowing you to define and provision Snowflake resources using the same commands and syntax as the Snowflake service. You can use Pulumi to create, update, and delete Snowflake resources locally, such as databases, schemas, tables, stages, and more.
+The Snowflake emulator supports Pulumi, allowing you to define and provision Snowflake resources using the same commands and syntax as the Snowflake service. You can use Pulumi to create, update, and delete Snowflake resources locally, such as databases, schemas, tables, stages, and more.
 
 ## Configuring Pulumi
 
-In this guide, you will learn how to configure Pulumi to interact with the LocalStack Snowflake emulator.
+In this guide, you will learn how to configure Pulumi to interact with the Snowflake emulator.
 
 ### Set up Snowflake provider
 
-To use Pulumi with the LocalStack Snowflake emulator, you need to configure the Snowflake provider in your Pulumi configuration file. Create a blank Pulumi project, and add the following environment variables to your Pulumi stack:
+To use Pulumi with the Snowflake emulator, you need to configure the Snowflake provider in your Pulumi configuration file. Create a blank Pulumi project, and add the following environment variables to your Pulumi stack:
 
 {{< command>}}
 $ pulumi config set snowflake:account test
@@ -54,7 +54,7 @@ You can now deploy the Pulumi configuration to create the Snowflake resources lo
 $ pulumi up
 {{< /command >}}
 
-The expected output should show the resources being created in the LocalStack Snowflake emulator:
+The expected output should show the resources being created in the Snowflake emulator:
 
 ```bash
 Enter your passphrase to unlock config/secrets

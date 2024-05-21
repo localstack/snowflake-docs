@@ -19,7 +19,7 @@ The code in this tutorial is available on [GitHub](https://github.com/localstack
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli) with a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
-- [LocalStack Snowflake emulator]({{< ref "installation" >}})
+- [LocalStack for Snowflake]({{< ref "installation" >}})
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) & [`awslocal` wrapper](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal)
 - Python 3.10 installed locally
 
@@ -95,7 +95,7 @@ In the above code:
 
 - You import the `snowflake.connector` module to establish a connection to the Snowflake database.
 - You define the `lambda_handler` function, which is the entry point for the Lambda function.
-- You define the `snowflake_params` dictionary with `snowflake.localhost.localstack.cloud` as the host to connect to the LocalStack Snowflake emulator.
+- You define the `snowflake_params` dictionary with `snowflake.localhost.localstack.cloud` as the host to connect to the Snowflake emulator.
 - You establish a connection to the Snowflake database using the `sf.connect` method.
 - You create a cursor object and execute a query to create a table.
 - You insert rows and execute an insert query with `executemany` and a query to select data from the table.

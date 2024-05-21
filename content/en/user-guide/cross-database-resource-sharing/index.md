@@ -2,18 +2,18 @@
 title: "Cross-Database Resource Sharing"
 linkTitle: "Cross-Database Resource Sharing"
 weight: 6
-description: Get started with cross-database resource sharing in LocalStack Snowflake emulator
+description: Get started with cross-database resource sharing in the Snowflake emulator
 ---
 
 ## Introduction
 
 Snowflake data providers can easily share data from various databases using secure views. These views can include schemas, tables, and other views from one or more databases, as long as they're part of the same account.
 
-LocalStack Snowflake emulator supports cross-database resource sharing, allowing you to share a secure view that references objects from multiple databases. This guide walks you through the process of creating databases, schemas, tables, and views, and sharing them with other databases.
+The Snowflake emulator supports cross-database resource sharing, allowing you to share a secure view that references objects from multiple databases. This guide walks you through the process of creating databases, schemas, tables, and views, and sharing them with other databases.
 
 ## Getting started
 
-This guide is designed for users new to cross-database resource sharing and assumes basic knowledge of SQL and Snowflake. Start your LocalStack Snowflake emulator and connect to the Snowflake emulator using an SQL client.
+This guide is designed for users new to cross-database resource sharing and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to the Snowflake emulator using an SQL client.
 
 In this guide, we'll walk through a series of Snowflake SQL statements to create databases, schemas, tables, views, and a share.
 

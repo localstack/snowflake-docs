@@ -2,14 +2,14 @@
 title: "Snow CLI"
 linkTitle: "Snow CLI"
 weight: 2
-description: Use Snow CLI to interact with the LocalStack Snowflake emulator.
+description: Use Snow CLI to interact with the Snowflake emulator.
 ---
 
 ## Introduction
 
-Snow CLI is a command-line interface (CLI) for Snowflake. You can use Snow CLI to interact with the LocalStack Snowflake emulator. Snow CLI provides a set of commands to manage and interact with Snowflake accounts, databases, warehouses, and more.
+Snow CLI is a command-line interface (CLI) for Snowflake. You can use Snow CLI to interact with the Snowflake emulator. Snow CLI provides a set of commands to manage and interact with Snowflake accounts, databases, warehouses, and more.
 
-You can connect Snow CLI to the LocalStack Snowflake emulator using a connection profile. A connection profile is a set of parameters that define the connection to a Snowflake account. You can create, list, and test connection profiles using Snow CLI.
+You can connect Snow CLI to the Snowflake emulator using a connection profile. A connection profile is a set of parameters that define the connection to a Snowflake account. You can create, list, and test connection profiles using Snow CLI.
 
 {{<alert type="info">}}
 Snow CLI is still under [active development](https://docs.snowflake.com/LIMITEDACCESS/snowcli/snowcli-guide), hence the commands and features might change in future releases.
@@ -33,11 +33,11 @@ snow --help
 
 ## Configuring Snow CLI
 
-In this guide, you will learn how to configure Snow CLI to interact with the LocalStack Snowflake emulator using a `localstack` connection profile.
+In this guide, you will learn how to configure Snow CLI to interact with the Snowflake emulator using a `localstack` connection profile.
 
 ### Create a connection profile
 
-To configure Snow CLI to interact with the LocalStack Snowflake emulator, create a connection profile using the following command:
+To configure Snow CLI to interact with the Snowflake emulator, create a connection profile using the following command:
 
 {{< command >}}
 $ snow connection add \
@@ -73,7 +73,7 @@ The output should be:
 
 ### Test the connection
 
-To test the connection to the LocalStack Snowflake emulator, execute the following command:
+To test the connection to the Snowflake emulator, execute the following command:
 
 {{< command >}}
 $ snow connection test --connection localstack
@@ -101,7 +101,7 @@ To run a query using the connection profile, execute the following command:
 $ snow sql --query "CREATE DATABASE mytestdb;" --connection localstack
 {{< / command >}}
 
-You can see all the databases in your LocalStack Snowflake emulator using the following command:
+You can see all the databases in your Snowflake emulator using the following command:
 
 {{< command >}}
 $ snow sql --query "SHOW DATABASES;" --connection localstack
