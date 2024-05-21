@@ -12,7 +12,7 @@ Snowflake provides SQL commands to create and modify a `STREAMLIT` object. Strea
 LocalStack Snowflake emulator supports Streamlit, allowing you to create Streamlit applications using the same commands and syntax as the Snowflake service. The following operations are supported:
 
 - `CREATE STREAMLIT`
-- `SHOW STREAMLIT`
+- `SHOW STREAMLITS`
 - `DESCRIBE STREAMLIT`
 - `ALTER STREAMLIT`
 - `DROP STREAMLIT`
@@ -28,12 +28,7 @@ In this guide, you will create a Streamlit application, describe the Streamlit a
 You can create a Streamlit application using the `CREATE STREAMLIT` command. In this example, you can create a Streamlit application called `testapp` with a `@teststage` stage and a `test.py` script:
 
 ```sql
-+-----------------------------------------+                                     
-| ?COLUMN?                                |
-|-----------------------------------------|
-| Streamlit TESTAPP successfully created. |
-+-----------------------------------------+
-1 Row(s) produced. Time Elapsed: 0.191s
+CREATE STREAMLIT TESTAPP ROOT_LOCATION = '@teststage' MAIN_FILE = 'test.py';
 ```
 
 The output shows that the Streamlit application `testapp` was successfully created.
@@ -80,3 +75,27 @@ The output shows that the Streamlit application `testapp` was successfully dropp
 | Streamlit TESTAPP successfully dropped. |
 +-----------------------------------------+
 ```
+
+## Connecting Streamlit to Snowflake emulator
+
+To connect to the Snowflake emulator while developing locally, Streamlit provides a way to store secrets and connection details in the project.
+
+To run the sample against Snowflake emulator, your local `~/.streamlit/secrets.toml` should look like this:
+
+```toml
+[snowpark]
+user = "test"
+password = "test"
+account = "test"
+warehouse = "test"
+database = "STREAMLIT_DEMO"
+schema = "STREAMLIT_USER_PROFILER"
+role = "test"
+host = "snowflake.localhost.localstack.cloud"
+```
+
+## Limitations
+
+Currently, the Snowflake emulator supports CRUD operations to create Streamlit application entries in the Snowflake emulator, but support for hosting the Web UIs of these Streamlit apps is not yet available.
+
+Users can run Streamlit apps locally by using the `streamlit run main.py` command and connecting to the local Snowflake instance.
