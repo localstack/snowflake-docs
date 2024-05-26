@@ -18,23 +18,19 @@ This guide explains how to set up the Snowflake emulator and develop a Python pr
 
 ## Instructions
 
-Before you begin, install the Snowflake emulator and start the LocalStack container with the following commands:
+Before you begin, pull the Snowflake emulator image (`localstack/snowflake`) and start the LocalStack container:
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ localstack start
+$ IMAGE_NAME=localstack/snowflake:latest localstack start
 {{< / command >}}
 
 Check the emulator's availability by running:
 
 {{< command >}}
-$ localstack extensions list
+$ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
 <disable-copy>
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
-┃ Name                           ┃ Summary                         ┃ Version ┃ Author     ┃ Plugin name ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
-│ localstack-extension-snowflake │ LocalStack Extension: Snowflake │ 0.1.22  │ LocalStack │ snowflake   │
-└────────────────────────────────┴─────────────────────────────────┴─────────┴────────────┴─────────────┘
+{"success": true}
 </disable-copy>
 {{< / command >}}
 
