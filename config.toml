@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "LocalStack Docs"
+title = "LocalStack for Snowflake Docs"
 
 # Language settings
 contentDir = "content/en"
@@ -54,14 +54,14 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-101988473-1"
+id = ""
 
 # Language configuration
 
 [languages]
 [languages.en]
 title = "Docs"
-description = "LocalStack Documentation"
+description = "LocalStack for Snowflake Documentation"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
@@ -108,12 +108,7 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://localstack.cloud/docs/"
-
-# Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/localstack/docs"
-# An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/localstack/localstack"
+url_latest_version = "https://snowflake.localstack.cloud/"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -121,9 +116,6 @@ github_project_repo = "https://github.com/localstack/localstack"
 # Uncomment this if you have a newer GitHub repo with "main" as the default branch,
 # or specify a new value if you want to reference another branch in your GitHub links
 github_branch= "main"
-
-# Google Custom Search Engine ID. Remove or comment out to disable search.
-# gcs_engine_id = "d72aa9b2712488cc3"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
@@ -210,25 +202,6 @@ enable = true
 [params.localstack]
 # LocalStack specific configuration values
 latest_version = "3.1.0"
-
-[params.localstack.cli_links]
-# Configure the different download links for the cli-binary-download shortcode
-[[params.localstack.cli_links.macos]]
-	name = "Intel (AMD64)"
-	url = "https://github.com/localstack/localstack-cli/releases/download/v<latest-version>/localstack-cli-<latest-version>-darwin-amd64-onefile.tar.gz"
-	icon = "fab fa-apple"
-[[params.localstack.cli_links.linux]]
-	name = "x86-64"
-	url = "https://github.com/localstack/localstack-cli/releases/download/v<latest-version>/localstack-cli-<latest-version>-linux-amd64-onefile.tar.gz"
-	icon = "fab fa-linux"
-[[params.localstack.cli_links.linux]]
-	name = "ARM64"
-	url = "https://github.com/localstack/localstack-cli/releases/download/v<latest-version>/localstack-cli-<latest-version>-linux-arm64-onefile.tar.gz"
-	icon = "fab fa-linux"
-[[params.localstack.cli_links.windows]]
-	name = "64-bit"
-	url = "https://github.com/localstack/localstack-cli/releases/download/v<latest-version>/localstack-cli-<latest-version>-windows-amd64-onefile.zip"
-	icon = "fab fa-windows"
 
 # hugo module configuration
 
