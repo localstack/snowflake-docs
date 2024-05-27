@@ -45,5 +45,7 @@ The Web UI provides a detailed view of request/response traces of API calls. You
 You can forward queries from the Snowflake emulator to a real Snowflake instance using a proxy.
 
 To forward queries, click on the **Proxy** tab in the Web UI and enter the Snowflake account username & password. Click on the **Save** button to save the credentials. You can now run queries in the Query Editor, and they will be forwarded to the real Snowflake instance.
-
+{{< alert title="Important" color="danger" >}}
+Be careful when operating the proxy, as it can incur costs and access data in your real Snowflake account. For security reasons, please make sure to use scoped credentials with the least set of required permissions (ideally read-only). Only run the proxy against test/staging environments, and never against a production database.
+{{< /alert >}}
 <img src="proxy-web-ui.png" alt="Forward queries to a real Snowflake instance" width="700"/>
