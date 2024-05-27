@@ -16,7 +16,7 @@ This table provides a list of all Snowflake system-defined SQL functions, scalar
 The table is a work in progress and will be updated as more functions are implemented.
 |Function|Supported|Tested|
 |----|----|----|
-|ABS|❓|❓|
+|ABS|✅|✅|
 |ACOS|✅|✅|
 |ACOSH|❓|❓|
 |ADD_MONTHS|✅|✅|
@@ -88,7 +88,7 @@ The table is a work in progress and will be updated as more functions are implem
 |BASE64_ENCODE|❓|❓|
 |[ NOT ] BETWEEN|❓|❓|
 |BIT_LENGTH|❓|❓|
-|BITAND|❓|❓|
+|BITAND|✅|✅|
 |BITAND_AGG|❓|❓|
 |BITMAP_BIT_POSITION|❓|❓|
 |BITMAP_BUCKET_NUMBER|❓|❓|
@@ -208,7 +208,7 @@ The table is a work in progress and will be updated as more functions are implem
 |FACTORIAL|❓|❓|
 |FILTER|❓|❓|
 |FIRST_VALUE|❓|❓|
-|FLATTEN|❓|❓|
+|FLATTEN|✅|✅|
 |FLOOR|❓|❓|
 |FRESHNESS|❓|❓|
 |GENERATE_COLUMN_DESCRIPTION|❓|❓|
@@ -388,8 +388,8 @@ The table is a work in progress and will be updated as more functions are implem
 |QUERY_ACCELERATION_HISTORY|❓|❓|
 |QUERY_HISTORY , QUERY_HISTORY_BY_*|❓|❓|
 |RADIANS|✅|✅|
-|RANDOM|❓|❓|
-|RANDSTR|❓|❓|
+|RANDOM|✅|✅|
+|RANDSTR|✅|✅|
 |RANK|❓|❓|
 |RATIO_TO_REPORT|✅|✅|
 |[ NOT ] REGEXP|❓|❓|
