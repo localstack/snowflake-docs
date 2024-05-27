@@ -15,6 +15,10 @@ The Snowflake emulator provides a simple web user interface (UI) accessible via 
 
 Access the Web UI at [https://snowflake.localhost.localstack.cloud/](https://snowflake.localhost.localstack.cloud/). The Web UI is available only when the Snowflake emulator is running. It does not connect to the Snowflake service (except during a proxy connection) or any other external service on the Internet.
 
+{{< alert title="Info" >}}
+Please note that the LocalStack Snowflake Web UI is still experimental and under active development.
+{{< /alert >}}
+
 ## Getting started
 
 This guide is designed for users new to the Snowflake emulator Web UI. Start your Snowflake emulator using the following command:
