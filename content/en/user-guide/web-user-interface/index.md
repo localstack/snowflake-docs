@@ -7,7 +7,7 @@ description: Get started with LocalStack for Snowflake Web User Interface
 
 ## Introduction
 
-The Snowflake emulator provides a web user interface (UI) accessible via a web browser. The Web UI allows you to:
+The Snowflake emulator provides a simple web user interface (UI) accessible via a web browser. The Web UI allows you to:
 
 * Run SQL queries and view results using a Query Editor.
 * View detailed request/response traces of API calls.
