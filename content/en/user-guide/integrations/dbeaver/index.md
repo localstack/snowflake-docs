@@ -9,9 +9,9 @@ description: Use DBeaver to interact with the Snowflake emulator
 
 [DBeaver](https://dbeaver.io/) is a free and open-source universal database tool for developers, database administrators, and analysts. DBeaver provides a wide range of features, such as executing SQL statements, viewing and editing data, managing database objects, and more.
 
-The Snowflake emulator supports DBeaver, allowing you to interact with the Snowflake emulator using the same commands and syntax as the Snowflake service. You can use DBeaver to connect to the Snowflake emulator, execute SQL commands, and manage Snowflake resources locally, such as databases, schemas, tables, stages, and more.
+You can use DBeaver to interact with the Snowflake emulator using the same commands and syntax as the Snowflake service. With DBeaver, you can manage Snowflake resources locally, such as databases, schemas, tables, stages, and more.
 
-## Configuring SnowSQL
+## Configuring DBeaver
 
 In this guide, you will learn how to configure DBeaver to interact with the Snowflake emulator.
 
