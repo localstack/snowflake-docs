@@ -20,7 +20,7 @@ Access the Web UI at [https://snowflake.localhost.localstack.cloud/](https://sno
 This guide is designed for users new to the Snowflake emulator Web UI. Start your Snowflake emulator using the following command:
 
 ```bash
-EXTRA_CORS_ALLOWED_ORIGINS=* IMAGE_NAME=localstack/snowflake:latest localstack start
+EXTRA_CORS_ALLOWED_ORIGINS='*' IMAGE_NAME=localstack/snowflake DEBUG=1 localstack start
 ```
 
 The `EXTRA_CORS_ALLOWED_ORIGINS` environment variable is used to allow CORS requests from the Web UI. Navigate to [https://snowflake.localhost.localstack.cloud/](https://snowflake.localhost.localstack.cloud/) to access the Web UI.
