@@ -18,7 +18,7 @@ This guide explains how to set up the Snowflake emulator and develop a Python pr
 
 ## Instructions
 
-Before you begin, pull the Snowflake emulator image (`localstack/snowflake`) and start the LocalStack container:
+Before you begin, pull the Snowflake emulator image (`localstack/snowflake`) and start the container:
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
