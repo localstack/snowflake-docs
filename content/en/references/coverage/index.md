@@ -63,9 +63,9 @@ The table is a work in progress and will be updated as more functions are implem
 |ARRAYS_OVERLAP|✅|✅|
 |ARRAYS_TO_OBJECT|✅|✅|
 |AS_<object_type>|❓|❓|
-|AS_ARRAY|❓|❓|
-|AS_BINARY|❓|❓|
-|AS_BOOLEAN|❓|❓|
+|AS_ARRAY|✅|✅|
+|AS_BINARY|✅|✅|
+|AS_BOOLEAN|✅|✅|
 |AS_CHAR , AS_VARCHAR|❓|❓|
 |AS_DATE|❓|❓|
 |AS_DECIMAL , AS_NUMBER|❓|❓|
@@ -82,7 +82,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ATANH|❓|❓|
 |AUTO_REFRESH_REGISTRATION_HISTORY|❓|❓|
 |AUTOMATIC_CLUSTERING_HISTORY|❓|❓|
-|AVG|✅|✅|
+|AVG|❓|❓|
 |BASE64_DECODE_BINARY|❓|❓|
 |BASE64_DECODE_STRING|❓|❓|
 |BASE64_ENCODE|❓|❓|
@@ -95,12 +95,12 @@ The table is a work in progress and will be updated as more functions are implem
 |BITMAP_CONSTRUCT_AGG|❓|❓|
 |BITMAP_COUNT|❓|❓|
 |BITMAP_OR_AGG|❓|❓|
-|BITNOT|❓|❓|
-|BITOR|❓|❓|
+|BITNOT|✅|✅|
+|BITOR|✅|✅|
 |BITOR_AGG|❓|❓|
-|BITSHIFTLEFT|❓|❓|
-|BITSHIFTRIGHT|❓|❓|
-|BITXOR|❓|❓|
+|BITSHIFTLEFT|✅|✅|
+|BITSHIFTRIGHT|✅|✅|
+|BITXOR|✅|✅|
 |BITXOR_AGG|❓|❓|
 |BOOLAND|❓|❓|
 |BOOLAND_AGG|❓|❓|
@@ -117,7 +117,7 @@ The table is a work in progress and will be updated as more functions are implem
 |CEIL|❓|❓|
 |CHARINDEX|❓|❓|
 |CHECK_JSON|❓|❓|
-|CHECK_XML|❓|❓|
+|CHECK_XML|✅|✅|
 |CHR , CHAR|❓|❓|
 |COALESCE|❓|❓|
 |COLLATE|❓|❓|
@@ -138,6 +138,7 @@ The table is a work in progress and will be updated as more functions are implem
 |COT|❓|❓|
 |COUNT|✅|✅|
 |COUNT_IF|❓|❓|
+|COUNT_TOKENS (SNOWFLAKE.CORTEX)|❓|❓|
 |COVAR_POP|❓|❓|
 |COVAR_SAMP|❓|❓|
 |CUME_DIST|❓|❓|
@@ -184,7 +185,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DECRYPT_RAW|❓|❓|
 |DEGREES|❓|❓|
 |DENSE_RANK|❓|❓|
-|DIV0|❓|❓|
+|DIV0|✅|✅|
 |DIV0NULL|❓|❓|
 |DUPLICATE_COUNT|❓|❓|
 |DYNAMIC_TABLE_GRAPH_HISTORY|❓|❓|
@@ -193,6 +194,7 @@ The table is a work in progress and will be updated as more functions are implem
 |EDITDISTANCE|❓|❓|
 |EMAIL_INTEGRATION_CONFIG|❓|❓|
 |EMBED_TEXT_768 (SNOWFLAKE.CORTEX)|❓|❓|
+|EMBED_TEXT_1024 (SNOWFLAKE.CORTEX)|❓|❓|
 |ENCRYPT|❓|❓|
 |ENCRYPT_RAW|❓|❓|
 |ENDSWITH|❓|❓|
@@ -207,6 +209,11 @@ The table is a work in progress and will be updated as more functions are implem
 |EXTRACT_SEMANTIC_CATEGORIES|❓|❓|
 |FACTORIAL|❓|❓|
 |FILTER|❓|❓|
+|FINETUNE ('CANCEL') (SNOWFLAKE.CORTEX)|❓|❓|
+|FINETUNE ('CREATE') (SNOWFLAKE.CORTEX)|❓|❓|
+|FINETUNE ('DESCRIBE') (SNOWFLAKE.CORTEX)|❓|❓|
+|FINETUNE ('SHOW') (SNOWFLAKE.CORTEX)|❓|❓|
+|FINETUNE (SNOWFLAKE.CORTEX)|❓|❓|
 |FIRST_VALUE|❓|❓|
 |FLATTEN|✅|✅|
 |FLOOR|❓|❓|
@@ -255,8 +262,12 @@ The table is a work in progress and will be updated as more functions are implem
 |H3_POLYGON_TO_CELLS|❓|❓|
 |H3_POLYGON_TO_CELLS_STRINGS|❓|❓|
 |H3_STRING_TO_INT|❓|❓|
+|H3_TRY_COVERAGE|❓|❓|
+|H3_TRY_COVERAGE_STRINGS|❓|❓|
 |H3_TRY_GRID_DISTANCE|❓|❓|
 |H3_TRY_GRID_PATH|❓|❓|
+|H3_TRY_POLYGON_TO_CELLS|❓|❓|
+|H3_TRY_POLYGON_TO_CELLS_STRINGS|❓|❓|
 |H3_UNCOMPACT_CELLS|❓|❓|
 |H3_UNCOMPACT_CELLS_STRINGS|❓|❓|
 |HASH|❓|❓|
@@ -327,7 +338,7 @@ The table is a work in progress and will be updated as more functions are implem
 |LOGIN_HISTORY , LOGIN_HISTORY_BY_USER|❓|❓|
 |LOWER|❓|❓|
 |LPAD|❓|❓|
-|LTRIM|❓|❓|
+|LTRIM|✅|✅|
 |MAP_CAT|❓|❓|
 |MAP_CONTAINS_KEY|❓|❓|
 |MAP_DELETE|❓|❓|
@@ -359,8 +370,8 @@ The table is a work in progress and will be updated as more functions are implem
 |NTH_VALUE|❓|❓|
 |NTILE|❓|❓|
 |NULL_COUNT|❓|❓|
-|NULLIF|❓|❓|
-|NULLIFZERO|❓|❓|
+|NULLIF|✅|✅|
+|NULLIFZERO|✅|✅|
 |NVL|❓|❓|
 |NVL2|❓|❓|
 |OBJECT_AGG|❓|❓|
@@ -425,7 +436,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ROW_COUNT|❓|❓|
 |ROW_NUMBER|❓|❓|
 |RPAD|❓|❓|
-|RTRIM|❓|❓|
+|RTRIM|✅|✅|
 |RTRIMMED_LENGTH|❓|❓|
 |SCHEDULED_TIME|❓|❓|
 |SEARCH_OPTIMIZATION_HISTORY|❓|❓|
@@ -437,7 +448,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SHA2 , SHA2_HEX|❓|❓|
 |SHA2_BINARY|❓|❓|
 |SHOW_PYTHON_PACKAGES_DEPENDENCIES|❓|❓|
-|SIGN|❓|❓|
+|SIGN|✅|✅|
 |SIN|✅|✅|
 |SINH|❓|❓|
 |SKEW|❓|❓|
@@ -582,6 +593,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$LOG, SYSTEM$LOG_<level> (for Snowflake Scripting)|❓|❓|
 |SYSTEM$MIGRATE_SAML_IDP_REGISTRATION|❓|❓|
 |SYSTEM$PIPE_FORCE_RESUME|❓|❓|
+|SYSTEM$PIPE_REBINDING_WITH_NOTIFICATION_CHANNEL|❓|❓|
 |SYSTEM$PIPE_STATUS|❓|❓|
 |SYSTEM$QUERY_REFERENCE|❓|❓|
 |SYSTEM$REFERENCE|❓|❓|
@@ -646,12 +658,13 @@ The table is a work in progress and will be updated as more functions are implem
 |TRANSFORM|❓|❓|
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|❓|
 |TRANSLATE|❓|❓|
-|TRIM|❓|❓|
+|TRIM|✅|✅|
 |TRUNCATE , TRUNC|❓|❓|
 |TRUNC|❓|❓|
 |TRY_BASE64_DECODE_BINARY|❓|❓|
 |TRY_BASE64_DECODE_STRING|❓|❓|
 |TRY_CAST|❓|❓|
+|TRY_COMPLETE (SNOWFLAKE.CORTEX)|❓|❓|
 |TRY_DECRYPT|❓|❓|
 |TRY_DECRYPT_RAW|❓|❓|
 |TRY_HEX_DECODE_BINARY|❓|❓|
