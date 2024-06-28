@@ -137,7 +137,7 @@ The table is a work in progress and will be updated as more functions are implem
 |COSH|❓|❓|
 |COT|❓|❓|
 |COUNT|✅|✅|
-|COUNT_IF|❓|❓|
+|COUNT_IF|✅|✅|
 |COUNT_TOKENS (SNOWFLAKE.CORTEX)|❓|❓|
 |COVAR_POP|❓|❓|
 |COVAR_SAMP|❓|❓|
@@ -184,7 +184,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DECRYPT|❓|❓|
 |DECRYPT_RAW|❓|❓|
 |DEGREES|❓|❓|
-|DENSE_RANK|❓|❓|
+|DENSE_RANK|✅|✅|
 |DIV0|✅|✅|
 |DIV0NULL|❓|❓|
 |DUPLICATE_COUNT|❓|❓|
@@ -220,7 +220,7 @@ The table is a work in progress and will be updated as more functions are implem
 |FRESHNESS|❓|❓|
 |GENERATE_COLUMN_DESCRIPTION|❓|❓|
 |GENERATOR|✅|✅|
-|GET|❓|❓|
+|GET|✅|✅|
 |GET_ABSOLUTE_PATH|❓|❓|
 |GET_ANACONDA_PACKAGES_REPODATA|❓|❓|
 |GET_CONDITION_QUERY_UUID|❓|❓|
@@ -336,7 +336,7 @@ The table is a work in progress and will be updated as more functions are implem
 |LOCALTIMESTAMP|❓|❓|
 |LOG|❓|❓|
 |LOGIN_HISTORY , LOGIN_HISTORY_BY_USER|❓|❓|
-|LOWER|❓|❓|
+|LOWER|✅|✅|
 |LPAD|❓|❓|
 |LTRIM|✅|✅|
 |MAP_CAT|❓|❓|
@@ -372,13 +372,13 @@ The table is a work in progress and will be updated as more functions are implem
 |NULL_COUNT|❓|❓|
 |NULLIF|✅|✅|
 |NULLIFZERO|✅|✅|
-|NVL|❓|❓|
+|NVL|✅|✅|
 |NVL2|❓|❓|
 |OBJECT_AGG|❓|❓|
 |OBJECT_CONSTRUCT|✅|✅|
 |OBJECT_CONSTRUCT_KEEP_NULL|❓|❓|
-|OBJECT_DELETE|❓|❓|
-|OBJECT_INSERT|❓|❓|
+|OBJECT_DELETE|✅|✅|
+|OBJECT_INSERT|✅|✅|
 |OBJECT_KEYS|❓|❓|
 |OBJECT_PICK|❓|❓|
 |OCTET_LENGTH|❓|❓|
@@ -401,13 +401,13 @@ The table is a work in progress and will be updated as more functions are implem
 |RADIANS|✅|✅|
 |RANDOM|✅|✅|
 |RANDSTR|✅|✅|
-|RANK|❓|❓|
+|RANK|✅|✅|
 |RATIO_TO_REPORT|✅|✅|
 |[ NOT ] REGEXP|❓|❓|
 |REGEXP_COUNT|❓|❓|
 |REGEXP_INSTR|❓|❓|
 |REGEXP_LIKE|❓|❓|
-|REGEXP_REPLACE|❓|❓|
+|REGEXP_REPLACE|✅|✅|
 |REGEXP_SUBSTR|❓|❓|
 |REGEXP_SUBSTR_ALL|❓|❓|
 |REGR_AVGX|❓|❓|
@@ -434,7 +434,7 @@ The table is a work in progress and will be updated as more functions are implem
 |[ NOT ] RLIKE|❓|❓|
 |ROUND|❓|❓|
 |ROW_COUNT|❓|❓|
-|ROW_NUMBER|❓|❓|
+|ROW_NUMBER|✅|✅|
 |RPAD|❓|❓|
 |RTRIM|✅|✅|
 |RTRIMMED_LENGTH|❓|❓|
@@ -650,6 +650,7 @@ The table is a work in progress and will be updated as more functions are implem
 |TO_GEOMETRY|❓|❓|
 |TO_JSON|❓|❓|
 |TO_OBJECT|✅|✅|
+|TO_QUERY|❓|❓|
 |TO_TIME , TIME|❓|❓|
 |TO_TIMESTAMP / TO_TIMESTAMP_*|❓|❓|
 |TO_VARIANT|✅|✅|
@@ -683,7 +684,7 @@ The table is a work in progress and will be updated as more functions are implem
 |UNICODE|❓|❓|
 |UNIFORM|❓|❓|
 |UNIQUE_COUNT|❓|❓|
-|UPPER|❓|❓|
+|UPPER|✅|✅|
 |UUID_STRING|✅|✅|
 |VALIDATE|❓|❓|
 |VALIDATE_PIPE_LOAD|❓|❓|
