@@ -166,7 +166,6 @@ The table is a work in progress and will be updated as more functions are implem
 |CURRENT_VERSION|✅|✅|
 |CURRENT_WAREHOUSE|✅|✅|
 |DATA_METRIC_FUNCTION_REFERENCES|❓|❓|
-|DATA_METRIC_SCHEDULED_TIME|❓|❓|
 |DATA_TRANSFER_HISTORY|❓|❓|
 |DATABASE_REFRESH_HISTORY|❓|❓|
 |DATABASE_REFRESH_PROGRESS , DATABASE_REFRESH_PROGRESS_BY_JOB|❓|❓|
@@ -175,8 +174,8 @@ The table is a work in progress and will be updated as more functions are implem
 |DATE_FROM_PARTS|❓|❓|
 |DATE_PART|❓|❓|
 |DATE_TRUNC|❓|❓|
-|DATEADD|❓|❓|
-|DATEDIFF|❓|❓|
+|DATEADD|✅|✅|
+|DATEDIFF|✅|✅|
 |DAYNAME|✅|✅|
 |DECODE|❓|❓|
 |DECOMPRESS_BINARY|❓|❓|
@@ -187,7 +186,19 @@ The table is a work in progress and will be updated as more functions are implem
 |DENSE_RANK|✅|✅|
 |DIV0|✅|✅|
 |DIV0NULL|❓|❓|
-|DUPLICATE_COUNT|❓|❓|
+|AVG (system data metric function)|❓|❓|
+|BLANK_COUNT (system data metric function)|❓|❓|
+|BLANK_PERCENT (system data metric function)|❓|❓|
+|DATA_METRIC_SCHEDULED_TIME (system data metric function)|❓|❓|
+|DUPLICATE_COUNT (system data metric function)|❓|❓|
+|FRESHNESS (system data metric function)|❓|❓|
+|MAX (system data metric function)|❓|❓|
+|MIN (system data metric function)|❓|❓|
+|NULL_COUNT (system data metric function)|❓|❓|
+|NULL_PERCENT (system data metric function)|❓|❓|
+|ROW_COUNT (system data metric function)|❓|❓|
+|STDDEV (system data metric function)|❓|❓|
+|UNIQUE_COUNT (system data metric function)|❓|❓|
 |DYNAMIC_TABLE_GRAPH_HISTORY|❓|❓|
 |DYNAMIC_TABLE_REFRESH_HISTORY|❓|❓|
 |DYNAMIC_TABLES|❓|❓|
@@ -217,7 +228,6 @@ The table is a work in progress and will be updated as more functions are implem
 |FIRST_VALUE|❓|❓|
 |FLATTEN|✅|✅|
 |FLOOR|❓|❓|
-|FRESHNESS|❓|❓|
 |GENERATE_COLUMN_DESCRIPTION|❓|❓|
 |GENERATOR|✅|✅|
 |GET|✅|✅|
@@ -369,7 +379,6 @@ The table is a work in progress and will be updated as more functions are implem
 |NOTIFICATION_HISTORY|❓|❓|
 |NTH_VALUE|❓|❓|
 |NTILE|❓|❓|
-|NULL_COUNT|❓|❓|
 |NULLIF|✅|✅|
 |NULLIFZERO|✅|✅|
 |NVL|✅|✅|
@@ -422,7 +431,7 @@ The table is a work in progress and will be updated as more functions are implem
 |REGR_VALX|❓|❓|
 |REGR_VALY|❓|❓|
 |REPEAT|❓|❓|
-|REPLACE|❓|❓|
+|REPLACE|✅|✅|
 |REPLICATION_GROUP_REFRESH_HISTORY|❓|❓|
 |REPLICATION_GROUP_REFRESH_PROGRESS, REPLICATION_GROUP_REFRESH_PROGRESS_BY_JOB|❓|❓|
 |REPLICATION_GROUP_USAGE_HISTORY|❓|❓|
@@ -433,7 +442,6 @@ The table is a work in progress and will be updated as more functions are implem
 |RIGHT|✅|✅|
 |[ NOT ] RLIKE|❓|❓|
 |ROUND|❓|❓|
-|ROW_COUNT|❓|❓|
 |ROW_NUMBER|✅|✅|
 |RPAD|❓|❓|
 |RTRIM|✅|✅|
@@ -635,7 +643,7 @@ The table is a work in progress and will be updated as more functions are implem
 |TIME_FROM_PARTS|❓|❓|
 |TIME_SLICE|❓|❓|
 |TIMEADD|❓|❓|
-|TIMEDIFF|❓|❓|
+|TIMEDIFF|✅|✅|
 |TIMESTAMP_FROM_PARTS|❓|❓|
 |TIMESTAMPADD|❓|❓|
 |TIMESTAMPDIFF|❓|❓|
@@ -683,7 +691,6 @@ The table is a work in progress and will be updated as more functions are implem
 |TYPEOF|❓|❓|
 |UNICODE|❓|❓|
 |UNIFORM|❓|❓|
-|UNIQUE_COUNT|❓|❓|
 |UPPER|✅|✅|
 |UUID_STRING|✅|✅|
 |VALIDATE|❓|❓|
