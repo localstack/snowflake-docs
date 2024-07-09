@@ -44,6 +44,14 @@ CREATE STAGE test_stage
   FILE_FORMAT = (TYPE = 'JSON')
 ```
 
+### Create a table
+
+You can create a table using the `CREATE TABLE` command. The table is used to store the data that Snowpipe loads from the stage.
+
+```sql
+CREATE TABLE my_test_table(record VARIANT)
+```
+
 ### Create a pipe
 
 You can create a pipe using the `CREATE PIPE` command. The pipe is used to define the data loading process from the stage to the table.
