@@ -106,7 +106,7 @@ $ awslocal s3 cp test.json s3://test-bucket/
 
 ### Check the data
 
-You can check the data in the table using the following query:
+After uploading the file to the S3 bucket in the previous step, the contents of the JSON file should get inserted into the table automatically by the `test_pipe` pipe. You can check the data in the table using the following query:
 
 ```sql
 SELECT * FROM my_test_table
