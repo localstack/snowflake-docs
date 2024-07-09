@@ -96,6 +96,7 @@ Copy a JSON file to the S3 bucket to trigger the pipe to load the data into the 
 
 ```json
 {"name": "Alice", "age": 30}
+{"name": "Bob", "age": 42}
 ```
 
 Upload the file to the S3 bucket:
