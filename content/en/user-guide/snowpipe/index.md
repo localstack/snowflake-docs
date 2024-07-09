@@ -80,7 +80,7 @@ The `notification.json` file should contain the following configuration:
   "QueueConfigurations": [
     {
       "Id": "test-queue",
-      "QueueArn": "arn:aws:sqs:us-east-1:000000000000:localstack-sqs",
+      "QueueArn": "arn:aws:sqs:us-east-1:000000000000:sf-snowpipe-test",
       "Events": ["s3:ObjectCreated:*"]
     }
   ],
