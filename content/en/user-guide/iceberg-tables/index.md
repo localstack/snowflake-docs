@@ -78,3 +78,9 @@ The output should be:
 | foobar |
 +------+
 ```
+
+You can also list the content of the S3 bucket:
+
+{{< command >}}
+$ awslocal s3 ls --recursive s3://test-bucket/
+{{< / command >}}
