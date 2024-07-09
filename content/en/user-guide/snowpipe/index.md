@@ -84,7 +84,7 @@ The `notification.json` file should contain the following configuration:
       "Events": ["s3:ObjectCreated:*"]
     }
   ],
-  "EventBridgeConfiguration": {},
+  "EventBridgeConfiguration": {}
 }
 ```
 
