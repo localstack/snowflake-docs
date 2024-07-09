@@ -17,7 +17,7 @@ This guide is designed for users new to Iceberg tables and assumes basic knowled
 
 In this guide, you will create an external volume, and an Iceberg table to store and query data using the Iceberg table format.
 
-### Create a S3 bucket
+### Create an S3 bucket
 
 You can create a local S3 bucket using the `mb` command with the `awslocal` CLI.
 
