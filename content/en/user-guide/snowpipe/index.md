@@ -22,7 +22,7 @@ This guide is designed for users new to Snowpipe and assumes basic knowledge of 
 
 In this guide, you will create a stage, and a pipe to load data from a local S3 bucket into a Snowflake table.
 
-### Create a S3 bucket
+### Create an S3 bucket
 
 You can create a local S3 bucket using the `mb` command with the `awslocal` CLI.
 
