@@ -7,10 +7,10 @@ description: Basic installation guide to get started with LocalStack for Snowfla
 
 ## Introduction
 
-You can set up the Snowflake emulator by utilizing LocalStack's Extension mechanism. There are two methods for installing the Snowflake emulator:
+There are two methods for installing the Snowflake emulator:
 
-- [Snowflake Docker image](https://hub.docker.com/r/localstack/snowflake)
-- [LocalStack Extension mechanism](https://docs.localstack.cloud/user-guide/extensions/)
+- [Snowflake Docker image](https://hub.docker.com/r/localstack/snowflake) (recommended)
+- [LocalStack Extension mechanism](https://docs.localstack.cloud/user-guide/extensions/) (deprecated)
 
 {{<alert type="info">}}
 Before starting, ensure you have a valid `LOCALSTACK_AUTH_TOKEN` to access the Snowflake emulator. Refer to the [Auth Token guide](https://docs.localstack.cloud/getting-started/auth-token/) to obtain your Auth Token and specify it in the `LOCALSTACK_AUTH_TOKEN` environment variable.
@@ -18,7 +18,9 @@ Before starting, ensure you have a valid `LOCALSTACK_AUTH_TOKEN` to access the S
 
 ## Snowflake Docker image
 
-You can use the Snowflake Docker image to run the Snowflake emulator. The Snowflake Docker image is available on the [LocalStack Docker Hub](https://hub.docker.com/r/localstack/snowflake). To pull the Snowflake Docker image, execute the following command:
+You can use the Snowflake Docker image to run the Snowflake emulator - this is the recommended way of installation.
+The Snowflake Docker image is available on the [LocalStack Docker Hub](https://hub.docker.com/r/localstack/snowflake).
+To pull the Snowflake Docker image, execute the following command:
 
 {{< command >}}
 $ docker pull localstack/snowflake
@@ -80,12 +82,16 @@ $ docker-compose up
 
 To update the Snowflake Docker container, pull the latest image and restart the container. The `latest` tag is the nightly build of the Snowflake Docker image.
 
-## LocalStack Extension mechanism
+## LocalStack Extension mechanism (deprecated)
 
-The LocalStack Extension mechanism allows you to install and manage extensions for LocalStack. Extensions are packaged as Python applications, and can be installed using:
+The LocalStack Extension mechanism allows you to install and manage extensions for LocalStack.
+Extensions are packaged as Python applications, and can be installed using:
 
 1. [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
 2. [Docker Compose](https://docs.docker.com/compose/install/)
+
+Note that installing the Snowflake emulator via the LocalStack Extension mechanism is deprecated by now, and is not guaranteed to work with all versions of LocalStack.
+We recommend using the custom LocalStack Snowflake Docker image, described further above in this document.
 
 ### `localstack` CLI
 
@@ -161,10 +167,20 @@ $ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
 
 You can set the `SF_LOG=trace` environment variable in the Snowflake container to enable detailed trace logs that show all the request/response message.
 
-When using `docker-compose` then simply add this variable to the `environment` section of the YAML configuration file. If you're starting up via the `localstack start` CLI, then make sure to start up via the following configuration: 
+When using `docker-compose` then simply add this variable to the `environment` section of the YAML configuration file.
+If you're starting up via the `localstack start` CLI, then make sure to start up via the following configuration: 
 
 {{< command >}}
 $ DOCKER_FLAGS='-e SF_LOG=trace' DEBUG=1 IMAGE_NAME=localstack/snowflake localstack start
+{{< / command >}}
+
+### The `snowflake.localhost.localstack.cloud` hostname doesn't resolve on my machine, what can I do?
+
+On some systems, including some newer versions of MacOS, the domain name `snowflake.localhost.localstack.cloud` may not resolve properly.
+If you are encountering network issues and your Snowflake client drivers are unable to connect to the emulator, you may need to manually add the following entry to your `/etc/hosts` file:
+
+{{< command >}}
+127.0.0.1	snowflake.localhost.localstack.cloud
 {{< / command >}}
 
 ## Next steps
