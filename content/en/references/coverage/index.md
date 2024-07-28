@@ -70,7 +70,7 @@ The table is a work in progress and will be updated as more functions are implem
 |AS_DATE|❓|❓|
 |AS_DECIMAL , AS_NUMBER|❓|❓|
 |AS_DOUBLE , AS_REAL|❓|❓|
-|AS_INTEGER|❓|❓|
+|AS_INTEGER|✅|✅|
 |AS_OBJECT|❓|❓|
 |AS_TIME|❓|❓|
 |AS_TIMESTAMP_*|❓|❓|
@@ -446,8 +446,10 @@ The table is a work in progress and will be updated as more functions are implem
 |RPAD|❓|❓|
 |RTRIM|✅|✅|
 |RTRIMMED_LENGTH|❓|❓|
+|SANITIZE_WEBHOOK_CONTENT|❓|❓|
 |SCHEDULED_TIME|❓|❓|
 |SEARCH_OPTIMIZATION_HISTORY|❓|❓|
+|SEARCH_PREVIEW (SNOWFLAKE.CORTEX)|❓|❓|
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|❓|
 |SEQ1 / SEQ2 / SEQ4 / SEQ8|❓|❓|
 |SERVERLESS_TASK_HISTORY|❓|❓|
@@ -503,7 +505,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ST_INTERSECTS|❓|❓|
 |ST_ISVALID|❓|❓|
 |ST_LENGTH|❓|❓|
-|ST_MAKEGEOMPOINT , ST_GEOM_POINT|❓|❓|
+|ST_MAKEGEOMPOINT , ST_GEOMPOINT|❓|❓|
 |ST_MAKELINE|❓|❓|
 |ST_MAKEPOINT , ST_POINT|❓|❓|
 |ST_MAKEPOLYGON , ST_POLYGON|❓|❓|
