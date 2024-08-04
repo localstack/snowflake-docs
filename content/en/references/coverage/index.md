@@ -62,6 +62,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ARRAY_UNIQUE_AGG|❓|❓|
 |ARRAYS_OVERLAP|✅|✅|
 |ARRAYS_TO_OBJECT|✅|✅|
+|ARRAYS_ZIP|❓|❓|
 |AS_<object_type>|❓|❓|
 |AS_ARRAY|✅|✅|
 |AS_BINARY|✅|✅|
@@ -166,6 +167,7 @@ The table is a work in progress and will be updated as more functions are implem
 |CURRENT_VERSION|✅|✅|
 |CURRENT_WAREHOUSE|✅|✅|
 |DATA_METRIC_FUNCTION_REFERENCES|❓|❓|
+|DATA_QUALITY_MONITORING_RESULTS|❓|❓|
 |DATA_TRANSFER_HISTORY|❓|❓|
 |DATABASE_REFRESH_HISTORY|❓|❓|
 |DATABASE_REFRESH_PROGRESS , DATABASE_REFRESH_PROGRESS_BY_JOB|❓|❓|
