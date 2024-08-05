@@ -387,7 +387,7 @@ The table is a work in progress and will be updated as more functions are implem
 |NVL2|❓|❓|
 |OBJECT_AGG|❓|❓|
 |OBJECT_CONSTRUCT|✅|✅|
-|OBJECT_CONSTRUCT_KEEP_NULL|❓|❓|
+|OBJECT_CONSTRUCT_KEEP_NULL|✅|✅|
 |OBJECT_DELETE|✅|✅|
 |OBJECT_INSERT|✅|✅|
 |OBJECT_KEYS|❓|❓|
