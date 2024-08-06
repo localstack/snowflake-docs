@@ -23,7 +23,7 @@ In this guide, you will create a Hybrid table, display the Hybrid tables, and dr
 
 ### Create a Hybrid table
 
-You can create a Hybrid table using the `CREATE HYBRID TABLE` query. In this example, you can create a Hybrid table called `test-table`:
+You can create a Hybrid table using the `CREATE HYBRID TABLE` statement. In this example, you can create a Hybrid table called `test-table`:
 
 ```sql
 CREATE HYBRID TABLE "test-table"(id int, name TEXT, PRIMARY KEY(id));
@@ -41,7 +41,7 @@ The output should be:
 
 ### Show Hybrid tables
 
-You can display the Hybrid tables using the `SHOW HYBRID TABLES` query:
+You can display the Hybrid tables using the `SHOW HYBRID TABLES` statement:
 
 ```sql
 SHOW HYBRID TABLES LIKE 'test-table';
@@ -50,14 +50,16 @@ SHOW HYBRID TABLES LIKE 'test-table';
 The output should be:
 
 ```sql
++-----------------------------------------------------------------------------------------------------+
 created_on             |name      |database_name|schema_name|comment|rows|bytes|owner |owner_role_type|
 -----------------------+----------+-------------+-----------+-------+----+-----+------+---------------+
 1970-01-01 05:30:00.000|test-table|TEST         |PUBLIC     |       |1000| 1000|PUBLIC|ROLE           |
++-----------------------------------------------------------------------------------------------------+
 ```
 
 ### Drop Hybrid table
 
-You can drop the Hybrid table using the `DROP HYBRID TABLE` query:
+You can drop the Hybrid table using the `DROP HYBRID TABLE` statement:
 
 ```sql
 DROP TABLE "test-table";
