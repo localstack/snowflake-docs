@@ -309,6 +309,7 @@ The table is a work in progress and will be updated as more functions are implem
 |IS [ NOT ] DISTINCT FROM|❓|❓|
 |IS [ NOT ] NULL|❓|❓|
 |IS_<object_type>|❓|❓|
+|IS_APPLICATION_ROLE_IN_SESSION|❓|❓|
 |IS_ARRAY|✅|✅|
 |IS_BINARY|❓|❓|
 |IS_BOOLEAN|✅|✅|
@@ -320,7 +321,7 @@ The table is a work in progress and will be updated as more functions are implem
 |IS_GRANTED_TO_INVOKER_ROLE|❓|❓|
 |IS_INSTANCE_ROLE_IN_SESSION|❓|❓|
 |IS_INTEGER|❓|❓|
-|IS_NULL_VALUE|❓|❓|
+|IS_NULL_VALUE|✅|✅|
 |IS_OBJECT|❓|❓|
 |IS_ROLE_IN_SESSION|❓|❓|
 |IS_TIME|❓|❓|
@@ -390,7 +391,7 @@ The table is a work in progress and will be updated as more functions are implem
 |OBJECT_CONSTRUCT_KEEP_NULL|✅|✅|
 |OBJECT_DELETE|✅|✅|
 |OBJECT_INSERT|✅|✅|
-|OBJECT_KEYS|❓|❓|
+|OBJECT_KEYS|✅|✅|
 |OBJECT_PICK|❓|❓|
 |OCTET_LENGTH|❓|❓|
 |PARSE_IP|❓|❓|
