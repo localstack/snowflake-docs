@@ -120,7 +120,7 @@ The table is a work in progress and will be updated as more functions are implem
 |CHECK_JSON|❓|❓|
 |CHECK_XML|✅|✅|
 |CHR , CHAR|❓|❓|
-|COALESCE|❓|❓|
+|COALESCE|✅|✅|
 |COLLATE|❓|❓|
 |COLLATION|❓|❓|
 |COMPLETE (SNOWFLAKE.CORTEX)|❓|❓|
@@ -175,7 +175,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DATABASE_STORAGE_USAGE_HISTORY|❓|❓|
 |DATE_FROM_PARTS|❓|❓|
 |DATE_PART|❓|❓|
-|DATE_TRUNC|❓|❓|
+|DATE_TRUNC|✅|✅|
 |DATEADD|✅|✅|
 |DATEDIFF|✅|✅|
 |DAYNAME|✅|✅|
@@ -248,7 +248,7 @@ The table is a work in progress and will be updated as more functions are implem
 |GETDATE|❓|❓|
 |GETVARIABLE|❓|❓|
 |GREATEST|❓|❓|
-|GREATEST_IGNORE_NULLS|❓|❓|
+|GREATEST_IGNORE_NULLS|✅|✅|
 |GROUPING|❓|❓|
 |GROUPING_ID|❓|❓|
 |H3_CELL_TO_BOUNDARY|❓|❓|
@@ -337,7 +337,7 @@ The table is a work in progress and will be updated as more functions are implem
 |LAST_VALUE|❓|❓|
 |LEAD|❓|❓|
 |LEAST|❓|❓|
-|LEAST_IGNORE_NULLS|❓|❓|
+|LEAST_IGNORE_NULLS|✅|✅|
 |LEFT|❓|❓|
 |LENGTH, LEN|❓|❓|
 |[ NOT ] LIKE|❓|❓|
@@ -385,7 +385,7 @@ The table is a work in progress and will be updated as more functions are implem
 |NULLIF|✅|✅|
 |NULLIFZERO|✅|✅|
 |NVL|✅|✅|
-|NVL2|❓|❓|
+|NVL2|✅|✅|
 |OBJECT_AGG|❓|❓|
 |OBJECT_CONSTRUCT|✅|✅|
 |OBJECT_CONSTRUCT_KEEP_NULL|✅|✅|
@@ -394,7 +394,7 @@ The table is a work in progress and will be updated as more functions are implem
 |OBJECT_KEYS|✅|✅|
 |OBJECT_PICK|❓|❓|
 |OCTET_LENGTH|❓|❓|
-|PARSE_IP|❓|❓|
+|PARSE_IP|✅|✅|
 |PARSE_JSON|✅|✅|
 |PARSE_URL|❓|❓|
 |PARSE_XML|❓|❓|
@@ -451,6 +451,7 @@ The table is a work in progress and will be updated as more functions are implem
 |RTRIMMED_LENGTH|❓|❓|
 |SANITIZE_WEBHOOK_CONTENT|❓|❓|
 |SCHEDULED_TIME|❓|❓|
+|SEARCH|❓|❓|
 |SEARCH_OPTIMIZATION_HISTORY|❓|❓|
 |SEARCH_PREVIEW (SNOWFLAKE.CORTEX)|❓|❓|
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|❓|
@@ -565,6 +566,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$CURRENT_USER_TASK_NAME|❓|❓|
 |SYSTEM$DATABASE_REFRESH_HISTORY — Deprecated|❓|❓|
 |SYSTEM$DATABASE_REFRESH_PROGRESS , SYSTEM$DATABASE_REFRESH_PROGRESS_BY_JOB — Deprecated|❓|❓|
+|SYSTEM$DEPROVISION_PRIVATELINK_ENDPOINT|❓|❓|
 |SYSTEM$DISABLE_BEHAVIOR_CHANGE_BUNDLE|❓|❓|
 |SYSTEM$DISABLE_DATABASE_REPLICATION|❓|❓|
 |SYSTEM$ENABLE_BEHAVIOR_CHANGE_BUNDLE|❓|❓|
@@ -592,8 +594,9 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$GET_PRIVATELINK|❓|❓|
 |SYSTEM$GET_PRIVATELINK_AUTHORIZED_ENDPOINTS|❓|❓|
 |SYSTEM$GET_PRIVATELINK_CONFIG|❓|❓|
+|SYSTEM$GET_PRIVATELINK_ENDPOINTS_INFO|❓|❓|
 |SYSTEM$GET_SERVICE_LOGS|❓|❓|
-|SYSTEM$GET_SERVICE_STATUS|❓|❓|
+|SYSTEM$GET_SERVICE_STATUS — Deprecated|❓|❓|
 |SYSTEM$GET_SNOWFLAKE_PLATFORM_INFO|❓|❓|
 |SYSTEM$GET_TAG|❓|❓|
 |SYSTEM$GET_TAG_ALLOWED_VALUES|❓|❓|
@@ -612,10 +615,12 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$PIPE_FORCE_RESUME|❓|❓|
 |SYSTEM$PIPE_REBINDING_WITH_NOTIFICATION_CHANNEL|❓|❓|
 |SYSTEM$PIPE_STATUS|❓|❓|
+|SYSTEM$PROVISION_PRIVATELINK_ENDPOINT|❓|❓|
 |SYSTEM$QUERY_REFERENCE|❓|❓|
 |SYSTEM$REFERENCE|❓|❓|
 |SYSTEM$REGISTER_CMK_INFO|❓|❓|
 |SYSTEM$REGISTRY_LIST_IMAGES — Deprecated|❓|❓|
+|SYSTEM$RESTORE_PRIVATELINK_ENDPOINT|❓|❓|
 |SYSTEM$REVOKE_PRIVATELINK|❓|❓|
 |SYSTEM$REVOKE_STAGE_PRIVATELINK_ACCESS|❓|❓|
 |SYSTEM$SET_APPLICATION_RESTRICTED_FEATURE_ACCESS|❓|❓|
