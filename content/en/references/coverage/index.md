@@ -143,6 +143,7 @@ The table is a work in progress and will be updated as more functions are implem
 |COVAR_POP|❓|❓|
 |COVAR_SAMP|❓|❓|
 |CUME_DIST|❓|❓|
+|CUMULATIVE_PRIVACY_LOSSES|❓|❓|
 |CURRENT_ACCOUNT|✅|✅|
 |CURRENT_ACCOUNT_NAME|✅|✅|
 |CURRENT_AVAILABLE_ROLES|✅|✅|
@@ -173,7 +174,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DATABASE_REFRESH_PROGRESS , DATABASE_REFRESH_PROGRESS_BY_JOB|❓|❓|
 |DATABASE_REPLICATION_USAGE_HISTORY|❓|❓|
 |DATABASE_STORAGE_USAGE_HISTORY|❓|❓|
-|DATE_FROM_PARTS|❓|❓|
+|DATE_FROM_PARTS|✅|✅|
 |DATE_PART|❓|❓|
 |DATE_TRUNC|✅|✅|
 |DATEADD|✅|✅|
@@ -201,6 +202,8 @@ The table is a work in progress and will be updated as more functions are implem
 |ROW_COUNT (system data metric function)|❓|❓|
 |STDDEV (system data metric function)|❓|❓|
 |UNIQUE_COUNT (system data metric function)|❓|❓|
+|DP_ESTIMATE_HIGH|❓|❓|
+|DP_ESTIMATE_LOW|❓|❓|
 |DYNAMIC_TABLE_GRAPH_HISTORY|❓|❓|
 |DYNAMIC_TABLE_REFRESH_HISTORY|❓|❓|
 |DYNAMIC_TABLES|❓|❓|
@@ -229,7 +232,7 @@ The table is a work in progress and will be updated as more functions are implem
 |FINETUNE (SNOWFLAKE.CORTEX)|❓|❓|
 |FIRST_VALUE|❓|❓|
 |FLATTEN|✅|✅|
-|FLOOR|❓|❓|
+|FLOOR|✅|✅|
 |GENERATE_COLUMN_DESCRIPTION|❓|❓|
 |GENERATOR|✅|✅|
 |GET|✅|✅|
@@ -331,7 +334,7 @@ The table is a work in progress and will be updated as more functions are implem
 |KURTOSIS|❓|❓|
 |LAG|❓|❓|
 |LAST_DAY|❓|❓|
-|LAST_QUERY_ID|❓|❓|
+|LAST_QUERY_ID|✅|✅|
 |LAST_SUCCESSFUL_SCHEDULED_TIME|❓|❓|
 |LAST_TRANSACTION|❓|❓|
 |LAST_VALUE|❓|❓|
@@ -360,7 +363,7 @@ The table is a work in progress and will be updated as more functions are implem
 |MAP_PICK|❓|❓|
 |MAP_SIZE|❓|❓|
 |MATERIALIZED_VIEW_REFRESH_HISTORY|❓|❓|
-|MAX|❓|❓|
+|MAX|✅|✅|
 |MAX_BY|✅|✅|
 |MD5 , MD5_HEX|❓|❓|
 |MD5_BINARY|❓|❓|
@@ -368,7 +371,7 @@ The table is a work in progress and will be updated as more functions are implem
 |MD5_NUMBER_LOWER64|❓|❓|
 |MD5_NUMBER_UPPER64|❓|❓|
 |MEDIAN|❓|❓|
-|MIN|❓|❓|
+|MIN|✅|✅|
 |MIN_BY|✅|✅|
 |MINHASH|❓|❓|
 |MINHASH_COMBINE|❓|❓|
@@ -469,7 +472,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SOUNDEX|❓|❓|
 |SOUNDEX_P123|❓|❓|
 |SPACE|❓|❓|
-|SPLIT|❓|❓|
+|SPLIT|✅|✅|
 |SPLIT_PART|❓|❓|
 |SPLIT_TO_TABLE|❓|❓|
 |SQRT|❓|❓|
