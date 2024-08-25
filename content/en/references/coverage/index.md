@@ -304,7 +304,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ILIKE ANY|❓|❓|
 |[ NOT ] IN|❓|❓|
 |INFER_SCHEMA|✅|✅|
-|INITCAP|❓|❓|
+|INITCAP|✅|✅|
 |INSERT|✅|✅|
 |INTEGRATION|❓|❓|
 |INVOKER_ROLE|❓|❓|
