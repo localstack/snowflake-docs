@@ -22,7 +22,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ADD_MONTHS|✅|✅|
 |ALERT_HISTORY|❓|❓|
 |ALL_USER_NAMES|❓|❓|
-|ANY_VALUE|❓|❓|
+|ANY_VALUE|✅|✅|
 |APPLICATION_JSON|❓|❓|
 |APPROX_COUNT_DISTINCT|❓|❓|
 |APPROX_PERCENTILE|❓|❓|
@@ -130,7 +130,7 @@ The table is a work in progress and will be updated as more functions are implem
 |CONCAT_WS|❓|❓|
 |CONDITIONAL_CHANGE_EVENT|❓|❓|
 |CONDITIONAL_TRUE_EVENT|❓|❓|
-|CONTAINS|❓|❓|
+|CONTAINS|✅|✅|
 |CONVERT_TIMEZONE|✅|✅|
 |COPY_HISTORY|❓|❓|
 |CORR|❓|❓|
@@ -178,7 +178,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DATE_PART|❓|❓|
 |DATE_TRUNC|✅|✅|
 |DATEADD|✅|✅|
-|DATEDIFF|✅|✅|
+|DATEDIFF|❓|❓|
 |DAYNAME|✅|✅|
 |DECODE|❓|❓|
 |DECOMPRESS_BINARY|❓|❓|
@@ -285,7 +285,7 @@ The table is a work in progress and will be updated as more functions are implem
 |H3_TRY_POLYGON_TO_CELLS_STRINGS|❓|❓|
 |H3_UNCOMPACT_CELLS|❓|❓|
 |H3_UNCOMPACT_CELLS_STRINGS|❓|❓|
-|HASH|❓|❓|
+|HASH|✅|✅|
 |HASH_AGG|❓|❓|
 |HAVERSINE|❓|❓|
 |HEX_DECODE_BINARY|❓|❓|
@@ -339,7 +339,7 @@ The table is a work in progress and will be updated as more functions are implem
 |LAST_TRANSACTION|❓|❓|
 |LAST_VALUE|❓|❓|
 |LEAD|❓|❓|
-|LEAST|❓|❓|
+|LEAST|✅|✅|
 |LEAST_IGNORE_NULLS|✅|✅|
 |LEFT|❓|❓|
 |LENGTH, LEN|❓|❓|
@@ -376,7 +376,7 @@ The table is a work in progress and will be updated as more functions are implem
 |MINHASH|❓|❓|
 |MINHASH_COMBINE|❓|❓|
 |MOD|✅|✅|
-|MODE|❓|❓|
+|MODE|✅|✅|
 |MONTHNAME|✅|✅|
 |MONTHS_BETWEEN|❓|❓|
 |NETWORK_RULE_REFERENCES|❓|❓|
@@ -455,6 +455,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SANITIZE_WEBHOOK_CONTENT|❓|❓|
 |SCHEDULED_TIME|❓|❓|
 |SEARCH|❓|❓|
+|SEARCH_IP|❓|❓|
 |SEARCH_OPTIMIZATION_HISTORY|❓|❓|
 |SEARCH_PREVIEW (SNOWFLAKE.CORTEX)|❓|❓|
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|❓|
@@ -545,7 +546,7 @@ The table is a work in progress and will be updated as more functions are implem
 |STRTOK_SPLIT_TO_TABLE|❓|❓|
 |STRTOK_TO_ARRAY|❓|❓|
 |SUBSTR , SUBSTRING|❓|❓|
-|SUM|❓|❓|
+|SUM|✅|✅|
 |SUMMARIZE (SNOWFLAKE.CORTEX)|❓|❓|
 |SYSDATE|❓|❓|
 |SYSTEM$ABORT_SESSION|❓|❓|
@@ -684,7 +685,6 @@ The table is a work in progress and will be updated as more functions are implem
 |TO_TIMESTAMP / TO_TIMESTAMP_*|❓|❓|
 |TO_VARIANT|✅|✅|
 |TO_XML|❓|❓|
-|TOP_INSIGHTS (SNOWFLAKE.ML)|❓|❓|
 |TRANSFORM|❓|❓|
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|❓|
 |TRANSLATE|❓|❓|
