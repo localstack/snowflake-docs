@@ -67,10 +67,10 @@ The table is a work in progress and will be updated as more functions are implem
 |AS_ARRAY|✅|✅|
 |AS_BINARY|✅|✅|
 |AS_BOOLEAN|✅|✅|
-|AS_CHAR , AS_VARCHAR|❓|❓|
+|AS_CHAR, AS_VARCHAR|❓|❓|
 |AS_DATE|❓|❓|
-|AS_DECIMAL , AS_NUMBER|❓|❓|
-|AS_DOUBLE , AS_REAL|❓|❓|
+|AS_DECIMAL, AS_NUMBER|❓|❓|
+|AS_DOUBLE, AS_REAL|❓|❓|
 |AS_INTEGER|✅|✅|
 |AS_OBJECT|❓|❓|
 |AS_TIME|❓|❓|
@@ -113,20 +113,20 @@ The table is a work in progress and will be updated as more functions are implem
 |BUILD_SCOPED_FILE_URL|❓|❓|
 |BUILD_STAGE_FILE_URL|❓|❓|
 |CASE|❓|❓|
-|CAST , ::|❓|❓|
+|CAST|❓|❓|
 |CBRT|❓|❓|
 |CEIL|❓|❓|
 |CHARINDEX|❓|❓|
 |CHECK_JSON|❓|❓|
 |CHECK_XML|✅|✅|
-|CHR , CHAR|❓|❓|
+|CHR, CHAR|❓|❓|
 |COALESCE|✅|✅|
 |COLLATE|❓|❓|
 |COLLATION|❓|❓|
 |COMPLETE (SNOWFLAKE.CORTEX)|❓|❓|
 |COMPLETE_TASK_GRAPHS|❓|❓|
 |COMPRESS|❓|❓|
-|CONCAT , |||✅|✅|
+|CONCAT|✅|✅|
 |CONCAT_WS|❓|❓|
 |CONDITIONAL_CHANGE_EVENT|❓|❓|
 |CONDITIONAL_TRUE_EVENT|❓|❓|
@@ -171,7 +171,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DATA_QUALITY_MONITORING_RESULTS|❓|❓|
 |DATA_TRANSFER_HISTORY|❓|❓|
 |DATABASE_REFRESH_HISTORY|❓|❓|
-|DATABASE_REFRESH_PROGRESS , DATABASE_REFRESH_PROGRESS_BY_JOB|❓|❓|
+|DATABASE_REFRESH_PROGRESS, DATABASE_REFRESH_PROGRESS_BY_JOB|❓|❓|
 |DATABASE_REPLICATION_USAGE_HISTORY|❓|❓|
 |DATABASE_STORAGE_USAGE_HISTORY|❓|❓|
 |DATE_FROM_PARTS|✅|✅|
@@ -242,7 +242,7 @@ The table is a work in progress and will be updated as more functions are implem
 |GET_DDL|❓|❓|
 |GET_IGNORE_CASE|❓|❓|
 |GET_OBJECT_REFERENCES|❓|❓|
-|GET_PATH , :|❓|❓|
+|GET_PATH|❓|❓|
 |GET_PRESIGNED_URL|❓|❓|
 |GET_QUERY_OPERATOR_STATS|❓|❓|
 |GET_RELATIVE_PATH|❓|❓|
@@ -316,11 +316,11 @@ The table is a work in progress and will be updated as more functions are implem
 |IS_ARRAY|✅|✅|
 |IS_BINARY|❓|❓|
 |IS_BOOLEAN|✅|✅|
-|IS_CHAR , IS_VARCHAR|❓|❓|
+|IS_CHAR, IS_VARCHAR|❓|❓|
 |IS_DATABASE_ROLE_IN_SESSION|❓|❓|
-|IS_DATE , IS_DATE_VALUE|❓|❓|
+|IS_DATE, IS_DATE_VALUE|❓|❓|
 |IS_DECIMAL|❓|❓|
-|IS_DOUBLE , IS_REAL|❓|❓|
+|IS_DOUBLE, IS_REAL|❓|❓|
 |IS_GRANTED_TO_INVOKER_ROLE|❓|❓|
 |IS_INSTANCE_ROLE_IN_SESSION|❓|❓|
 |IS_INTEGER|❓|❓|
@@ -351,7 +351,7 @@ The table is a work in progress and will be updated as more functions are implem
 |LOCALTIME|❓|❓|
 |LOCALTIMESTAMP|❓|❓|
 |LOG|❓|❓|
-|LOGIN_HISTORY , LOGIN_HISTORY_BY_USER|❓|❓|
+|LOGIN_HISTORY, LOGIN_HISTORY_BY_USER|❓|❓|
 |LOWER|✅|✅|
 |LPAD|❓|❓|
 |LTRIM|✅|✅|
@@ -365,7 +365,7 @@ The table is a work in progress and will be updated as more functions are implem
 |MATERIALIZED_VIEW_REFRESH_HISTORY|❓|❓|
 |MAX|✅|✅|
 |MAX_BY|✅|✅|
-|MD5 , MD5_HEX|❓|❓|
+|MD5, MD5_HEX|❓|❓|
 |MD5_BINARY|❓|❓|
 |MD5_NUMBER — Obsoleted|❓|❓|
 |MD5_NUMBER_LOWER64|❓|❓|
@@ -412,7 +412,7 @@ The table is a work in progress and will be updated as more functions are implem
 |POW, POWER|❓|❓|
 |PREVIOUS_DAY|❓|❓|
 |QUERY_ACCELERATION_HISTORY|❓|❓|
-|QUERY_HISTORY , QUERY_HISTORY_BY_*|❓|❓|
+|QUERY_HISTORY, QUERY_HISTORY_BY_*|❓|❓|
 |RADIANS|✅|✅|
 |RANDOM|✅|✅|
 |RANDSTR|✅|✅|
@@ -461,9 +461,9 @@ The table is a work in progress and will be updated as more functions are implem
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|❓|
 |SEQ1 / SEQ2 / SEQ4 / SEQ8|❓|❓|
 |SERVERLESS_TASK_HISTORY|❓|❓|
-|SHA1 , SHA1_HEX|❓|❓|
+|SHA1, SHA1_HEX|❓|❓|
 |SHA1_BINARY|❓|❓|
-|SHA2 , SHA2_HEX|❓|❓|
+|SHA2, SHA2_HEX|❓|❓|
 |SHA2_BINARY|❓|❓|
 |SHOW_PYTHON_PACKAGES_DEPENDENCIES|❓|❓|
 |SIGN|✅|✅|
@@ -482,8 +482,8 @@ The table is a work in progress and will be updated as more functions are implem
 |ST_ASEWKB|❓|❓|
 |ST_ASEWKT|❓|❓|
 |ST_ASGEOJSON|❓|❓|
-|ST_ASWKB , ST_ASBINARY|❓|❓|
-|ST_ASWKT , ST_ASTEXT|❓|❓|
+|ST_ASWKB, ST_ASBINARY|❓|❓|
+|ST_ASWKT, ST_ASTEXT|❓|❓|
 |ST_AZIMUTH|❓|❓|
 |ST_BUFFER|❓|❓|
 |ST_CENTROID|❓|❓|
@@ -513,12 +513,12 @@ The table is a work in progress and will be updated as more functions are implem
 |ST_INTERSECTS|❓|❓|
 |ST_ISVALID|❓|❓|
 |ST_LENGTH|❓|❓|
-|ST_MAKEGEOMPOINT , ST_GEOMPOINT|❓|❓|
+|ST_MAKEGEOMPOINT, ST_GEOMPOINT|❓|❓|
 |ST_MAKELINE|❓|❓|
-|ST_MAKEPOINT , ST_POINT|❓|❓|
-|ST_MAKEPOLYGON , ST_POLYGON|❓|❓|
+|ST_MAKEPOINT, ST_POINT|❓|❓|
+|ST_MAKEPOLYGON, ST_POLYGON|❓|❓|
 |ST_MAKEPOLYGONORIENTED|❓|❓|
-|ST_NPOINTS , ST_NUMPOINTS|❓|❓|
+|ST_NPOINTS, ST_NUMPOINTS|❓|❓|
 |ST_PERIMETER|❓|❓|
 |ST_POINTN|❓|❓|
 |ST_SETSRID|❓|❓|
@@ -545,7 +545,7 @@ The table is a work in progress and will be updated as more functions are implem
 |STRTOK|❓|❓|
 |STRTOK_SPLIT_TO_TABLE|❓|❓|
 |STRTOK_TO_ARRAY|❓|❓|
-|SUBSTR , SUBSTRING|❓|❓|
+|SUBSTR, SUBSTRING|❓|❓|
 |SUM|✅|✅|
 |SUMMARIZE (SNOWFLAKE.CORTEX)|❓|❓|
 |SYSDATE|❓|❓|
@@ -569,7 +569,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$CREATE_BILLING_EVENT|❓|❓|
 |SYSTEM$CURRENT_USER_TASK_NAME|❓|❓|
 |SYSTEM$DATABASE_REFRESH_HISTORY — Deprecated|❓|❓|
-|SYSTEM$DATABASE_REFRESH_PROGRESS , SYSTEM$DATABASE_REFRESH_PROGRESS_BY_JOB — Deprecated|❓|❓|
+|SYSTEM$DATABASE_REFRESH_PROGRESS, SYSTEM$DATABASE_REFRESH_PROGRESS_BY_JOB — Deprecated|❓|❓|
 |SYSTEM$DEPROVISION_PRIVATELINK_ENDPOINT|❓|❓|
 |SYSTEM$DISABLE_BEHAVIOR_CHANGE_BUNDLE|❓|❓|
 |SYSTEM$DISABLE_DATABASE_REPLICATION|❓|❓|
@@ -672,16 +672,16 @@ The table is a work in progress and will be updated as more functions are implem
 |TO_ARRAY|✅|✅|
 |TO_BINARY|✅|✅|
 |TO_BOOLEAN|✅|✅|
-|TO_CHAR , TO_VARCHAR|❓|❓|
-|TO_DATE , DATE|❓|❓|
-|TO_DECIMAL , TO_NUMBER , TO_NUMERIC|❓|❓|
+|TO_CHAR, TO_VARCHAR|❓|❓|
+|TO_DATE, DATE|❓|❓|
+|TO_DECIMAL, TO_NUMBER, TO_NUMERIC|❓|❓|
 |TO_DOUBLE|❓|❓|
 |TO_GEOGRAPHY|❓|❓|
 |TO_GEOMETRY|❓|❓|
 |TO_JSON|❓|❓|
 |TO_OBJECT|✅|✅|
 |TO_QUERY|❓|❓|
-|TO_TIME , TIME|❓|❓|
+|TO_TIME, TIME|❓|❓|
 |TO_TIMESTAMP / TO_TIMESTAMP_*|❓|❓|
 |TO_VARIANT|✅|✅|
 |TO_XML|❓|❓|
@@ -689,7 +689,7 @@ The table is a work in progress and will be updated as more functions are implem
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|❓|
 |TRANSLATE|❓|❓|
 |TRIM|✅|✅|
-|TRUNCATE , TRUNC|❓|❓|
+|TRUNCATE, TRUNC|❓|❓|
 |TRUNC|❓|❓|
 |TRY_BASE64_DECODE_BINARY|❓|❓|
 |TRY_BASE64_DECODE_STRING|❓|❓|
@@ -718,7 +718,7 @@ The table is a work in progress and will be updated as more functions are implem
 |VALIDATE_PIPE_LOAD|❓|❓|
 |VAR_POP|❓|❓|
 |VAR_SAMP|❓|❓|
-|VARIANCE , VARIANCE_SAMP|❓|❓|
+|VARIANCE, VARIANCE_SAMP|❓|❓|
 |VARIANCE_POP|❓|❓|
 |VECTOR_COSINE_SIMILARITY|❓|❓|
 |VECTOR_INNER_PRODUCT|❓|❓|
