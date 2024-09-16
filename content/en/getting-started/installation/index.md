@@ -48,7 +48,9 @@ To start the Snowflake Docker container using the `docker` CLI, execute the foll
 {{< command >}}
 $ docker run \
     --rm -it \
-    -p 4566:4566 \
+    -p 127.0.0.1:4566:4566 \
+    -p 127.0.0.1:4510-4559:4510-4559 \
+    -p 127.0.0.1:443:443 \
     -e LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:?} \
     localstack/snowflake
 {{< / command >}}
@@ -66,6 +68,8 @@ services:
     image: localstack/snowflake
     ports:
       - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4559:4510-4559"
+      - "127.0.0.1:443:443"
     environment:
       - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:?}
     volumes:
