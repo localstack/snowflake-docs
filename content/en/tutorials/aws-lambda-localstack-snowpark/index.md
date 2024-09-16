@@ -138,24 +138,13 @@ Start your LocalStack container in your preferred terminal/shell.
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ DEBUG=1 LAMBDA_RUNTIME_ENVIRONMENT_TIMEOUT=180 localstack start
+$ DEBUG=1 \
+  LAMBDA_RUNTIME_ENVIRONMENT_TIMEOUT=180 \
+  IMAGE_NAME=localstack/snowflake \
+  localstack start
 {{< / command >}}
 
 > The `DEBUG=1` environment variable is set to enable debug logs. It would allow you to see the SQL queries executed by the Lambda function. The `LAMBDA_RUNTIME_ENVIRONMENT_TIMEOUT` environment variable is set to increase the Lambda function's timeout to 180 seconds.
-
-Check the emulator's availability by running:
-
-{{< command >}}
-$ localstack extensions list
-<disable-copy>
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
-┃ Name                         ┃ Summary                       ┃ Version ┃ Author     ┃ Plugin name ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
-│ localstack-extension-snowfl… │ LocalStack Extension:         │ 0.1.22  │ LocalStack │ snowflake   │
-│                              │ Snowflake                     │         │            │             │
-└──────────────────────────────┴───────────────────────────────┴─────────┴────────────┴─────────────┘
-</disable-copy>
-{{< / command >}}
 
 ## Deploy the Lambda function
 
