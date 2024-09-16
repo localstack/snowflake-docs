@@ -64,7 +64,7 @@ version: "3.8"
 
 services:
   localstack:
-    container_name: "localstack-main"
+    container_name: "localstack-snowflake"
     image: localstack/snowflake
     ports:
       - "127.0.0.1:4566:4566"
