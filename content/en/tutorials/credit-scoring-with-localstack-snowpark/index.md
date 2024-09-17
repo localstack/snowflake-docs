@@ -26,21 +26,7 @@ Start your LocalStack container in your preferred terminal/shell.
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ localstack start
-{{< / command >}}
-
-Check the emulator's availability by running:
-
-{{< command >}}
-$ localstack extensions list
-<disable-copy>
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
-┃ Name                         ┃ Summary                       ┃ Version ┃ Author     ┃ Plugin name ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━┩
-│ localstack-extension-snowfl… │ LocalStack Extension:         │ 0.1.22  │ LocalStack │ snowflake   │
-│                              │ Snowflake                     │         │            │             │
-└──────────────────────────────┴───────────────────────────────┴─────────┴────────────┴─────────────┘
-</disable-copy>
+$ IMAGE_NAME=localstack/snowflake localstack start
 {{< / command >}}
 
 ## Create a Snowpark session
