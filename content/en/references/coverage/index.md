@@ -59,7 +59,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ARRAY_SORT|✅|
 |ARRAY_TO_STRING|✅|
 |ARRAY_UNION_AGG|✅|
-|ARRAY_UNIQUE_AGG|❓|
+|ARRAY_UNIQUE_AGG|✅|
 |ARRAYS_OVERLAP|✅|
 |ARRAYS_TO_OBJECT|✅|
 |ARRAYS_ZIP|❓|
@@ -186,7 +186,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DECOMPRESS_STRING|❓|
 |DECRYPT|❓|
 |DECRYPT_RAW|❓|
-|DEGREES|❓|
+|DEGREES|✅|
 |DENSE_RANK|✅|
 |DIV0|✅|
 |DIV0NULL|❓|
@@ -216,7 +216,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ENCRYPT_RAW|❓|
 |ENDSWITH|❓|
 |EQUAL_NULL|❓|
-|EXP|❓|
+|EXP|✅|
 |EXPLAIN_JSON|❓|
 |EXTERNAL_FUNCTIONS_HISTORY|❓|
 |EXTERNAL_TABLE_FILES|❓|
@@ -437,7 +437,7 @@ The table is a work in progress and will be updated as more functions are implem
 |REGR_SYY|❓|
 |REGR_VALX|❓|
 |REGR_VALY|❓|
-|REPEAT|❓|
+|REPEAT|✅|
 |REPLACE|✅|
 |REPLICATION_GROUP_REFRESH_HISTORY|❓|
 |REPLICATION_GROUP_REFRESH_PROGRESS, REPLICATION_GROUP_REFRESH_PROGRESS_BY_JOB|❓|
@@ -732,5 +732,5 @@ The table is a work in progress and will be updated as more functions are implem
 |WIDTH_BUCKET|❓|
 |XMLGET|❓|
 |YEAR* / DAY* / WEEK* / MONTH / QUARTER|❓|
-|ZEROIFNULL|❓|
+|ZEROIFNULL|✅|
 |ZIPF|❓|
