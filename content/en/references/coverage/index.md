@@ -75,7 +75,7 @@ The table is a work in progress and will be updated as more functions are implem
 |AS_OBJECT|❓|
 |AS_TIME|❓|
 |AS_TIMESTAMP_*|❓|
-|ASCII|❓|
+|ASCII|✅|
 |ASIN|✅|
 |ASINH|✅|
 |ATAN|✅|
@@ -445,7 +445,7 @@ The table is a work in progress and will be updated as more functions are implem
 |REPLICATION_USAGE_HISTORY|❓|
 |REST_EVENT_HISTORY|❓|
 |RESULT_SCAN|✅|
-|REVERSE|❓|
+|REVERSE|✅|
 |RIGHT|✅|
 |[ NOT ] RLIKE|❓|
 |ROUND|❓|
@@ -477,7 +477,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SPLIT|✅|
 |SPLIT_PART|❓|
 |SPLIT_TO_TABLE|❓|
-|SQRT|❓|
+|SQRT|✅|
 |SQUARE|❓|
 |ST_AREA|❓|
 |ST_ASEWKB|❓|
@@ -557,6 +557,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$ALLOWLIST_PRIVATELINK|❓|
 |SYSTEM$AUTHORIZE_PRIVATELINK|❓|
 |SYSTEM$AUTHORIZE_STAGE_PRIVATELINK_ACCESS|❓|
+|SYSTEM$AUTO_REFRESH_STATUS|❓|
 |SYSTEM$BEHAVIOR_CHANGE_BUNDLE_STATUS|❓|
 |SYSTEM$BLOCK_INTERNAL_STAGES_PUBLIC_ACCESS|❓|
 |SYSTEM$CANCEL_ALL_QUERIES|✅|
