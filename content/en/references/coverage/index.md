@@ -203,8 +203,8 @@ The table is a work in progress and will be updated as more functions are implem
 |ROW_COUNT (system data metric function)|❓|
 |STDDEV (system data metric function)|❓|
 |UNIQUE_COUNT (system data metric function)|❓|
-|DP_ESTIMATE_HIGH|❓|
-|DP_ESTIMATE_LOW|❓|
+|DP_INTERVAL_HIGH|❓|
+|DP_INTERVAL_LOW|❓|
 |DYNAMIC_TABLE_GRAPH_HISTORY|❓|
 |DYNAMIC_TABLE_REFRESH_HISTORY|❓|
 |DYNAMIC_TABLES|❓|
@@ -216,6 +216,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ENCRYPT_RAW|❓|
 |ENDSWITH|❓|
 |EQUAL_NULL|❓|
+|ESTIMATE_REMAINING_DP_AGGREGATES|❓|
 |EXP|✅|
 |EXPLAIN_JSON|❓|
 |EXTERNAL_FUNCTIONS_HISTORY|❓|
@@ -348,10 +349,10 @@ The table is a work in progress and will be updated as more functions are implem
 |LIKE ALL|❓|
 |LIKE ANY|❓|
 |LISTAGG|✅|
-|LN|❓|
+|LN|✅|
 |LOCALTIME|❓|
 |LOCALTIMESTAMP|❓|
-|LOG|❓|
+|LOG|✅|
 |LOGIN_HISTORY, LOGIN_HISTORY_BY_USER|❓|
 |LOWER|✅|
 |LPAD|❓|
@@ -398,6 +399,7 @@ The table is a work in progress and will be updated as more functions are implem
 |OBJECT_KEYS|✅|
 |OBJECT_PICK|❓|
 |OCTET_LENGTH|❓|
+|PARSE_DOCUMENT (SNOWFLAKE.CORTEX)|❓|
 |PARSE_IP|✅|
 |PARSE_JSON|✅|
 |PARSE_URL|❓|
@@ -419,6 +421,7 @@ The table is a work in progress and will be updated as more functions are implem
 |RANDSTR|✅|
 |RANK|✅|
 |RATIO_TO_REPORT|✅|
+|REDUCE|❓|
 |[ NOT ] REGEXP|❓|
 |REGEXP_COUNT|❓|
 |REGEXP_INSTR|❓|
@@ -509,6 +512,7 @@ The table is a work in progress and will be updated as more functions are implem
 |ST_GEOMFROMGEOHASH|❓|
 |ST_GEOMPOINTFROMGEOHASH|❓|
 |ST_HAUSDORFFDISTANCE|❓|
+|ST_INTERPOLATE|❓|
 |ST_INTERSECTION|❓|
 |ST_INTERSECTION_AGG|❓|
 |ST_INTERSECTS|❓|
