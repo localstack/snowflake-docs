@@ -190,7 +190,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DEGREES|✅|
 |DENSE_RANK|✅|
 |DIV0|✅|
-|DIV0NULL|❓|
+|DIV0NULL|✅|
 |AVG (system data metric function)|❓|
 |BLANK_COUNT (system data metric function)|❓|
 |BLANK_PERCENT (system data metric function)|❓|
@@ -663,7 +663,9 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$VALIDATE_STORAGE_INTEGRATION|❓|
 |SYSTEM$VERIFY_CMK_INFO|❓|
 |SYSTEM$VERIFY_EXTERNAL_OAUTH_TOKEN|❓|
+|SYSTEM$VERIFY_EXTERNAL_VOLUME|❓|
 |SYSTEM$WAIT|❓|
+|SYSTEM$WAIT_FOR_SERVICES|❓|
 |SYSTEM$WHITELIST — Deprecated|❓|
 |SYSTEM$WHITELIST_PRIVATELINK — Deprecated|❓|
 |SYSTIMESTAMP|❓|
