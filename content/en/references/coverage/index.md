@@ -302,7 +302,7 @@ The table is a work in progress and will be updated as more functions are implem
 |HLL_IMPORT|❓|
 |HOUR / MINUTE / SECOND|❓|
 |IFF|✅|
-|IFNULL|❓|
+|IFNULL|✅|
 |[ NOT ] ILIKE|❓|
 |ILIKE ANY|❓|
 |[ NOT ] IN|❓|
@@ -465,6 +465,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SEARCH_PREVIEW (SNOWFLAKE.CORTEX)|❓|
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|
 |SEQ1 / SEQ2 / SEQ4 / SEQ8|❓|
+|SERVERLESS_ALERT_HISTORY|❓|
 |SERVERLESS_TASK_HISTORY|❓|
 |SHA1, SHA1_HEX|❓|
 |SHA1_BINARY|❓|
@@ -611,7 +612,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$GET_SERVICE_LOGS|❓|
 |SYSTEM$GET_SERVICE_STATUS — Deprecated|❓|
 |SYSTEM$GET_SNOWFLAKE_PLATFORM_INFO|❓|
-|SYSTEM$GET_TAG|❓|
+|SYSTEM$GET_TAG|✅|
 |SYSTEM$GET_TAG_ALLOWED_VALUES|❓|
 |SYSTEM$GET_TAG_ON_CURRENT_COLUMN|❓|
 |SYSTEM$GET_TAG_ON_CURRENT_TABLE|❓|
@@ -669,7 +670,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$WHITELIST — Deprecated|❓|
 |SYSTEM$WHITELIST_PRIVATELINK — Deprecated|❓|
 |SYSTIMESTAMP|❓|
-|TAG_REFERENCES|❓|
+|TAG_REFERENCES|✅|
 |TAG_REFERENCES_ALL_COLUMNS|❓|
 |TAG_REFERENCES_WITH_LINEAGE|❓|
 |TAN|✅|
