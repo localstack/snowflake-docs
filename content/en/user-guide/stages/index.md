@@ -12,6 +12,7 @@ Stages are a way to load data into Snowflake. You can use stages to load data fr
 The Snowflake emulator supports stages, allowing you to load data into Snowflake using the same commands and syntax as the Snowflake service. The following operations are supported:
 
 - [`CREATE STAGE`](https://docs.snowflake.com/en/sql-reference/sql/create-stage.html)
+- [`DESCRIBE STAGE`](https://docs.snowflake.com/en/sql-reference/sql/desc-stage)
 - [`DROP STAGE`](https://docs.snowflake.com/en/sql-reference/sql/drop-stage.html)
 
 ## Getting started
