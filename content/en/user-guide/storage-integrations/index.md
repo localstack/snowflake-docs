@@ -2,7 +2,7 @@
 title: "Storage Integrations"
 linkTitle: "Storage Integrations"
 weight: 15
-description: Get started with Streamlit in LocalStack for Snowflake
+description: Get started with Storage Integrations in LocalStack for Snowflake
 ---
 
 ## Introduction
