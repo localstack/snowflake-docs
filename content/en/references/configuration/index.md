@@ -53,6 +53,16 @@ Options to configure how LocalStack interacts with Docker.
 | `DOCKER_CMD` | `docker` (default), `sudo docker`| Shell command used to run Docker containers (only used in combination with `LEGACY_DOCKER_CLIENT`) |
 | `FORCE_NONINTERACTIVE` | | When running with Docker, disables the `--interactive` and `--tty` flags. Useful when running headless. |
 
+## Proxy Configuration
+
+Options to configure Snowflake proxy settings for LocalStack.
+
+| Variable | Example Values | Description |
+| - | - | - |
+| `SF_PROXY_HOST` | `proxy.example.com` | Hostname or IP address of the proxy server to be used for connecting to Snowflake. |
+| `SF_PROXY_USER` | `proxy_user` | Username for authentication with the proxy server. |
+| `SF_PROXY_PASSWORD` | `password123` | Password associated with the proxy user account. |
+
 ## Profiles
 
 LocalStack supports configuration profiles which are stored in the `~/.localstack` config directory.
