@@ -11,10 +11,10 @@ Snowflake tags allow you to categorize and manage Snowflake objects by associati
 
 The Snowflake emulator supports tags, allowing you to apply these tags to the local Snowflake tables, views, and databases using the same commands and syntax as the Snowflake service. The following operations are supported:
 
--   [CREATE TAG](https://docs.snowflake.com/en/sql-reference/sql/create-tag)
--   [SHOW TAGS](https://docs.snowflake.com/en/sql-reference/sql/show-tags)
--   [ALTER TAG](https://docs.snowflake.com/en/sql-reference/sql/alter-tag)
--   [DROP TAG](https://docs.snowflake.com/en/sql-reference/sql/drop-tag)
+-   [`CREATE TAG`](https://docs.snowflake.com/en/sql-reference/sql/create-tag)
+-   [`SHOW TAGS`](https://docs.snowflake.com/en/sql-reference/sql/show-tags)
+-   [`ALTER TAG`](https://docs.snowflake.com/en/sql-reference/sql/alter-tag)
+-   [`DROP TAG`](https://docs.snowflake.com/en/sql-reference/sql/drop-tag)
 
 ## Getting started
 
