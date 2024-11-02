@@ -14,6 +14,7 @@ The Snowflake emulator supports stages, allowing you to load data into Snowflake
 - [`CREATE STAGE`](https://docs.snowflake.com/en/sql-reference/sql/create-stage.html)
 - [`DESCRIBE STAGE`](https://docs.snowflake.com/en/sql-reference/sql/desc-stage)
 - [`DROP STAGE`](https://docs.snowflake.com/en/sql-reference/sql/drop-stage.html)
+- [`SHOW STAGES`](https://docs.snowflake.com/en/sql-reference/sql/show-stages)
 
 ## Getting started
 
