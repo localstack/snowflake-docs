@@ -13,7 +13,6 @@ The Snowflake emulator supports storage integrations, allowing you to test inter
 
 -   [`CREATE STORAGE INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/create-storage-integration)
 -   [`DESCRIBE STORAGE INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/describe-storage-integration)
--   [`ALTER STORAGE INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/alter-storage-integration)
 -   [`DROP STORAGE INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/drop-storage-integration)
 
 ## Getting started
