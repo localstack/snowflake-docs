@@ -180,7 +180,7 @@ The table is a work in progress and will be updated as more functions are implem
 |DATE_PART|❓|
 |DATE_TRUNC|✅|
 |DATEADD|✅|
-|DATEDIFF|❓|
+|DATEDIFF|✅|
 |DAYNAME|✅|
 |DECODE|❓|
 |DECOMPRESS_BINARY|❓|
@@ -685,7 +685,7 @@ The table is a work in progress and will be updated as more functions are implem
 |TIMEDIFF|✅|
 |TIMESTAMP_FROM_PARTS|❓|
 |TIMESTAMPADD|❓|
-|TIMESTAMPDIFF|❓|
+|TIMESTAMPDIFF|✅|
 |TO_ARRAY|✅|
 |TO_BINARY|✅|
 |TO_BOOLEAN|✅|
