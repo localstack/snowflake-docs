@@ -9,7 +9,7 @@ description: Get started with Clones in LocalStack for Snowflake
 
 Cloning in Snowflake allows you to create a quick, zero-copy duplicate of an existing database, schema, or table. This feature enables users to replicate data structures and content for testing or development without duplicating the underlying storage.
 
-The Snowflake emulator supports database cloning, enabling you to create quick, zero-copy duplicates of databases, schemas, or tables. Currently, [`CREATE ... CLONE`](https://docs.snowflake.com/en/sql-reference/sql/create-clone) is supported by LocalStack.
+The Snowflake emulator supports database cloning, enabling you to create quick duplicates of databases, schemas, or tables. Currently, [`CREATE ... CLONE`](https://docs.snowflake.com/en/sql-reference/sql/create-clone) is supported by LocalStack.
 
 ## Getting started
 
