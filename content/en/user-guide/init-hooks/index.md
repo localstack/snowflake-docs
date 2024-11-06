@@ -1,17 +1,13 @@
 ---
 title: "Initialization Hooks"
 linkTitle: "Initialization Hooks"
-weight: 5
-description: >
-  Writing QQL scripts to initialize your Snowflake emulator
-cascade:
-  type: docs
-hide_readingtime: true
+weight: 17
+description: Writing SQL scripts to initialize your Snowflake emulator
 ---
  
 ## Introduction
 
-LocalStack for Snowflake supports automatically executing `*.sf.sql` with [Init Hooks](https://docs.localstack.cloud/references/init-hooks/) when mounted into the Docker container. A script can be added to one of these stages in the lifecycle:
+LocalStack for Snowflake supports automatically executing `*.sf.sql` files via [Init Hooks](https://docs.localstack.cloud/references/init-hooks/) when mounted into the Docker container. A script can be added to one of these stages in the lifecycle:
 
 -   `BOOT`: the container is running, but LocalStack hasn’t started
 -   `START`: the Python process is running, and LocalStack is starting
