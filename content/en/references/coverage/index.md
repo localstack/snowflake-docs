@@ -244,6 +244,7 @@ The table is a work in progress and will be updated as more functions are implem
 |GET_CONDITION_QUERY_UUID|❓|
 |GET_DDL|❓|
 |GET_IGNORE_CASE|❓|
+|GET_LINEAGE (SNOWFLAKE.CORE)|❓|
 |GET_OBJECT_REFERENCES|❓|
 |GET_PATH, :|✅|
 |GET_PRESIGNED_URL|❓|
@@ -481,6 +482,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SPACE|❓|
 |SPLIT|✅|
 |SPLIT_PART|❓|
+|SPLIT_TEXT_RECURSIVE_CHARACTER (SNOWFLAKE.CORTEX)|❓|
 |SPLIT_TO_TABLE|❓|
 |SQRT|✅|
 |SQUARE|❓|
@@ -576,6 +578,7 @@ The table is a work in progress and will be updated as more functions are implem
 |SYSTEM$COMMIT_MOVE_ORGANIZATION_ACCOUNT|❓|
 |SYSTEM$CONVERT_PIPES_SQS_TO_SNS|❓|
 |SYSTEM$CREATE_BILLING_EVENT|❓|
+|SYSTEM$CREATE_BILLING_EVENTS|❓|
 |SYSTEM$CURRENT_USER_TASK_NAME|❓|
 |SYSTEM$DATA_METRIC_SCAN|❓|
 |SYSTEM$DATABASE_REFRESH_HISTORY — Deprecated|❓|
