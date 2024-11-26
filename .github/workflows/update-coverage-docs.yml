@@ -37,7 +37,8 @@ jobs:
       - name: Move the generated files
         run: |
           cd snowflake-docs
-          rm -f content/en/references/coverage/index.md && mv index.md content/en/references/coverage/
+          mv coverage-features.md content/en/references/coverage-features/index.md
+          mv coverage-functions.md content/en/references/coverage-functions/index.md
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
