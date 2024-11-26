@@ -1,7 +1,7 @@
 
 ---
-title: "Functions Coverage"
-linkTitle: "Functions Coverage"
+title: "SQL Functions Coverage"
+linkTitle: "SQL Functions Coverage"
 weight: 1
 description: >
   Overview of the implemented Snowflake SQL functions in LocalStack
@@ -13,7 +13,8 @@ hide_readingtime: true
 ## Overview
 
 This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack.
-The table is a work in progress and will be updated as more functions are implemented.
+The content will be updated as additional query features and functions are implemented.
+
 |Function|Supported|
 |----|----|
 |ABS|✅|
@@ -113,7 +114,7 @@ The table is a work in progress and will be updated as more functions are implem
 |BOOLXOR_AGG|❓|
 |BUILD_SCOPED_FILE_URL|❓|
 |BUILD_STAGE_FILE_URL|❓|
-|CASE|❓|
+|CASE|✅|
 |CAST, ::|✅|
 |CBRT|✅|
 |CEIL|✅|
@@ -352,7 +353,6 @@ The table is a work in progress and will be updated as more functions are implem
 |LIKE ANY|❓|
 |LISTAGG|✅|
 |LISTING_REFRESH_HISTORY|❓|
-|LISTING_REFRESH_PROGRESS, LISTING_REFRESH_PROGRESS_BY_JOB|❓|
 |LN|✅|
 |LOCALTIME|❓|
 |LOCALTIMESTAMP|❓|
@@ -755,3 +755,4 @@ The table is a work in progress and will be updated as more functions are implem
 |YEAR* / DAY* / WEEK* / MONTH / QUARTER|❓|
 |ZEROIFNULL|✅|
 |ZIPF|❓|
+
