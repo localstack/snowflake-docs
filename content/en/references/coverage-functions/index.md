@@ -337,13 +337,13 @@ The content will be updated as additional query features and functions are imple
 |JAROWINKLER_SIMILARITY|❓|
 |JSON_EXTRACT_PATH_TEXT|❓|
 |KURTOSIS|❓|
-|LAG|❓|
+|LAG|✅|
 |LAST_DAY|❓|
 |LAST_QUERY_ID|✅|
 |LAST_SUCCESSFUL_SCHEDULED_TIME|❓|
 |LAST_TRANSACTION|❓|
 |LAST_VALUE|❓|
-|LEAD|❓|
+|LEAD|✅|
 |LEAST|✅|
 |LEAST_IGNORE_NULLS|✅|
 |LEFT|❓|
