@@ -85,6 +85,7 @@ The content will be updated as additional query features and functions are imple
 |ATANH|✅|
 |AUTO_REFRESH_REGISTRATION_HISTORY|❓|
 |AUTOMATIC_CLUSTERING_HISTORY|❓|
+|AVAILABLE_LISTING_REFRESH_HISTORY|❓|
 |AVG|✅|
 |BASE64_DECODE_BINARY|❓|
 |BASE64_DECODE_STRING|❓|
@@ -137,6 +138,7 @@ The content will be updated as additional query features and functions are imple
 |CONVERT_TIMEZONE|✅|
 |COPY_HISTORY|❓|
 |CORR|❓|
+|CORTEX_SEARCH_DATA_SCAN|❓|
 |COS|✅|
 |COSH|✅|
 |COT|✅|
@@ -748,6 +750,7 @@ The content will be updated as additional query features and functions are imple
 |VARIANCE_POP|❓|
 |VECTOR_COSINE_SIMILARITY|❓|
 |VECTOR_INNER_PRODUCT|❓|
+|VECTOR_L1_DISTANCE|❓|
 |VECTOR_L2_DISTANCE|❓|
 |WAREHOUSE_LOAD_HISTORY|❓|
 |WAREHOUSE_METERING_HISTORY|❓|
