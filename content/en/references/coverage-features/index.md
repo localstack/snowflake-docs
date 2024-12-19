@@ -46,6 +46,11 @@ The content will be updated as additional query features and functions are imple
 |----|----|----|----|----|----|----|
 |**ICEBERG TABLE**|❓|❓|❓|❓|❓|❓|
 
+### Materialized Views
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|
+|----|----|----|----|----|----|----|
+|**MATERIALIZED VIEW**|❓|✅|❓|✅|❓|❓|
+
 ### Pipes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
