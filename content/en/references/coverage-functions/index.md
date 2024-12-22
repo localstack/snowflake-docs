@@ -306,6 +306,8 @@ The content will be updated as additional query features and functions are imple
 |HLL_EXPORT|❓|
 |HLL_IMPORT|❓|
 |HOUR / MINUTE / SECOND|❓|
+|ICEBERG_TABLE_FILES|❓|
+|ICEBERG_TABLE_SNAPSHOT_REFRESH_HISTORY|❓|
 |IFF|✅|
 |IFNULL|✅|
 |[ NOT ] ILIKE|❓|
