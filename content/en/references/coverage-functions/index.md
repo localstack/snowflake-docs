@@ -324,9 +324,9 @@ The content will be updated as additional query features and functions are imple
 |IS_<object_type>|❓|
 |IS_APPLICATION_ROLE_IN_SESSION|❓|
 |IS_ARRAY|✅|
-|IS_BINARY|❓|
+|IS_BINARY|✅|
 |IS_BOOLEAN|✅|
-|IS_CHAR, IS_VARCHAR|❓|
+|IS_CHAR, IS_VARCHAR|✅|
 |IS_DATABASE_ROLE_IN_SESSION|❓|
 |IS_DATE, IS_DATE_VALUE|❓|
 |IS_DECIMAL|❓|
@@ -716,7 +716,7 @@ The content will be updated as additional query features and functions are imple
 |TO_JSON|❓|
 |TO_OBJECT|✅|
 |TO_QUERY|❓|
-|TO_TIME, TIME|❓|
+|TO_TIME, TIME|✅|
 |TO_TIMESTAMP / TO_TIMESTAMP_*|❓|
 |TO_VARIANT|✅|
 |TO_XML|❓|
