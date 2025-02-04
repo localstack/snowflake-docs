@@ -30,7 +30,7 @@ $ awslocal mwaa create-environment --dag-s3-path /dags \
 ## Create an Airflow DAG script that connects to LocalStack Snowflake
 
 We can then create a local file `my_dag.py` with the Airflow DAG definition, for example:
-```
+```python
 import datetime
 import json
 
