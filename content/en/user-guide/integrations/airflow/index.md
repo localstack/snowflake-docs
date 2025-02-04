@@ -7,7 +7,7 @@ description: Use Airflow to run local ETL jobs against the Snowflake emulator
 
 ## Introduction
 
-[Airflow](https://airflow.apache.org) is a platform to run data-centric workflows and scheduled compute jobs.
+Apache [Airflow](https://airflow.apache.org) is a platform for running data-centric workflows and scheduled compute jobs.
 LocalStack supports the [AWS Managed Workflows for Apache Airflow](https://docs.localstack.cloud/user-guide/aws/mwaa/) (MWAA) service to run Airflow jobs locally.
 
 You can use Airflow to interact with the LocalStack Snowflake emulator and run ETL (Extract-Transform-Load) jobs, using the Airflow `SnowflakeOperator` for running queries against Snowflake.
