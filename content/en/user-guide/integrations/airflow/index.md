@@ -85,7 +85,7 @@ In order to use the `SnowflakeOperator` in your Airflow DAG, a small patch is re
 The code listings below contain the patch for different Airflow versions - simply copy the relevant snippet and paste it into the top of your DAG script (e.g., `my_dag.py`).
 
 **Airflow version 2.6.3 and above**:
-```
+```python
 # ---
 # patch for local Snowflake connection, for Airflow 2.6.3 and above
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
@@ -108,7 +108,7 @@ SnowflakeHook._get_conn_params = _get_conn_params
 ```
 
 **Airflow version 2.9.2 and above**:
-```
+```python
 # ---
 # patch for local Snowflake connection, for Airflow 2.9.2 / 2.10.1
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
@@ -139,7 +139,7 @@ In a future release, we're looking to integrate these patches directly into the 
 
 Next, we copy the `my_dag.py` file to the `/dags` folder within the `my-mwaa-bucket` S3 bucket, to trigger the deployment of the DAG in Airflow:
 {{< command>}}
-awslocal s3 cp my_dag.py s3://my-mwaa-bucket/dags/
+$ awslocal s3 cp my_dag.py s3://my-mwaa-bucket/dags/
 {{< /command >}}
 
 You should then be able to open the Airflow UI (e.g., http://localhost.localstack.cloud:4510/dags) to view the status of the DAG and trigger a DAG run.
