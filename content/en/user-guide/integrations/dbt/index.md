@@ -179,5 +179,5 @@ The host value must match your ephemeral instance URL. This overrides the defaul
 4. **Modularity**: Break down complex transformations into smaller, reusable models
 
 {{< alert type="info" >}}
-It's a good practice to always test your dbt models locally with the Snowflake emulator before deploying to production to save time and resources.
+It's a good practice to always test your dbt models locally with the Snowflake emulator before deploying to production, to save time and resources.
 {{< /alert >}} 
