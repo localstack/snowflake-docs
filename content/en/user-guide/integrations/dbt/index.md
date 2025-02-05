@@ -59,20 +59,9 @@ You should see output indicating a successful connection to the Snowflake emulat
 
 Once configured, you can run standard dbt commands against the Snowflake emulator:
 
-{{< command >}}
-# Run all models
-$ dbt run --profile localstack_snowflake
-
-# Run tests
-$ dbt test --profile localstack_snowflake
-
-# Generate documentation
-$ dbt docs generate --profile localstack_snowflake
-{{< /command >}}
-
 ### Example dbt Model
 
-Here's a simple example of a dbt model that you can use to test the integration:
+Here's a simple example of a dbt model which creates a table with a single row that you can use to test the integration:
 
 ```sql
 -- models/example_model.sql
@@ -82,6 +71,39 @@ SELECT
     1 as id,
     'test' as name
 ```
+
+### Example Tests
+
+You can test your models using dbt's generic tests.
+
+Add the following to your `models/schema.yml`:
+
+```yaml
+version: 2
+
+models:
+  - name: example_model
+    description: "A simple example model with generic tests"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "The name field"
+        tests:
+          - not_null
+```
+
+{{< command >}}
+# Run all models
+$ dbt run --profile localstack_snowflake
+
+# Run tests
+$ dbt test --profile localstack_snowflake
+
+{{< /command >}}
 
 ### Project Structure
 
@@ -93,8 +115,6 @@ my_dbt_project/
 ├── models/
 │   ├── example_model.sql
 │   └── schema.yml
-├── tests/
-│   └── assert_example_model_valid.sql
 └── README.md
 ```
 
@@ -121,6 +141,35 @@ models:
   my_dbt_project:
     materialized: table
 ```
+
+### Connect to dbt Cloud
+
+To use dbt Cloud with the Snowflake emulator, you'll first need to configure an ephemeral instance. Ephemeral instances provide isolated environments for testing and development. For more information, see the [Ephemeral Instances documentation]({{< ref "user-guide/ephemeral-instances" >}}).
+
+1. First, create an ephemeral instance for Snowflake in LocalStack UI.
+
+2. Once your ephemeral instance is running, note the host URL (e.g., `sf-v09rkl9fcjs21.sandbox.localstack.cloud`).
+
+3. In the dbt Cloud interface:
+   - Navigate to **Deploy** > **Environments**
+   - Create a new environment or edit an existing one
+   - Under **Connection Settings**, select **Snowflake**
+   - Fill in the basic credentials:
+     * Username: `test`
+     * Password: `test`
+     * Schema: `test`
+
+4. In the **Extended attributes** section, specify the host from your ephemeral instance:
+
+```yaml
+host: sf-v09rkl9fcjs21.sandbox.localstack.cloud
+```
+
+![dbt Cloud Configuration](dbt-cloud-config.png)
+
+{{< alert type="info" >}}
+The host value must match your ephemeral instance URL. This overrides the default Snowflake host and directs connections to your LocalStack environment.
+{{< /alert >}}
 
 ## Best Practices
 
