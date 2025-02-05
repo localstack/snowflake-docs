@@ -57,7 +57,7 @@ You should see output indicating a successful connection to the Snowflake emulat
 
 ### Running dbt Commands
 
-Once configured, you can run standard dbt commands against the Snowflake emulator:
+Once configured, you can run standard dbt commands against the Snowflake emulator.
 
 ### Example dbt Model
 
