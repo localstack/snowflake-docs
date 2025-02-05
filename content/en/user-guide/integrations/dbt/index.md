@@ -165,7 +165,7 @@ To use dbt Cloud with the Snowflake emulator, you'll first need to configure an 
 host: sf-v09rkl9fcjs21.sandbox.localstack.cloud
 ```
 
-<img src="dbt-cloud-config.png" alt="dbt Cloud Configuration" title="dbt Cloud Configuration" width="800" />
+![dbt Cloud Configuration](dbt-cloud-config.png)
 
 {{< alert type="info" >}}
 The host value must match your ephemeral instance URL. This overrides the default Snowflake host and directs connections to your LocalStack environment.
