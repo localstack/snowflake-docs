@@ -157,7 +157,7 @@ To use dbt Cloud with the Snowflake emulator, you'll first need to configure an 
    - Fill in the basic credentials:
      * Username: `test`
      * Password: `test`
-     * Schema: `test`
+     * Schema: `public`
 
 4. In the **Extended attributes** section, specify the host from your ephemeral instance:
 
