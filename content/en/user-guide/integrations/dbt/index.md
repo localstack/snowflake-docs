@@ -146,7 +146,7 @@ models:
 
 To use dbt Cloud with the Snowflake emulator, you'll first need to configure an ephemeral instance. Ephemeral instances provide isolated environments for testing and development. For more information, see the [Ephemeral Instances documentation]({{< ref "user-guide/ephemeral-instances" >}}).
 
-1. First, create an ephemeral instance for Snowflake in LocalStack UI.
+1. First, create an ephemeral instance for Snowflake in the LocalStack Web application.
 
 2. Once your ephemeral instance is running, note the host URL (e.g., `sf-v09rkl9fcjs21.sandbox.localstack.cloud`).
 
