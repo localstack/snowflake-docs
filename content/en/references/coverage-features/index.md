@@ -129,5 +129,5 @@ The content will be updated as additional query features and functions are imple
 ### Warehouses
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
 |----|----|----|----|----|----|----|
-|**WAREHOUSE**|✅|✅|❓|✅|✅|❓|
+|**WAREHOUSE**|✅|✅|✅|✅|✅|❓|
 
