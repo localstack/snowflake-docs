@@ -61,7 +61,7 @@ var connection = snowflake.createConnection({
     password: 'test',
     account: 'test',
     database: 'test',
-    host: 'snowflake.localhost.localstack.cloud',
+    accessUrl: 'https://snowflake.localhost.localstack.cloud',
 });
 connection.connect(function(err, conn) {
   if (err) {
