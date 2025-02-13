@@ -54,7 +54,7 @@ The content will be updated as additional query features and functions are imple
 ### Pipes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**PIPE**|❓|✅|❓|✅|✅|
+|**PIPE**|✅|✅|❓|✅|✅|
 
 ### Procedures
 | |ALTER|CALL|CALL WITH|CREATE|DESCRIBE|DROP|SHOW|
