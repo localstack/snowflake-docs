@@ -61,7 +61,7 @@ var connection = snowflake.createConnection({
     password: 'test',
     account: 'test',
     database: 'test',
-    // snowflake-sdk version 1.9.3 and later supports host property and can be used instead of accessUrl like: host: 'snowflake.localhost.localstack.cloud',
+    // snowflake-sdk version 1.9.3 and later supports host property and can be used instead of accessUrl like:
     // host: 'snowflake.localhost.localstack.cloud',
     accessUrl: 'https://snowflake.localhost.localstack.cloud',
 });
