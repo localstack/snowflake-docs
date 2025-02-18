@@ -55,7 +55,7 @@ The content will be updated as additional query features and functions are imple
 |ARRAY_PREPEND|✅|
 |ARRAY_REMOVE|✅|
 |ARRAY_REMOVE_AT|✅|
-|ARRAY_REVERSE|❓|
+|ARRAY_REVERSE|✅|
 |ARRAY_SIZE|✅|
 |ARRAY_SLICE|✅|
 |ARRAY_SORT|✅|

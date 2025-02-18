@@ -74,7 +74,7 @@ The content will be updated as additional query features and functions are imple
 ### Sequences
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SEQUENCE**|✅|✅|❓|✅|❓|
+|**SEQUENCE**|✅|✅|✅|✅|❓|
 
 ### Shares
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
