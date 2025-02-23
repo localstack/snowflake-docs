@@ -219,7 +219,7 @@ The content will be updated as additional query features and functions are imple
 |ENCRYPT|❓|
 |ENCRYPT_RAW|❓|
 |ENDSWITH|❓|
-|EQUAL_NULL|❓|
+|EQUAL_NULL|✅|
 |ESTIMATE_REMAINING_DP_AGGREGATES|❓|
 |EXP|✅|
 |EXPLAIN_JSON|❓|
@@ -328,16 +328,16 @@ The content will be updated as additional query features and functions are imple
 |IS_BOOLEAN|✅|
 |IS_CHAR, IS_VARCHAR|✅|
 |IS_DATABASE_ROLE_IN_SESSION|❓|
-|IS_DATE, IS_DATE_VALUE|❓|
-|IS_DECIMAL|❓|
-|IS_DOUBLE, IS_REAL|❓|
+|IS_DATE, IS_DATE_VALUE|✅|
+|IS_DECIMAL|✅|
+|IS_DOUBLE, IS_REAL|✅|
 |IS_GRANTED_TO_INVOKER_ROLE|❓|
 |IS_INSTANCE_ROLE_IN_SESSION|❓|
-|IS_INTEGER|❓|
+|IS_INTEGER|✅|
 |IS_NULL_VALUE|✅|
-|IS_OBJECT|❓|
+|IS_OBJECT|✅|
 |IS_ROLE_IN_SESSION|❓|
-|IS_TIME|❓|
+|IS_TIME|✅|
 |IS_TIMESTAMP_*|❓|
 |JAROWINKLER_SIMILARITY|❓|
 |JSON_EXTRACT_PATH_TEXT|❓|
@@ -684,7 +684,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$VERIFY_CMK_INFO|❓|
 |SYSTEM$VERIFY_EXTERNAL_OAUTH_TOKEN|❓|
 |SYSTEM$VERIFY_EXTERNAL_VOLUME|❓|
-|SYSTEM$WAIT|❓|
+|SYSTEM$WAIT|✅|
 |SYSTEM$WAIT_FOR_SERVICES|❓|
 |SYSTEM$WHITELIST — Deprecated|❓|
 |SYSTEM$WHITELIST_PRIVATELINK — Deprecated|❓|
@@ -726,7 +726,7 @@ The content will be updated as additional query features and functions are imple
 |TRANSLATE|❓|
 |TRIM|✅|
 |TRUNCATE, TRUNC|❓|
-|TRUNC|❓|
+|TRUNCATE, TRUNC|❓|
 |TRY_BASE64_DECODE_BINARY|❓|
 |TRY_BASE64_DECODE_STRING|❓|
 |TRY_CAST|❓|
