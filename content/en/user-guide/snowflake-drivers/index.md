@@ -88,3 +88,68 @@ connection.execute({
     }
   });
 ```
+
+## Go Driver
+
+The Go Snowflake driver provides a way to connect to Snowflake and perform database operations using Go. You can use this driver to connect to the Snowflake emulator for testing your Snowflake integrations in Go.
+
+To install the Go Snowflake driver, execute the following command:
+
+{{< command >}}
+$ go get github.com/snowflakedb/gosnowflake
+{{< /command >}}
+
+The connection string follows the format `username:password@host:port/database?account=account_name`. For the emulator use:
+`test:test@snowflake.localhost.localstack.cloud:4566/test?account=test`
+
+Here's an example of how to connect to the Snowflake emulator using Go:
+
+```go
+package main
+
+import (
+	"database/sql"
+	"fmt"
+	"log"
+
+	_ "github.com/snowflakedb/gosnowflake"
+)
+
+func main() {
+	// Connection string
+	connectionString := "test:test@snowflake.localhost.localstack.cloud:4566/test?account=test"
+
+	// Connect to LocalStack Snowflake
+	db, err := sql.Open("snowflake", connectionString)
+	if err != nil {
+		log.Fatalf("Failed to connect to Snowflake: %v", err)
+	}
+	defer db.Close()
+
+	// Ping the database to verify the connection
+	if err := db.Ping(); err != nil {
+		log.Fatalf("Failed to ping Snowflake: %v", err)
+	}
+	fmt.Println("Successfully connected to Snowflake!")
+
+	// Execute a simple query
+	rows, err := db.Query("SELECT 123")
+	if err != nil {
+		log.Fatalf("Failed to execute query: %v", err)
+	}
+	defer rows.Close()
+
+	// Process the result
+	var version string
+	for rows.Next() {
+		if err := rows.Scan(&version); err != nil {
+			log.Fatalf("Failed to scan row: %v", err)
+		}
+		fmt.Printf("Query result: %s\n", version)
+	}
+
+	if err := rows.Err(); err != nil {
+		log.Fatalf("Error iterating rows: %v", err)
+	}
+}
+```
