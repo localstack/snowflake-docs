@@ -165,7 +165,7 @@ The content will be updated as additional query features and functions are imple
 |CURRENT_SECONDARY_ROLES|✅|
 |CURRENT_SESSION|✅|
 |CURRENT_STATEMENT|✅|
-|CURRENT_TASK_GRAPHS|❓|
+|CURRENT_TASK_GRAPHS|✅|
 |CURRENT_TIME|✅|
 |CURRENT_TIMESTAMP|✅|
 |CURRENT_TRANSACTION|✅|
@@ -183,7 +183,7 @@ The content will be updated as additional query features and functions are imple
 |DATE_PART|❓|
 |DATE_TRUNC|✅|
 |DATEADD|✅|
-|DATEDIFF|❓|
+|DATEDIFF|✅|
 |DAYNAME|✅|
 |DECODE|❓|
 |DECOMPRESS_BINARY|❓|
@@ -342,13 +342,13 @@ The content will be updated as additional query features and functions are imple
 |JAROWINKLER_SIMILARITY|❓|
 |JSON_EXTRACT_PATH_TEXT|❓|
 |KURTOSIS|❓|
-|LAG|❓|
+|LAG|✅|
 |LAST_DAY|❓|
 |LAST_QUERY_ID|✅|
 |LAST_SUCCESSFUL_SCHEDULED_TIME|❓|
 |LAST_TRANSACTION|❓|
 |LAST_VALUE|❓|
-|LEAD|❓|
+|LEAD|✅|
 |LEAST|✅|
 |LEAST_IGNORE_NULLS|✅|
 |LEFT|❓|
@@ -689,7 +689,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$WHITELIST — Deprecated|❓|
 |SYSTEM$WHITELIST_PRIVATELINK — Deprecated|❓|
 |SYSTIMESTAMP|❓|
-|TAG_REFERENCES|❓|
+|TAG_REFERENCES|✅|
 |TAG_REFERENCES_ALL_COLUMNS|❓|
 |TAG_REFERENCES_WITH_LINEAGE|❓|
 |TAN|✅|
@@ -701,10 +701,10 @@ The content will be updated as additional query features and functions are imple
 |TIME_FROM_PARTS|❓|
 |TIME_SLICE|❓|
 |TIMEADD|✅|
-|TIMEDIFF|❓|
+|TIMEDIFF|✅|
 |TIMESTAMP_FROM_PARTS|❓|
 |TIMESTAMPADD|✅|
-|TIMESTAMPDIFF|❓|
+|TIMESTAMPDIFF|✅|
 |TO_ARRAY|✅|
 |TO_BINARY|✅|
 |TO_BOOLEAN|✅|
