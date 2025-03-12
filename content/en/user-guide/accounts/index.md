@@ -19,9 +19,13 @@ This guide explains how to start and connect to the Snowflake emulator using spe
 You can specify any account name when connecting to the Snowflake emulator. If you don't, all resources
 will be managed by the default `test` account.
 
-### Connect using Snowflake Connector for Python
+Depending on the Snowflake Driver you choose, you can pass `account` accordingly.
 
-To connect to a specific account using the Snowflake Connector for Python, you can pass the `account` parameter in the connection object:
+### Connect using Snowflake Connection Object
+
+If the Snowflake driver provides a connection object, you can pass the `account` parameter in the connection object.
+
+Example using the Snowflake Connector for Python:
 
 ```python
 sf_conn_obj = sf.connect(
@@ -30,11 +34,20 @@ sf_conn_obj = sf.connect(
 )
 ```
 
+Example using the NodeJS Driver for Snowflake:
+
+```javascript
+var connection = snowflake.createConnection({
+  account: "your_account",
+  // other parameters
+});
+```
+
 ### Connect using Connection String
 
-Alternatively, you can use a connection string that follows the format: `test:test@snowflake.localhost.localstack.cloud:4566/test?account=test`.
+You can also specify the account for Snowflake drivers that let you connect with a connection string.
 
-For example, to establish a JDBC connection, you can specify the account in the connection URL:
+Example establishing a JDBC connection:
 
 ```
 jdbc:snowflake://snowflake.localhost.localstack.cloud:4566/?account=your_account
