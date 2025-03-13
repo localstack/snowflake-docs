@@ -54,7 +54,7 @@ The content will be updated as additional query features and functions are imple
 ### Functions
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**FUNCTION**|❓|✅|✅|✅|❓|
+|**FUNCTION**|✅|✅|✅|✅|✅|
 
 ### Hybrid Tables
 | |CREATE|SHOW|
@@ -90,6 +90,11 @@ The content will be updated as additional query features and functions are imple
 | |ALTER|CREATE|DROP|GRANT|REVOKE|SHOW|USE|
 |----|----|----|----|----|----|----|----|
 |**ROLE**|❓|✅|✅|❓|❓|✅|❓|
+
+### Row Access Policies
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**ROW ACCESS POLICY**|❓|✅|❓|✅|❓|
 
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
@@ -144,7 +149,7 @@ The content will be updated as additional query features and functions are imple
 ### Users
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**USER**|✅|✅|❓|✅|✅|
+|**USER**|✅|✅|❓|✅|❓|
 
 ### Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
