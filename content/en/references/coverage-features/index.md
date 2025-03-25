@@ -44,7 +44,7 @@ The content will be updated as additional query features and functions are imple
 ### External Volumes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
 |----|----|----|----|----|----|----|
-|**EXTERNAL VOLUME**|❓|✅|✅|✅|❓|❓|
+|**EXTERNAL VOLUME**|✅|✅|✅|✅|✅|❓|
 
 ### File Formats
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -144,7 +144,7 @@ The content will be updated as additional query features and functions are imple
 ### Tasks
 | |ALTER|CREATE|DESCRIBE|DROP|EXECUTE|SHOW|
 |----|----|----|----|----|----|----|
-|**TASK**|✅|✅|❓|✅|❓|✅|
+|**TASK**|✅|✅|✅|✅|✅|✅|
 
 ### Users
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
