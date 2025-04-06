@@ -26,10 +26,15 @@ The content will be updated as additional query features and functions are imple
 |----|----|----|----|----|
 |**APPLICATION PACKAGE**|✅|✅|✅|✅|
 
+### Catalog Integration
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**CATALOG INTEGRATION**|❓|✅|❓|✅|✅|
+
 ### Databases
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**DATABASE**|✅|✅|❓|✅|❓|❓|❓|
+|**DATABASE**|✅|✅|❓|✅|✅|❓|❓|
 
 ### Dynamic Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
@@ -61,15 +66,15 @@ The content will be updated as additional query features and functions are imple
 |----|----|----|
 |**HYBRID TABLE**|✅|✅|
 
-### Integrations
-| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
-|----|----|----|----|----|----|
-|**INTEGRATION**|❓|❓|❓|❓|❓|
-
 ### Iceberg Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
 |----|----|----|----|----|----|----|
 |**ICEBERG TABLE**|❓|✅|❓|✅|❓|❓|
+
+### Indexes
+| |CREATE|DROP|SHOW|
+|----|----|----|----|
+|**INDEX**|✅|✅|✅|
 
 ### Materialized Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|
@@ -84,7 +89,7 @@ The content will be updated as additional query features and functions are imple
 ### Procedures
 | |ALTER|CALL|CALL WITH|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|----|----|
-|**PROCEDURE**|❓|❓|❓|✅|❓|✅|❓|
+|**PROCEDURE**|❓|❓|❓|✅|❓|✅|✅|
 
 ### Roles
 | |ALTER|CREATE|DROP|GRANT|REVOKE|SHOW|USE|
@@ -99,17 +104,17 @@ The content will be updated as additional query features and functions are imple
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**SCHEMA**|✅|✅|❓|✅|❓|❓|❓|
+|**SCHEMA**|✅|✅|❓|✅|✅|❓|❓|
 
 ### Sequences
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SEQUENCE**|✅|✅|✅|✅|❓|
+|**SEQUENCE**|✅|✅|✅|✅|✅|
 
 ### Shares
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SHARE**|❓|✅|❓|❓|❓|
+|**SHARE**|❓|✅|❓|✅|❓|
 
 ### Stages
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -134,7 +139,7 @@ The content will be updated as additional query features and functions are imple
 ### Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|UNDROP|
 |----|----|----|----|----|----|----|----|
-|**TABLE**|✅|✅|✅|✅|❓|❓|❓|
+|**TABLE**|✅|✅|✅|✅|✅|❓|❓|
 
 ### Tags
 | |ALTER|CREATE|DROP|SHOW|UNDROP|
@@ -149,15 +154,15 @@ The content will be updated as additional query features and functions are imple
 ### Users
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**USER**|✅|✅|❓|✅|❓|
+|**USER**|✅|✅|❓|✅|✅|
 
 ### Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**VIEW**|❓|✅|❓|✅|❓|
+|**VIEW**|❓|✅|❓|✅|✅|
 
 ### Warehouses
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
 |----|----|----|----|----|----|----|
-|**WAREHOUSE**|✅|✅|✅|✅|❓|❓|
+|**WAREHOUSE**|✅|✅|✅|✅|✅|❓|
 
