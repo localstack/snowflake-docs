@@ -5,6 +5,8 @@ weight: 4
 description: Get started with Tasks in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Tasks are user-defined objects that enable the automation of repetitive SQL operations in Snowflake. You can use tasks to schedule SQL statements, such as queries, DDL, and DML operations, to run at a specific time or at regular intervals.

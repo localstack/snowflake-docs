@@ -5,6 +5,8 @@ weight: 2
 description: Get started with LocalStack for Snowflake in a few simple steps
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 This guide explains how to set up the Snowflake emulator and develop a Python program using the Snowflake Connector for Python (`snowflake-connector-python`) to interact with emulated Snowflake running on your local machine.

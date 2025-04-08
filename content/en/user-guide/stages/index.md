@@ -5,6 +5,8 @@ weight: 7
 description: Get started with Stages in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Stages are a way to load data into Snowflake. You can use stages to load data from files in a variety of formats, including CSV, JSON, and Parquet. You can also use stages to load data from external cloud storage services, such as Amazon S3, Google Cloud Storage, and Microsoft Azure Blob Storage.

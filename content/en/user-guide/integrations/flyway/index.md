@@ -5,6 +5,8 @@ weight: 6
 description: Use Flyway to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [Flyway](https://flywaydb.org/) is an open-source database migration tool that simplifies the process of managing and applying database migrations. Flyway supports various databases, including Snowflake, allowing you to manage database schema changes, version control, and data migration in a structured and automated way.

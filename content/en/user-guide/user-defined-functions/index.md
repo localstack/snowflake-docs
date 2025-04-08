@@ -5,6 +5,8 @@ weight: 5
 description: Get started with User-Defined Functions in Node.js & Python with LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 User-Defined Functions (UDFs) are functions that you can create to extend the functionality of your SQL queries. Snowflake supports UDFs in different programming languages, including JavaScript, Python, Java, Scala, and SQL.

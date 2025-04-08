@@ -5,6 +5,8 @@ weight: 3
 description: Use Pulumi to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [Pulumi](https://pulumi.com/) is an Infrastructure-as-Code (IaC) framework that allows you to define and provision infrastructure using familiar programming languages. Pulumi supports a wide range of cloud providers and services, including AWS, Azure, Google Cloud, and more.

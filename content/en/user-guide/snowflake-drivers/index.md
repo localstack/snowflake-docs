@@ -5,6 +5,8 @@ weight: 1
 description: Get started with Snowflake Drivers in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowflake Drivers enable the use of programming languages like Go, C#, and Python for developing applications that interact with Snowflake. The Snowflake emulator facilitates testing Snowflake integration without connecting to the actual Snowflake instance. This guide provides instructions on connecting the Snowflake emulator with various drivers.

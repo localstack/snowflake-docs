@@ -5,6 +5,8 @@ weight: 9
 description: Get started with LocalStack for Snowflake Web User Interface
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 The Snowflake emulator provides a simple web user interface (UI) accessible via a web browser. The Web UI allows you to:

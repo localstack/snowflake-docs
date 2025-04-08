@@ -11,6 +11,8 @@ aliases:
 hide_readingtime: true
 ---
 
+{{< preview-notice >}}
+
 [LocalStack](https://localstack.cloud/) is a cloud service emulator that runs in a single container on your laptop or in your CI environment.
 LocalStack for Snowflake emulates the functionality of a real Snowflake instance, allowing you to perform operations without an internet connection or a Snowflake account.
 This is valuable for locally developing and testing Snowflake data pipelines without incurring costs.

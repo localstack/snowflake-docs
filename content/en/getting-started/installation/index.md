@@ -5,6 +5,8 @@ weight: 1
 description: Basic installation guide to get started with LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 You can use the Snowflake Docker image to run the Snowflake emulator.

@@ -5,6 +5,8 @@ weight: 8
 description: Get started with State Management in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 State Management in LocalStack allows you to save and load the state of your LocalStack instance. LocalStack is ephemeral in nature, so when you stop and restart your LocalStack instance, all the data is lost. With State Management, you can save the state of your LocalStack instance and load it back when you restart your LocalStack instance.

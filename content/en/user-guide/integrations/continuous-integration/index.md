@@ -5,6 +5,8 @@ weight: 4
 description: Get started with Snowflake emulator in continuous integration (CI) environments
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 This guide explains how to set up the Snowflake emulator in a continuous integration (CI) environment. You can use the emulator to test your Snowflake integration without connecting to the real Snowflake instance.

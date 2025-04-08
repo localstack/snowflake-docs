@@ -5,6 +5,8 @@ weight: 16
 description: Get started with Clones in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Cloning in Snowflake allows you to create a quick, zero-copy duplicate of an existing database, schema, or table. This feature enables users to replicate data structures and content for testing or development without duplicating the underlying storage.

@@ -5,6 +5,8 @@ weight: 10
 description: Get started with Snowpipe in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowpipe allows you to load data into Snowflake tables from files stored in an external stage. Snowpipe continuously loads data from files in a stage into a table as soon as the files are available. Snowpipe uses a queue to manage the data loading process, which allows you to load data into Snowflake tables in near real-time.

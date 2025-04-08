@@ -5,6 +5,8 @@ weight: 2
 description: Get started with Snowpark in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowpark library is a developer library for querying and processing data at scale in Snowflake. Snowflake currently provides Snowpark libraries for three languages: Java, Python, and Scala. The Snowflake emulator facilitates testing Snowpark queries without connecting to the actual Snowflake instance. This guide provides instructions on using the Snowflake emulator in conjunction with Snowpark.

@@ -5,6 +5,8 @@ weight: 5
 description: Use Airflow to run local ETL jobs against the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Apache [Airflow](https://airflow.apache.org) is a platform for running data-centric workflows and scheduled compute jobs.

@@ -5,6 +5,8 @@ weight: 2
 description: In this tutorial, you will explore how you can use Snowpark to connect to a locally running AWS Lambda using LocalStack.
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 In this tutorial, you will explore how to connect Snowpark to AWS Lambda locally using LocalStack. Snowpark allows you to query, process, and transform data in a variety of ways using Snowpark Python. In this example, we create a Lambda function that uses Snowpark to:
