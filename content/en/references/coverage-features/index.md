@@ -18,15 +18,40 @@ This page provides a list of Snowflake query features (resource types and operat
 The content will be updated as additional query features and functions are implemented.
 
 
+### Applications
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**APPLICATION**|❓|✅|❓|✅|✅|
+
+### Application Packages
+| |ALTER|CREATE|DROP|SHOW|
+|----|----|----|----|----|
+|**APPLICATION PACKAGE**|✅|✅|✅|✅|
+
+### Catalog Integration
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**CATALOG INTEGRATION**|❓|✅|❓|✅|✅|
+
 ### Databases
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
 |**DATABASE**|✅|✅|❓|✅|✅|❓|❓|
 
+### Dynamic Tables
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
+|----|----|----|----|----|----|----|
+|**DYNAMIC TABLE**|❓|✅|✅|✅|✅|❓|
+
 ### External Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
 |**EXTERNAL TABLE**|❓|❓|❓|❓|❓|
+
+### External Volumes
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
+|----|----|----|----|----|----|----|
+|**EXTERNAL VOLUME**|✅|✅|✅|✅|✅|❓|
 
 ### File Formats
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -36,17 +61,22 @@ The content will be updated as additional query features and functions are imple
 ### Functions
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**FUNCTION**|❓|✅|✅|✅|❓|
+|**FUNCTION**|✅|✅|✅|✅|✅|
 
-### Integrations
-| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
-|----|----|----|----|----|----|
-|**INTEGRATION**|❓|❓|❓|❓|❓|
+### Hybrid Tables
+| |CREATE|SHOW|
+|----|----|----|
+|**HYBRID TABLE**|✅|✅|
 
 ### Iceberg Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
 |----|----|----|----|----|----|----|
-|**ICEBERG TABLE**|❓|❓|❓|❓|❓|❓|
+|**ICEBERG TABLE**|❓|✅|❓|✅|❓|❓|
+
+### Indexes
+| |CREATE|DROP|SHOW|
+|----|----|----|----|
+|**INDEX**|✅|✅|✅|
 
 ### Materialized Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|
@@ -56,7 +86,7 @@ The content will be updated as additional query features and functions are imple
 ### Pipes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**PIPE**|✅|✅|❓|✅|✅|
+|**PIPE**|✅|✅|✅|✅|✅|
 
 ### Procedures
 | |ALTER|CALL|CALL WITH|CREATE|DESCRIBE|DROP|SHOW|
@@ -68,35 +98,40 @@ The content will be updated as additional query features and functions are imple
 |----|----|----|----|----|----|----|----|
 |**ROLE**|❓|✅|✅|❓|❓|✅|❓|
 
+### Row Access Policies
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**ROW ACCESS POLICY**|❓|✅|❓|✅|❓|
+
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**SCHEMA**|✅|✅|❓|✅|❓|❓|❓|
+|**SCHEMA**|✅|✅|❓|✅|✅|❓|❓|
 
 ### Sequences
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SEQUENCE**|✅|✅|✅|✅|❓|
+|**SEQUENCE**|✅|✅|✅|✅|✅|
 
 ### Shares
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SHARE**|❓|✅|❓|❓|❓|
+|**SHARE**|❓|✅|❓|✅|❓|
 
 ### Stages
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**STAGE**|❓|✅|❓|✅|✅|
+|**STAGE**|✅|✅|✅|✅|✅|
 
 ### Storage Integrations
-| |ALTER|CREATE|
-|----|----|----|
-|**STORAGE INTEGRATION**|❓|✅|
+| |ALTER|CREATE|DESCRIBE|DROP|SHOW|
+|----|----|----|----|----|----|
+|**STORAGE INTEGRATION**|❓|✅|✅|✅|✅|
 
 ### Streams
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**STREAM**|✅|✅|❓|✅|✅|
+|**STREAM**|✅|✅|✅|✅|✅|
 
 ### Streamlits
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -106,7 +141,7 @@ The content will be updated as additional query features and functions are imple
 ### Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|UNDROP|
 |----|----|----|----|----|----|----|----|
-|**TABLE**|✅|✅|✅|✅|❓|❓|❓|
+|**TABLE**|✅|✅|✅|✅|✅|❓|❓|
 
 ### Tags
 | |ALTER|CREATE|DROP|SHOW|UNDROP|
@@ -116,7 +151,7 @@ The content will be updated as additional query features and functions are imple
 ### Tasks
 | |ALTER|CREATE|DESCRIBE|DROP|EXECUTE|SHOW|
 |----|----|----|----|----|----|----|
-|**TASK**|✅|✅|❓|✅|❓|✅|
+|**TASK**|✅|✅|✅|✅|✅|✅|
 
 ### Users
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -126,7 +161,7 @@ The content will be updated as additional query features and functions are imple
 ### Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**VIEW**|❓|✅|❓|✅|❓|
+|**VIEW**|❓|✅|❓|✅|✅|
 
 ### Warehouses
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
