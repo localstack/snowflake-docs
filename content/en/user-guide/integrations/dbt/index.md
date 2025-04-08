@@ -5,6 +5,8 @@ weight: 5
 description: Use dbt to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [dbt (data build tool)](https://www.getdbt.com/) is a transformation workflow tool that enables data analysts and engineers to transform data in their warehouses by writing modular SQL. dbt handles version control, documentation, and modularity for data transformations.

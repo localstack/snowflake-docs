@@ -5,6 +5,8 @@ weight: 5
 description: Use DBeaver to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [DBeaver](https://dbeaver.io/) is a free and open-source universal database tool for developers, database administrators, and analysts. DBeaver provides a wide range of features, such as executing SQL statements, viewing and editing data, managing database objects, and more.

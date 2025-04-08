@@ -5,6 +5,8 @@ weight: 4
 description: Use SnowSQL to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [SnowSQL](https://docs.snowflake.com/en/user-guide/snowsql.html) is a command-line client for Snowflake that allows you to interact with the Snowflake service using SQL commands. SnowSQL provides a wide range of features, such as executing SQL statements, loading data, unloading data, and more.

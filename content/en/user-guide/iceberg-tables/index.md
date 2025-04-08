@@ -5,6 +5,8 @@ weight: 11
 description: Get started with Iceberg Tables in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Iceberg tables uses [Apache Iceberg](https://iceberg.apache.org/) open table format specification to provide an abstraction layer on data files stored in open formats. Iceberg tables for Snowflake offer schema evolution, partitioning, and snapshot isolation to manage the table data efficiently.

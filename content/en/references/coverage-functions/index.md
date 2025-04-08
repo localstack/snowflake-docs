@@ -10,6 +10,8 @@ cascade:
 hide_readingtime: true
 ---
 
+{{< preview-notice >}}
+
 ## Overview
 
 This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack.

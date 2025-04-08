@@ -5,6 +5,8 @@ weight: 3
 description: This page answers the frequently asked questions about LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Core FAQs
 
 ### Are Snowflake v2 APIs supported?

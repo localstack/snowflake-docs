@@ -5,6 +5,8 @@ weight: 15
 description: Get started with Storage Integrations in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowflake storage integrations enable access to external cloud storage like Amazon S3, Google Cloud Storage, and Azure Blob Storage. They manage authentication through generated IAM roles, enhancing security and simplifying data operations without exposing sensitive credentials. This approach centralizes and controls access, streamlining workflows across major cloud platforms.

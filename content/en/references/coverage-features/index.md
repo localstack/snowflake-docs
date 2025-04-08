@@ -10,6 +10,8 @@ cascade:
 hide_readingtime: true
 ---
 
+{{< preview-notice >}}
+
 ## Resource Types and Operations
 
 This page provides a list of Snowflake query features (resource types and operations) that are supported in the LocalStack emulator.

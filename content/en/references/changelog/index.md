@@ -9,6 +9,8 @@ cascade:
 hide_readingtime: true
 ---
 
+{{< preview-notice >}}
+
 ### 0.3.0
 - Add support for multi-account setups
 - Add initial support for Java UDFs

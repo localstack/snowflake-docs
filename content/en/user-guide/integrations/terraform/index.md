@@ -5,6 +5,8 @@ weight: 2
 description: Use Terraform to interact with the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 [Terraform](https://terraform.io/) is an Infrastructure-as-Code (IaC) framework developed by HashiCorp. It enables users to define and provision infrastructure using a high-level configuration language. Terraform uses HashiCorp Configuration Language (HCL) as its configuration syntax.

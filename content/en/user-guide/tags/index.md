@@ -5,6 +5,8 @@ weight: 15
 description: Get started with Tags in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowflake tags allow you to categorize and manage Snowflake objects by associating custom metadata with them. These tags support governance, cost tracking, and data lineage by enabling organizations to label resources with business-relevant information.

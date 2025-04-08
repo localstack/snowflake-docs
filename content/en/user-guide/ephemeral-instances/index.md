@@ -5,6 +5,8 @@ weight: 14
 description: Get started with Ephemeral Instances in LocalStack for Snowflake
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Ephemeral Instances allows you to run a LocalStack for Snowflake instance in the cloud. You can interact with these instances by configuring your Snowflake host with the endpoint URL of the ephemeral instance.

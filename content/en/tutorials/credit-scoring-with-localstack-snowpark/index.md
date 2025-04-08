@@ -5,6 +5,8 @@ weight: 1
 description: In this tutorial, you will explore how you can use LocalStack for Snowflake with Snowpark for data analysis and visualization
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 In this tutorial, you will learn how you can use the Snowflake emulator with Snowpark for Python and your favorite Python libraries for data analysis.

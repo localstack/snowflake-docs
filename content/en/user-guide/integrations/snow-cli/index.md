@@ -5,6 +5,8 @@ weight: 2
 description: Use Snow CLI to interact with the Snowflake emulator.
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snow CLI is a command-line interface (CLI) for Snowflake. You can use Snow CLI to interact with the Snowflake emulator. Snow CLI provides a set of commands to manage and interact with Snowflake accounts, databases, warehouses, and more.

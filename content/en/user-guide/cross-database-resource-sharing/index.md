@@ -5,6 +5,8 @@ weight: 6
 description: Get started with cross-database resource sharing in the Snowflake emulator
 ---
 
+{{< preview-notice >}}
+
 ## Introduction
 
 Snowflake data providers can easily share data from various databases using secure views. These views can include schemas, tables, and other views from one or more databases, as long as they're part of the same account.
