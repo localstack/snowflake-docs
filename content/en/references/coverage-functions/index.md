@@ -10,8 +10,6 @@ cascade:
 hide_readingtime: true
 ---
 
-{{< preview-notice >}}
-
 ## Overview
 
 This table provides a list of all Snowflake system-defined SQL functions, scalar or table, emulated by LocalStack.
@@ -576,6 +574,9 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$ADD_REFERENCE|❓|
 |SYSTEM$ALLOWLIST|❓|
 |SYSTEM$ALLOWLIST_PRIVATELINK|❓|
+|SYSTEM$APPLICATION_GET_LOG_LEVEL|❓|
+|SYSTEM$APPLICATION_GET_METRIC_LEVEL|❓|
+|SYSTEM$APPLICATION_GET_TRACE_LEVEL|❓|
 |SYSTEM$AUTHORIZE_PRIVATELINK|❓|
 |SYSTEM$AUTHORIZE_STAGE_PRIVATELINK_ACCESS|❓|
 |SYSTEM$AUTO_REFRESH_STATUS|❓|
@@ -674,6 +675,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$RESTORE_PRIVATELINK_ENDPOINT|❓|
 |SYSTEM$REVOKE_PRIVATELINK|❓|
 |SYSTEM$REVOKE_STAGE_PRIVATELINK_ACCESS|❓|
+|SYSTEM$SCHEDULE_ASYNC_REPLICATION_GROUP_REFRESH|❓|
 |SYSTEM$SEND_NOTIFICATIONS_TO_CATALOG|❓|
 |SYSTEM$SET_APPLICATION_RESTRICTED_FEATURE_ACCESS|❓|
 |SYSTEM$SET_EVENT_SHARING_ACCOUNT_FOR_REGION|❓|
