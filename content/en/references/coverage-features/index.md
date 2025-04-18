@@ -34,7 +34,7 @@ The content will be updated as additional query features and functions are imple
 ### Databases
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**DATABASE**|✅|✅|❓|✅|✅|❓|❓|
+|**DATABASE**|✅|✅|✅|✅|✅|❓|✅|
 
 ### Dynamic Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
@@ -79,7 +79,7 @@ The content will be updated as additional query features and functions are imple
 ### Materialized Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|
 |----|----|----|----|----|----|----|
-|**MATERIALIZED VIEW**|✅|✅|✅|✅|✅|❓|
+|**MATERIALIZED VIEW**|✅|✅|✅|✅|✅|✅|
 
 ### Pipes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -94,7 +94,7 @@ The content will be updated as additional query features and functions are imple
 ### Roles
 | |ALTER|CREATE|DROP|GRANT|REVOKE|SHOW|USE|
 |----|----|----|----|----|----|----|----|
-|**ROLE**|❓|✅|✅|❓|❓|✅|❓|
+|**ROLE**|❓|✅|✅|❓|❓|✅|✅|
 
 ### Row Access Policies
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -104,7 +104,7 @@ The content will be updated as additional query features and functions are imple
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**SCHEMA**|✅|✅|❓|✅|✅|❓|❓|
+|**SCHEMA**|✅|✅|❓|✅|✅|❓|✅|
 
 ### Sequences
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -164,5 +164,5 @@ The content will be updated as additional query features and functions are imple
 ### Warehouses
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
 |----|----|----|----|----|----|----|
-|**WAREHOUSE**|✅|✅|✅|✅|✅|❓|
+|**WAREHOUSE**|✅|✅|✅|✅|✅|✅|
 
