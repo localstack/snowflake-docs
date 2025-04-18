@@ -127,6 +127,7 @@ The content will be updated as additional query features and functions are imple
 |COALESCE|✅|
 |COLLATE|❓|
 |COLLATION|❓|
+|COMPLETE (SNOWFLAKE.CORTEX) (multimodal)|❓|
 |COMPLETE (SNOWFLAKE.CORTEX)|❓|
 |COMPLETE_TASK_GRAPHS|❓|
 |COMPRESS|❓|
@@ -219,6 +220,7 @@ The content will be updated as additional query features and functions are imple
 |ENCRYPT|❓|
 |ENCRYPT_RAW|❓|
 |ENDSWITH|❓|
+|ENTITY_SENTIMENT (SNOWFLAKE.CORTEX)|❓|
 |EQUAL_NULL|✅|
 |ESTIMATE_REMAINING_DP_AGGREGATES|❓|
 |EXP|✅|
@@ -237,6 +239,20 @@ The content will be updated as additional query features and functions are imple
 |FINETUNE ('SHOW') (SNOWFLAKE.CORTEX)|❓|
 |FINETUNE (SNOWFLAKE.CORTEX)|❓|
 |FIRST_VALUE|❓|
+|FL_GET_CONTENT_TYPE|❓|
+|FL_GET_ETAG|❓|
+|FL_GET_FILE_TYPE|❓|
+|FL_GET_LAST_MODIFIED|❓|
+|FL_GET_RELATIVE_PATH|❓|
+|FL_GET_SCOPED_FILE_URL|❓|
+|FL_GET_SIZE|❓|
+|FL_GET_STAGE|❓|
+|FL_GET_STAGE_FILE_URL|❓|
+|FL_IS_AUDIO|❓|
+|FL_IS_COMPRESSED|❓|
+|FL_IS_DOCUMENT|❓|
+|FL_IS_IMAGE|❓|
+|FL_IS_VIDEO|❓|
 |FLATTEN|✅|
 |FLOOR|✅|
 |GENERATE_COLUMN_DESCRIPTION|❓|
@@ -426,6 +442,7 @@ The content will be updated as additional query features and functions are imple
 |POSITION|❓|
 |POW, POWER|✅|
 |PREVIOUS_DAY|❓|
+|PROMPT function|❓|
 |QUERY_ACCELERATION_HISTORY|❓|
 |QUERY_HISTORY, QUERY_HISTORY_BY_*|❓|
 |RADIANS|✅|
@@ -454,8 +471,8 @@ The content will be updated as additional query features and functions are imple
 |REGR_VALY|❓|
 |REPEAT|✅|
 |REPLACE|✅|
-|REPLICATION_GROUP_REFRESH_HISTORY|❓|
-|REPLICATION_GROUP_REFRESH_PROGRESS, REPLICATION_GROUP_REFRESH_PROGRESS_BY_JOB|❓|
+|REPLICATION_GROUP_REFRESH_HISTORY, REPLICATION_GROUP_REFRESH_HISTORY_ALL|❓|
+|REPLICATION_GROUP_REFRESH_PROGRESS, REPLICATION_GROUP_REFRESH_PROGRESS_BY_JOB, REPLICATION_GROUP_REFRESH_PROGRESS_ALL|❓|
 |REPLICATION_GROUP_USAGE_HISTORY|❓|
 |REPLICATION_USAGE_HISTORY|❓|
 |REST_EVENT_HISTORY|❓|
@@ -734,6 +751,7 @@ The content will be updated as additional query features and functions are imple
 |TO_DATE, DATE|✅|
 |TO_DECIMAL, TO_NUMBER, TO_NUMERIC|✅|
 |TO_DOUBLE|❓|
+|TO_FILE|❓|
 |TO_GEOGRAPHY|❓|
 |TO_GEOMETRY|❓|
 |TO_JSON|❓|
@@ -763,6 +781,7 @@ The content will be updated as additional query features and functions are imple
 |TRY_TO_DATE|❓|
 |TRY_TO_DECIMAL, TRY_TO_NUMBER, TRY_TO_NUMERIC|✅|
 |TRY_TO_DOUBLE|❓|
+|TRY_TO_FILE|❓|
 |TRY_TO_GEOGRAPHY|❓|
 |TRY_TO_GEOMETRY|❓|
 |TRY_TO_TIME|❓|

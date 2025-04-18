@@ -79,7 +79,7 @@ The content will be updated as additional query features and functions are imple
 ### Materialized Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|TRUNCATE|
 |----|----|----|----|----|----|----|
-|**MATERIALIZED VIEW**|❓|✅|❓|✅|❓|❓|
+|**MATERIALIZED VIEW**|✅|✅|✅|✅|✅|❓|
 
 ### Pipes
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
@@ -159,7 +159,7 @@ The content will be updated as additional query features and functions are imple
 ### Views
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**VIEW**|❓|✅|❓|✅|✅|
+|**VIEW**|✅|✅|✅|✅|✅|
 
 ### Warehouses
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
