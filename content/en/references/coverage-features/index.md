@@ -89,7 +89,7 @@ The content will be updated as additional query features and functions are imple
 ### Procedures
 | |ALTER|CALL|CALL WITH|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|----|----|
-|**PROCEDURE**|❓|❓|❓|✅|❓|✅|✅|
+|**PROCEDURE**|❓|✅|❓|✅|❓|✅|✅|
 
 ### Roles
 | |ALTER|CREATE|DROP|GRANT|REVOKE|SHOW|USE|
