@@ -1,7 +1,7 @@
 ---
 title: "Initialization Hooks"
 linkTitle: "Initialization Hooks"
-weight: 17
+weight: 19
 description: Writing SQL scripts to initialize your Snowflake emulator
 ---
 
