@@ -17,7 +17,7 @@ The Snowflake emulator supports creating Iceberg tables with Polaris catalog. Cu
 
 This guide is designed for users new to Iceberg tables with Polaris catalog and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
 
-In this guide, you will create an Iceberg table, display the data in the Iceberg table, and drop the Iceberg table.
+In this guide, you will create an Iceberg table, display the data in the Iceberg table, and finally drop the Iceberg table.
 
 ### Create an Iceberg table
 
