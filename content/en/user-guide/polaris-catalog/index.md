@@ -21,7 +21,7 @@ In this guide, you will create an Iceberg table, display the data in the Iceberg
 
 ### Create an Iceberg table
 
-You can create an Iceberg table using the `CREATE ICEBERG TABLE` statement. In this example, you can create an external volume called `v_demo`:
+You can create an Iceberg table using the `CREATE ICEBERG TABLE` statement. In this example, you can create an external volume called `v_demo` (note that this volume points to a local S3 bucket in the LocalStack AWS emulator):
 
 ```sql
 CREATE OR REPLACE EXTERNAL VOLUME v_demo
