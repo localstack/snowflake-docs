@@ -40,7 +40,7 @@ The User Interface provides a **Worksheet** tab that allows you to run SQL queri
 <img src="run-sql-queries-web-ui.png" alt="Running SQL queries" width="900"/>
 <br><br>
 
-You can click on **Warehouses** and **Databases** on the left side of the worksheet to view the available warehouses and databases.
+You can click on **Warehouses** and **Databases** on the right side of the worksheet to view the available warehouses and databases.
 
 ### View Snowflake logs
 
