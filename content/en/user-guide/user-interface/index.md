@@ -44,7 +44,7 @@ You can click on **Warehouses** and **Databases** on the left side of the worksh
 
 ### View Snowflake logs
 
-The User Interface provides a **Logs** tab that provides you a detailed view of request/response traces of API calls. You can view the request and response headers, body, and status code.
+The User Interface provides a **Logs** tab that provides you a detailed view of request/response traces of API calls issued against the local emulator. You can view the request and response headers, body, and status code.
 
 <img src="request-logs-web-ui.png" alt="View request/response traces" width="900"/>
 
