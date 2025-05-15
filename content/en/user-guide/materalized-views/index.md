@@ -16,7 +16,7 @@ The Snowflake emulator supports Materialized Views, allowing you to accurately t
 - [`DESCRIBE MATERIALIZED VIEW`](https://docs.snowflake.com/en/sql-reference/sql/desc-materialized-view)
 - [`DROP MATERIALIZED VIEW`](https://docs.snowflake.com/en/sql-reference/sql/drop-materialized-view)
 - [`SHOW MATERIALIZED VIEWS`](https://docs.snowflake.com/en/sql-reference/sql/show-materialized-views)
-- [TRUNCATE MATERIALIZED VIEW`](https://docs.snowflake.com/en/sql-reference/sql/truncate-materialized-view)
+- [`TRUNCATE MATERIALIZED VIEW`](https://docs.snowflake.com/en/sql-reference/sql/truncate-materialized-view)
 
 ## Getting started
 
