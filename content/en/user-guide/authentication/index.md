@@ -32,6 +32,8 @@ sf_conn_obj = sf.connect(
 )
 ```
 
+The default username and password are set to `test` and can be changed using `SF_DEFAULT_USER` and `SF_DEFAULT_PASSWORD` when starting the Snowflake emulator.
+
 {{< alert title="Note" >}}
 It is not recommended to use your production credentials in the Snowflake emulator.
 {{< /alert >}}
