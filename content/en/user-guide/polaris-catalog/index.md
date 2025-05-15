@@ -100,6 +100,14 @@ curl -s -X PUT http://localhost:8181/api/management/v1/catalogs/polaris/catalog-
   -d '{"type": "catalog", "privilege": "TABLE_WRITE_DATA"}'
 ```
 
+### Create a bucket
+
+Create a bucket using the `awslocal` command:
+
+```bash
+awslocal s3 mb s3://$BUCKET_NAME
+```
+
 ### Create an external volume
 
 In your SQL client, create an external volume using the `CREATE EXTERNAL VOLUME` statement:
@@ -175,8 +183,8 @@ The output should be:
 
 All data will be persisted under:
 
-```
-awslocal s3 ls s3://test-bucket/test/test_namespace/
+```bash
+awslocal s3 ls s3://$BUCKET_NAME/test/test_namespace/
 ```
 
 You will see:
