@@ -14,7 +14,7 @@ The Snowflake emulator supports creating & deploying Native Apps locally with th
 - [`CREATE APPLICATIONS`](https://docs.snowflake.com/en/sql-reference/sql/create-application.html)
 - [`SHOW APPLICATION PACKAGES`](https://docs.snowflake.com/en/sql-reference/sql/show-application-packages.html)
 - [`ALTER APPLICATION PACKAGE`](https://docs.snowflake.com/en/sql-reference/sql/alter-application-package.html)
-- [`DESCRIBE APPLICATION PACKAGE`](https://docs.snowflake.com/en/sql-reference/sql/describe-application-package.html)
+- [`DESCRIBE APPLICATION`]( https://docs.snowflake.com/en/sql-reference/sql/desc-application)
 - [`DROP APPLICATION PACKAGE`](https://docs.snowflake.com/en/sql-reference/sql/drop-application-package.html)
 
 ## Getting started
