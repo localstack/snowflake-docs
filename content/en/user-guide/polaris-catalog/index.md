@@ -11,81 +11,154 @@ description: Get started with Polaris Catalog in LocalStack for Snowflake
 
 Polaris Catalog is a unified data catalog that provides a single view of all your data assets across Snowflake and external sources. It enables you to discover, understand, and govern your data assets, making it easier to find and use the right data for your analytics and machine learning projects.
 
-The Snowflake emulator supports creating Iceberg tables with Polaris catalog. Currently, [`CREATE CATALOG INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/create-catalog-integration-open-catalog) is supported by LocalStack.
+The Snowflake emulator supports creating Iceberg tables with Polaris catalog. Currently, [`CREATE CATALOG INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/create-catalog-integration-open-catalog) is supported by LocalStack. LocalStack also provides a `localstack/polaris` Docker image that can be used to create a local Polaris REST catalog.
 
 ## Getting started
 
 This guide is designed for users new to Iceberg tables with Polaris catalog and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
 
-In this guide, you will create an Iceberg table, display the data in the Iceberg table, and finally drop the Iceberg table.
+This guide shows how to use the Polaris REST catalog to create Iceberg tables in the Snowflake emulator, by:
 
-### Create an Iceberg table
+- Launching the Polaris Catalog service
+- Setting up an external volume
+- Creating a catalog integration
+- Creating an Iceberg table
+- Querying the Iceberg table
 
-You can create an Iceberg table using the `CREATE ICEBERG TABLE` statement. In this example, you can create an external volume called `v_demo` (note that this volume points to a local S3 bucket in the LocalStack AWS emulator):
+### Start Polaris catalog container
+
+The following command starts the Polaris catalog container using the `localstack/polaris` Docker image:
+
+```bash
+docker run -d --name polaris-test \
+  -p 8181:8181 -p 8182:8182 \
+  -e AWS_REGION=us-east-1 \
+  -e AWS_ACCESS_KEY_ID=test \
+  -e AWS_SECRET_ACCESS_KEY=test \
+  -e AWS_ENDPOINT_URL=http://localhost:4566 \
+  -e POLARIS_BOOTSTRAP_CREDENTIALS=default-realm,root,s3cr3t \
+  -e polaris.realm-context.realms=default-realm \
+  -e quarkus.otel.sdk.disabled=true \
+  localstack/polaris:latest
+```
+
+Wait for Polaris to become healthy:
+
+```bash 
+curl -X GET http://localhost:8182/health
+```
+
+### Authenticate and create Polaris catalog
+
+Set variables and retrieve an access token:
+
+```bash
+REALM="default-realm"
+CLIENT_ID="root"
+CLIENT_SECRET="s3cr3t"
+BUCKET_NAME="test-bucket-$(openssl rand -hex 4)"
+CATALOG_NAME="polaris"
+
+TOKEN=$(curl -s -X POST http://localhost:8181/api/catalog/v1/oauth/tokens \
+  -H "Polaris-Realm: $REALM" \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&scope=PRINCIPAL_ROLE:ALL" | jq -r '.access_token')
+```
+
+The `TOKEN` variable will contain the access token.
+
+Create a catalog:
+
+```bash
+curl -s -X POST http://localhost:8181/api/management/v1/catalogs \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "catalog": {
+      "name": "'"$CATALOG_NAME"'",
+      "type": "INTERNAL",
+      "properties": {
+        "default-base-location": "s3://'"$BUCKET_NAME"'/test"
+      },
+      "storageConfigInfo": {
+        "storageType": "S3_COMPATIBLE",
+        "allowedLocations": ["s3://'"$BUCKET_NAME"'/"],
+        "s3.roleArn": "arn:aws:iam::000000000000:role/'"$BUCKET_NAME"'",
+        "region": "us-east-1",
+        "s3.pathStyleAccess": true,
+        "s3.endpoint": "http://localhost:4566"
+      }
+    }
+  }'
+```
+
+Grant necessary permissions to the catalog:
+
+```bash
+curl -s -X PUT http://localhost:8181/api/management/v1/catalogs/polaris/catalog-roles/catalog_admin/grants \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"type": "catalog", "privilege": "TABLE_WRITE_DATA"}'
+```
+
+### Create an external volume
+
+In your SQL client, create an external volume using the `CREATE EXTERNAL VOLUME` statement:
 
 ```sql
-CREATE OR REPLACE EXTERNAL VOLUME v_demo
-  STORAGE_LOCATIONS = (
-    (
-      NAME = 'aws-s3-test'
-      STORAGE_PROVIDER = 'S3'
-      STORAGE_BASE_URL = 's3://testbucket/'
-      STORAGE_AWS_ROLE_ARN = '000000000000'
-      ENCRYPTION=(TYPE='AWS_SSE_S3')
-    )
+CREATE EXTERNAL VOLUME polaris_volume
+STORAGE_LOCATIONS = (
+  (
+    NAME = aws_s3_test
+    STORAGE_PROVIDER = S3
+    STORAGE_BASE_URL = 's3://test-bucket/'
+    STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::000000000000:role/test-bucket-290de95d'
+    ENCRYPTION = (TYPE = AWS_SSE_S3)
   )
-  ALLOW_WRITES = TRUE;
-```
-
-### Create a Catalog integration
-
-You can then create a Catalog integration using the `CREATE CATALOG INTEGRATION` statement. In this example, you can create a catalog integration called `catalog_demo`:
-
-```sql
-CREATE CATALOG INTEGRATION catalog_demo
-CATALOG_SOURCE=ICEBERG_REST
-TABLE_FORMAT=ICEBERG
-CATALOG_NAMESPACE='test_namespace'
-REST_CONFIG=(
-    CATALOG_URI='http://localhost:8181'
-    CATALOG_NAME='polaris'
 )
-REST_AUTHENTICATION=(
-    TYPE=OAUTH
-    OAUTH_CLIENT_ID='root'
-    OAUTH_CLIENT_SECRET='s3cr3t'
-    OAUTH_ALLOWED_SCOPES=(PRINCIPAL_ROLE:ALL)
+ALLOW_WRITES = TRUE;
+```
+
+### Create catalog integration
+
+Create a catalog integration using the `CREATE CATALOG INTEGRATION` statement:
+
+```sql
+CREATE CATALOG INTEGRATION polaris_catalog
+CATALOG_SOURCE = ICEBERG_REST
+TABLE_FORMAT = ICEBERG
+CATALOG_NAMESPACE = 'test_namespace'
+REST_CONFIG = (
+  CATALOG_URI = 'http://localhost:8181',
+  CATALOG_NAME = 'polaris'
 )
-ENABLED=TRUE
-REFRESH_INTERVAL_SECONDS=60
-COMMENT='Test catalog integration';
+REST_AUTHENTICATION = (
+  TYPE = OAUTH,
+  OAUTH_CLIENT_ID = 'root',
+  OAUTH_CLIENT_SECRET = 's3cr3t',
+  OAUTH_ALLOWED_SCOPES = (PRINCIPAL_ROLE:ALL)
+)
+ENABLED = TRUE
+REFRESH_INTERVAL_SECONDS = 60
+COMMENT = 'Polaris catalog integration';
 ```
 
-### Create an Iceberg table
+### Create and query an Iceberg table
 
-You can create an Iceberg table using the `CREATE ICEBERG TABLE` statement. In this example, you can create an Iceberg table called `t_demo`:
+Now create the table using the Polaris catalog and volume:
 
 ```sql
-CREATE ICEBERG TABLE t_demo (c1 TEXT)
-CATALOG='catalog_demo', EXTERNAL_VOLUME='v_demo', BASE_LOCATION='test/test_namespace';
+CREATE ICEBERG TABLE polaris_iceberg_table (c1 TEXT)
+CATALOG = 'polaris_catalog',
+EXTERNAL_VOLUME = 'polaris_volume',
+BASE_LOCATION = 'test/test_namespace';
 ```
 
-The output should be:
+Insert and query data:
 
 ```sql
-+-------------------------------------------+                                    
-| status                                    |
-|-------------------------------------------|
-| Table "t_demo" successfully created.      |
-+-------------------------------------------+
-```
+INSERT INTO polaris_iceberg_table(c1) VALUES ('test'), ('polaris'), ('iceberg');
 
-### Show Iceberg tables
-
-You can display the Iceberg tables using a `SELECT` query:
-
-```sql
-SELECT * FROM t_demo;
+SELECT * FROM polaris_iceberg_table;
 ```
 
 The output should be:
@@ -100,20 +173,13 @@ The output should be:
 +----------+
 ```
 
-### Drop Iceberg table
+All data will be persisted under:
 
-You can drop the Iceberg table using the `DROP ICEBERG TABLE` statement:
-
-```sql
-DROP ICEBERG TABLE t_demo;
+```
+awslocal s3 ls s3://test-bucket/test/test_namespace/
 ```
 
-The output should be:
+You will see:
 
-```sql
-+-------------------------------------------+  
-| status                                    |
-| ------------------------------------------+
-| T_DEMO successfully dropped.              |
-+-------------------------------------------+
-```
+-   `data/` with `.parquet` files
+-   `metadata/` with `.metadata.json` files
