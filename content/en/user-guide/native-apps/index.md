@@ -9,7 +9,7 @@ description: Get started with Native Apps in LocalStack for Snowflake
 
 Snowflake Native Apps are applications built and executed directly within the Snowflake Data Cloud platform. These apps can be used to extend the capabilities of Snowflake by integrating with external services, automating workflows, and building custom data applications. These apps are developed using Snowflake-native tools (e.g., Snowflake SQL, Snowflake API, and JavaScript) and can be distributed on the Snowflake Marketplace.
 
-The Snowflake emulator supports CRUD operations for Native Apps, allowing you to create, read, update, and delete apps using the same commands and syntax as the Snowflake service. The following operations are supported:
+The Snowflake emulator supports creating & deploying Native Apps locally with the same statements as the Snowflake service. The following operations are supported:
 
 - [`CREATE APPLICATIONS`](https://docs.snowflake.com/en/sql-reference/sql/create-application.html)
 - [`SHOW APPLICATION PACKAGES`](https://docs.snowflake.com/en/sql-reference/sql/show-application-packages.html)
@@ -19,80 +19,65 @@ The Snowflake emulator supports CRUD operations for Native Apps, allowing you to
 
 ## Getting started
 
-This guide is designed for users new to Native Apps and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client in order to execute the queries further below.
- 
-In this guide, you will  createan Application Package, add a version to your Application Package using a manifest file, create a Native Application from that package, view and describe your Native Applications, and clean up by dropping applications and packages.
+This guide is designed for users new to Native Apps and assumes basic knowledge of Snow CLI and Snowflake. Start your Snowflake emulator and connect to it using the Snow CLI in order to execute the commands further below.
 
-### Create an Application Package
+In this guide, you will locally deploy a Native App using an existing Application Package.
 
-An Application Package is a container that can hold multiple versions of your Native App code and metadata. Use the `CREATE APPLICATION PACKAGE` statement:
+### Clone the repository
 
-```sql
-CREATE OR REPLACE APPLICATION PACKAGE my_first_package;
+Clone the [Native Apps repository](https://github.com/localstack/native-apps) and navigate to the `examples/snowflake` directory:
+
+```bash
+git clone https://github.com/snowflakedb/native-apps-examples.git
+cd native-apps-examples/tasks-streams
 ```
 
-You can view all existing Application Packages in your environment using the `SHOW APPLICATION PACKAGES` statement:
+### Deploy Native App
 
-```sql 
-SHOW APPLICATION PACKAGES;
+Deploy the Native App using the Snow CLI:
+
+```bash
+snow app run --connection localstack
 ```
 
-### Prepare a Manifest File
+The following output should be displayed:
 
-A manifest file describes your Native App version (e.g., name, version, comment). You typically store the manifest in a stage so that Snowflake can access it easily when creating a new app version.
+```bash
+Creating new application package tasks_streams_app_pkg_username in account.
+Checking if stage tasks_streams_app_pkg_username.app_src.stage exists, or creating a new one if none exists.
+Performing a diff between the Snowflake stage: stage and your local deploy_root: /Users/username/code/localstack/native-apps-examples/tasks-streams/output/deploy.
+Local changes to be deployed:
+  added:    app/manifest.yml -> manifest.yml
+  added:    app/setup_script.sql -> setup_script.sql
+  added:    src/module-ui/src/environment.yml -> streamlit/environment.yml
+  added:    src/module-ui/src/ui.py -> streamlit/ui.py
+Updating the Snowflake stage from your local /Users/username/code/localstack/native-apps-examples/tasks-streams/output/deploy directory.
+Validating Snowflake Native App setup script.
+Creating new application object tasks_streams_app_username in account.
+Application 'TASKS_STREAMS_APP_username' created successfully.
 
-Create your `manifest.yml` locally:
-
-```yml
-manifest_version: 1
-version:
-  name: v1
-  comment: "My first native application"
+Your application object (tasks_streams_app_username) is now available:
+https://app.snowflake.com/test/test/#/apps/application/TASKS_STREAMS_APP_username
 ```
 
-You can then upload the manifest file to a stage:
+### Access Native App
 
-```sql
-PUT file://./manifest.yml @my_stage AUTO_COMPRESS=FALSE;
+You can access the Native App by visiting your preferred browser and navigating to the following URL:
+
+```bash
+https://snowflake.localhost.localstack.cloud:4566/apps/test/test/TASKS_STREAMS_APP_username/
 ```
 
-### Add a Version to Your Application Package
+{{< alert title="Note" >}}
+The URL above is an example. Change the outputted URL by:
 
-Once your manifest (and any related files) are uploaded to a stage, you can register a version with the Application Package using the `ALTER APPLICATION PACKAGE` statement:
+1.  Replacing `https://app.snowflake.com` with `https://snowflake.localhost.localstack.cloud:4566`.
+2.  Changing the path structure from `/#/apps/application/` to `/apps/test/test/`.
 
-```sql
-ALTER APPLICATION PACKAGE my_first_package 
-  ADD VERSION v1 
-  USING '@my_stage';
-```
+You can make additional changes depending on your local setup.
+{{< /alert >}}
 
-After adding a version, you can optionally set it as the default release directive:
+The following app should be displayed:
 
-```sql
-ALTER APPLICATION PACKAGE my_first_package 
-  SET DEFAULT RELEASE DIRECTIVE VERSION = v1 PATCH = 0;
-```
-
-Use `SHOW APPLICATION PACKAGES` again to see details of your updated package:
-
-```sql
-SHOW APPLICATION PACKAGES LIKE 'MY_FIRST_PACKAGE';
-```
-
-### Create a Native Application from the Package
-
-Next, create a Native Application that references the versioned Application Package you just set up using the `CREATE APPLICATION` statement:
-
-```sql
-CREATE OR REPLACE APPLICATION my_native_app
-  FROM APPLICATION PACKAGE my_first_package;
-```
-
-### Clean up
-
-When you no longer need your Native Application or its package, you can drop them using the `DROP APPLICATION` and `DROP APPLICATION PACKAGE` statements:
-
-```sql
-DROP APPLICATION my_native_app;
-DROP APPLICATION PACKAGE my_first_package;
-```
+<img src="native-app.png" alt="Native App" width="900"/>
+<br><br>
