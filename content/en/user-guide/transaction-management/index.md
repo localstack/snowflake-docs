@@ -95,14 +95,6 @@ Use the `SHOW TRANSACTIONS` statement to view all active transactions.
 SHOW TRANSACTIONS;
 ```
 
-The expected output is:
-
-```sql
-id            |user|session   |name  |started_on             |state  |scope|
---------------+----+----------+------+-----------------------+-------+-----+
-17591981308993|test|2653092814|MYTXN2|1970-01-01 05:30:00.000|running|    0|
-```
-
 ### Rollback transaction
 
 To undo uncommitted changes, use the `ROLLBACK` statement. Subsequent rollbacks have no effect.
