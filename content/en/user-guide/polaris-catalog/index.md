@@ -9,7 +9,7 @@ description: Get started with Polaris Catalog in LocalStack for Snowflake
 
 ## Introduction
 
-Polaris Catalog is a unified data catalog that provides a single view of all your data assets across Snowflake and external sources. It enables you to discover, understand, and govern your data assets, making it easier to find and use the right data for your analytics and machine learning projects.
+[Polaris Catalog](https://github.com/apache/polaris) is a unified data catalog that provides a single view of all your data assets across Snowflake and external sources. It enables you to discover, understand, and govern your data assets, making it easier to find and use the right data for your analytics and machine learning projects.
 
 The Snowflake emulator supports creating Iceberg tables with Polaris catalog. Currently, [`CREATE CATALOG INTEGRATION`](https://docs.snowflake.com/en/sql-reference/sql/create-catalog-integration-open-catalog) is supported by LocalStack. LocalStack also provides a `localstack/polaris` Docker image that can be used to create a local Polaris REST catalog.
 
@@ -119,7 +119,7 @@ STORAGE_LOCATIONS = (
     NAME = aws_s3_test
     STORAGE_PROVIDER = S3
     STORAGE_BASE_URL = 's3://test-bucket/'
-    STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::000000000000:role/test-bucket-290de95d'
+    STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::000000000000:role/test-bucket'
     ENCRYPTION = (TYPE = AWS_SSE_S3)
   )
 )
@@ -190,7 +190,7 @@ awslocal s3 ls s3://$BUCKET_NAME/test/test_namespace/
 You will see:
 
 -   `data/` with `.parquet` files
--   `metadata/` with `.metadata.json` files
+-   `metadata/` with Iceberg metadata files
 
 ## Configuration options
 
