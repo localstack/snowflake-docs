@@ -1,15 +1,15 @@
 ---
-title: "User-Defined Transaction Management"
-linkTitle: "User-Defined Transaction Management"
+title: "Transaction Management"
+linkTitle: "Transaction Management"
 weight: 20
-description: Get started with User-Defined Transaction Management in LocalStack for Snowflake
+description: Get started with Transaction Management in LocalStack for Snowflake
 ---
 
 ## Introduction
 
-User-Defined Transaction Management (UDTM) is a feature that allows you to manage transactions in Snowflake. You can use UDTM to create a transaction management system that is specific to your application.
+Transaction Management is a feature that allows you to manage transactions in Snowflake. You can use Transaction Management to create a transaction management system that is specific to your application.
 
-The Snowflake emulator supports UDTM, allowing you to emulate realistic database operations that require precise control over when changes are committed or rolled back. The following operations are supported:
+The Snowflake emulator supports Transaction Management, allowing you to emulate realistic database operations that require precise control over when changes are committed or rolled back. The following operations are supported:
 
 -   [BEGIN](https://docs.snowflake.com/en/sql-reference/sql/begin)
 -   [COMMIT](https://docs.snowflake.com/en/sql-reference/sql/commit)
@@ -19,7 +19,7 @@ The Snowflake emulator supports UDTM, allowing you to emulate realistic database
 
 ## Getting started
 
-This guide is designed for users new to UDTM and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client to execute the queries below.
+This guide is designed for users new to Transaction Management and assumes basic knowledge of SQL and Snowflake. Start your Snowflake emulator and connect to it using an SQL client to execute the queries below.
 
 The following sections demonstrate how to start and manage named transactions, check transaction state, control visibility across sessions, and monitor all active transactions using a simple orders table.
 
