@@ -25,7 +25,7 @@ In this guide, you will locally deploy a Native App using an existing Applicatio
 
 ### Clone the repository
 
-Clone the [Native Apps repository](https://github.com/snowflakedb/native-apps-examples) and navigate to the `examples/snowflake` directory:
+Clone the [Native Apps repository](https://github.com/snowflakedb/native-apps-examples) and navigate to the `tasks-streams` directory:
 
 ```bash
 git clone https://github.com/snowflakedb/native-apps-examples.git
