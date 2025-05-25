@@ -265,6 +265,7 @@ The content will be updated as additional query features and functions are imple
 |GET_ABSOLUTE_PATH|❓|
 |GET_ANACONDA_PACKAGES_REPODATA|❓|
 |GET_CONDITION_QUERY_UUID|❓|
+|GET_CONTACTS|❓|
 |GET_DDL|❓|
 |GET_IGNORE_CASE|❓|
 |GET_LINEAGE (SNOWFLAKE.CORE)|❓|
@@ -619,6 +620,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$DATA_METRIC_SCAN|❓|
 |SYSTEM$DATABASE_REFRESH_HISTORY — Deprecated|❓|
 |SYSTEM$DATABASE_REFRESH_PROGRESS, SYSTEM$DATABASE_REFRESH_PROGRESS_BY_JOB — Deprecated|❓|
+|SYSTEM$DECODE_PAT|❓|
 |SYSTEM$DEPROVISION_PRIVATELINK_ENDPOINT|❓|
 |SYSTEM$DISABLE_BEHAVIOR_CHANGE_BUNDLE|❓|
 |SYSTEM$DISABLE_DATABASE_REPLICATION|❓|
@@ -756,7 +758,7 @@ The content will be updated as additional query features and functions are imple
 |TO_CHAR, TO_VARCHAR|✅|
 |TO_DATE, DATE|✅|
 |TO_DECIMAL, TO_NUMBER, TO_NUMERIC|✅|
-|TO_DOUBLE|❓|
+|TO_DOUBLE|✅|
 |TO_FILE|❓|
 |TO_GEOGRAPHY|❓|
 |TO_GEOMETRY|❓|

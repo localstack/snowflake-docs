@@ -99,7 +99,7 @@ The content will be updated as additional query features and functions are imple
 ### Row Access Policies
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**ROW ACCESS POLICY**|❓|✅|❓|✅|❓|
+|**ROW ACCESS POLICY**|✅|✅|✅|✅|✅|
 
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
