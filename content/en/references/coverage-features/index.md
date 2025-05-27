@@ -104,7 +104,7 @@ The content will be updated as additional query features and functions are imple
 ### Schemas
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
-|**SCHEMA**|✅|✅|❓|✅|✅|❓|✅|
+|**SCHEMA**|✅|✅|✅|✅|✅|❓|✅|
 
 ### Sequences
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
