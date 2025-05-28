@@ -39,7 +39,7 @@ LocalStack provides several support channels to help you with the Snowflake emul
 
 - Join our [Slack community](https://localstack.cloud/slack) and ask questions in the `#help` channel
 - For technical questions or dedicated assistance, you can reach out to our support team through:
--   Email: [support@localstack.cloud](mailto:support@localstack.cloud)
--   Web Application chat: Navigate to the [LocalStack Web Application](https://app.localstack.cloud), click the chat icon in the bottom right corner, and select "Technical Question"
+    - Email: [support@localstack.cloud](mailto:support@localstack.cloud)
+    - Web Application chat: Navigate to the [LocalStack Web Application](https://app.localstack.cloud), click the chat icon in the bottom right corner, and select "Technical Question"
 
 For more detailed information about our support offerings, visit our [Help & Support documentation](https://docs.localstack.cloud/getting-started/help-and-support/).
