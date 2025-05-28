@@ -15,7 +15,7 @@ Yes, the Snowflake emulator supports the Snowflake v2 SQL API (`/api/v2/*` endpo
 
 ### Why are my Snowflake tests failing?
 
-The Snowflake emulator is in **preview** and may not support all Snowflake features. If your tests are failing, it could be due to the lack of support for certain Snowflake features in the emulator. We recommend checking the [function coverage](https://snowflake.localstack.cloud/references/coverage-functions/) to see the list of supported SQL functions and [feature coverage](https://snowflake.localstack.cloud/references/coverage-features/) to see the list of supported features. If you encounter any issues, you can connect with us for [support](#support-faqs).
+If your tests are failing, it could be due to the lack of support for certain Snowflake features in the emulator. We recommend checking the [function coverage](https://snowflake.localstack.cloud/references/coverage-functions/) to see the list of supported SQL functions and [feature coverage](https://snowflake.localstack.cloud/references/coverage-features/) to see the list of supported features. If you encounter any issues, you can connect with us for [support](#support-faqs).
 
 ### Why does the Snowflake emulator run on `snowflake.localhost.localstack.cloud`?
 
@@ -35,4 +35,11 @@ A CI key allows you to use LocalStack in your CI environment. Every activation o
 
 ### How can I get help with the Snowflake emulator?
 
-The Snowflake emulator is currently in **preview**. To get help, you can join the [Slack community](https://localstack.cloud/slack) and share your feedback, questions, and suggestions with the LocalStack team on the `#help` channel. If your team is using LocalStack for Snowflake, you can also request support by [contacting us](https://localstack.cloud/contact). We would be happy to setup a private Slack channel for your team to provide dedicated support.
+LocalStack provides several support channels to help you with the Snowflake emulator:
+
+- Join our [Slack community](https://localstack.cloud/slack) and ask questions in the `#help` channel
+- For technical questions or dedicated assistance, you can reach out to our support team through:
+    - Email: [support@localstack.cloud](mailto:support@localstack.cloud)
+    - Web Application chat: Navigate to the [LocalStack Web Application](https://app.localstack.cloud), click the chat icon in the bottom right corner, and select "Technical Question"
+
+For more detailed information about our support offerings, visit our [Help & Support documentation](https://docs.localstack.cloud/getting-started/help-and-support/).
