@@ -17,7 +17,7 @@ This guide explains how to set up the Snowflake emulator and use Snowflake CLI t
 - [LocalStack for Snowflake]({{< ref "installation" >}})
 - [`awscli-local`](https://github.com/localstack/awscli-local) for interacting with LocalStack's S3 service
 
-It is also recommended to setup an [integration]({{< ref "user-guide/integrations/" >}}) to run your SQL queries. We recommend using the [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}}), [DBeaver]({{< ref "user-guide/integrations/dbeaver" >}}) or the [LocalStack Web Application]({{< ref "user-guide/web-application" >}}) for this purpose.
+It is also recommended to setup an [integration]({{< ref "user-guide/integrations/" >}}) to run your SQL queries. We recommend using the [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}}), [DBeaver]({{< ref "user-guide/integrations/dbeaver" >}}) or the [LocalStack Web Application]({{< ref "user-guide/user-interface" >}}) for this purpose.
 
 ## Instructions
 
