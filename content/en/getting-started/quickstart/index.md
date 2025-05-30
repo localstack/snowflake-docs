@@ -9,14 +9,15 @@ description: Get started with LocalStack for Snowflake in a few simple steps
 
 ## Introduction
 
-This guide explains how to set up the Snowflake emulator and develop a Python program using the Snowflake Connector for Python (`snowflake-connector-python`) to interact with emulated Snowflake running on your local machine.
+This guide explains how to set up the Snowflake emulator and use Snowflake CLI to interact with Snowflake resources running on your local machine. You'll learn how to create databases, tables, set up automated data ingestion using Snowpipe, and work with S3 storage - all running locally with LocalStack.
 
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
 - [LocalStack for Snowflake]({{< ref "installation" >}})
-- Python 3.10 or later 
-- [`snowflake-connector-python` library](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-install)
+- [`awscli-local`](https://github.com/localstack/awscli-local) for interacting with LocalStack's S3 service
+
+It is also recommended to setup an [integration]({{< ref "user-guide/integrations/" >}}) to run your SQL queries. We recommend using the [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}}), [DBeaver]({{< ref "user-guide/integrations/dbeaver" >}}) or the [LocalStack Web Application]({{< ref "user-guide/web-application" >}}) for this purpose.
 
 ## Instructions
 
@@ -36,88 +37,228 @@ $ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
 </disable-copy>
 {{< / command >}}
 
-### Connect to the Snowflake emulator
+In this quickstart, we'll create a student records pipeline that demonstrates how to:
 
-Create a new Python file named `main.py` and use the following code to connect to the Snowflake emulator:
+- Create databases, schemas, and tables
+- Set up S3 stages for data storage
+- Configure Snowpipe for automated data ingestion
+- Load sample student data from CSV files
 
-```python
-import snowflake.connector as sf
+### Create database, schema & table
 
-sf_conn_obj = sf.connect(
-    user="test",
-    password="test",
-    account="test",
-    database="test",
-    host="snowflake.localhost.localstack.cloud",
-)
+Create the Snowflake database named `STUDENT_RECORDS_DEMO` and use it:
+
+```sql
+CREATE DATABASE IF NOT EXISTS STUDENT_RECORDS_DEMO;
+USE DATABASE STUDENT_RECORDS_DEMO;
 ```
-
-Specify the `host` parameter as `snowflake.localhost.localstack.cloud` and the other parameters as `test` to avoid connecting to the real Snowflake instance.
-
-### Create and execute a query
-
-Extend the Python program to insert rows from a list object into the emulated Snowflake table. Create a cursor object and execute the query:
-
-```python
-print("1. Insert lot of rows from a list object to Snowflake table")
-print("2. Creating a cursor object")
-sf_cur_obj = sf_conn_obj.cursor()
-
-print("3. Executing a query on cursor object")
-try:
-    sf_cur_obj.execute(
-        "create or replace table "
-        "ability(name string, skill string )")
-
-    rows_to_insert = [('John', 'SQL'), ('Alex', 'Java'), ('Pete', 'Snowflake')]
-    
-    sf_cur_obj.executemany(
-        " insert into ability (name, skill) values (%s,%s) " ,rows_to_insert)
-
-    sf_cur_obj.execute("select name, skill from ability")
-
-    print("4. Fetching the results")
-    result = sf_cur_obj.fetchall()
-    print("Total # of rows :" , len(result))
-    print("Row-1 =>",result[0])
-    print("Row-2 =>",result[1])
-finally:
-    sf_cur_obj.close()
-```
-
-This program creates a table named `ability`, inserts rows, and fetches the results.
-
-### Run the Python program
-
-Execute the Python program with:
-
-{{< command >}}
-$ python main.py
-{{< / command >}}
 
 The output should be:
 
 ```bash
-Insert lot of rows from a list object to Snowflake table
-1. Insert lot of rows from a list object to Snowflake table
-2. Creating a cursor object
-3. Executing a query on cursor object
-4. Fetching the results
-Total # of rows : 3
-Row-1 => ('John', 'SQL')
-Row-2 => ('Alex', 'Java')
++-----------------------------------------------------+
+| status                                              |
+|-----------------------------------------------------|
+| Database STUDENT_RECORDS_DEMO successfully created. |
++-----------------------------------------------------+
 ```
 
-Verify the results by navigating to the LocalStack logs:
+Create a Snowflake schema named `PUBLIC` and use it:
+
+```sql
+CREATE SCHEMA IF NOT EXISTS PUBLIC;
+USE SCHEMA PUBLIC;
+```
+
+The output should be:
 
 ```bash
-2024-02-22T06:03:13.627  INFO --- [   asgi_gw_0] localstack.request.http    : POST /session/v1/login-request => 200
-2024-02-22T06:03:16.122  WARN --- [   asgi_gw_0] l.packages.core            : postgresql will be installed as an OS package, even though install target is _not_ set to be static.
-2024-02-22T06:03:45.917  INFO --- [   asgi_gw_0] localstack.request.http    : POST /queries/v1/query-request => 200
-2024-02-22T06:03:46.016  INFO --- [   asgi_gw_1] localstack.request.http    : POST /queries/v1/query-request => 200
-2024-02-22T06:03:49.361  INFO --- [   asgi_gw_0] localstack.request.http    : POST /queries/v1/query-request => 200
-2024-02-22T06:03:49.412  INFO --- [   asgi_gw_1] localstack.request.http    : POST /session => 200
++---------------------------------------------+
+| result                                      |
+|---------------------------------------------|
+| public already exists, statement succeeded. |
++---------------------------------------------+
 ```
+
+Last, create the table `STUDENT_DATA` in the database:
+
+```sql
+CREATE OR REPLACE TABLE STUDENT_DATA (
+    student_id VARCHAR(50),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(200),
+    enrollment_date DATE,
+    gpa FLOAT,
+    major VARCHAR(100)
+);
+```
+
+The output should be:
+
+```bash
++------------------------------------------+
+| status                                   |
+|------------------------------------------|
+| Table STUDENT_DATA successfully created. |
++------------------------------------------+
+```
+
+### Create file format & stage
+
+Now, create a file format for CSV files:
+
+```sql
+CREATE OR REPLACE FILE FORMAT csv_format
+    TYPE = CSV
+    FIELD_DELIMITER = ','
+    SKIP_HEADER = 1
+    NULL_IF = ('NULL', 'null')
+    EMPTY_FIELD_AS_NULL = TRUE;
+```
+
+The output should be:
+
+```bash
++----------------------------------------------+
+| status                                       |
+|----------------------------------------------|
+| File format CSV_FORMAT successfully created. |
++----------------------------------------------+
+```
+
+You can then create a stage pointing to the S3 bucket:
+
+```sql
+CREATE OR REPLACE STAGE student_data_stage
+    URL = 's3://student-records-local/data/'
+    CREDENTIALS = (AWS_KEY_ID='test' AWS_SECRET_KEY='test')
+    FILE_FORMAT = csv_format
+    AWS_ROLE = NULL;
+```
+
+The output should be:
+
+```bash
++-----------------------------------------------------+
+| ?COLUMN?                                            |
+|-----------------------------------------------------|
+| Stage area STUDENT_DATA_STAGE successfully created. |
++-----------------------------------------------------+
+```
+
+Note that the S3 bucket is not created yet, we'll create it in the upcoming steps.
+
+### Create Snowpipe
+
+Create a Snowpipe for automated ingestion:
+
+```sql
+CREATE OR REPLACE PIPE student_data_pipe 
+  AUTO_INGEST = TRUE
+  AS
+  COPY INTO STUDENT_DATA
+    FROM @student_data_stage
+    PATTERN='.*[.]csv'
+    ON_ERROR = 'CONTINUE';
+```
+
+You can see the pipe details by running:
+
+```sql
+DESC PIPE student_data_pipe;
+```
+
+Copy the `notification_channel` value from the output, which will be used to setup the S3 bucket and event notifications.
+
+### Create a S3 bucket
+
+Create a S3 bucket named `student-records-local` using `awslocal`:
+
+{{< command >}}
+$ awslocal s3 mb s3://student-records-local
+{{< / command >}}
+
+You can then configure the S3 bucket notification for Snowpipe using `awslocal`:
+
+{{< command >}}
+$ awslocal s3api put-bucket-notification-configuration \
+    --bucket student-records-local \
+    --notification-configuration '{
+        "QueueConfigurations": [
+            {
+                "Id": "snowpipe-ingest-notification",
+                "QueueArn": "arn:aws:sqs:us-east-1:000000000000:sf-snowpipe-test",
+                "Events": ["s3:ObjectCreated:*"]
+            }
+        ]
+    }'
+{{< / command >}}
+
+Replace the `QueueArn` value with the `notification_channel` value from the Snowpipe details, if its different.
+
+### Upload sample data
+
+Create a new file named `student_data.csv` with sample student records:
+
+```csv
+student_id,first_name,last_name,email,enrollment_date,gpa,major
+S001,John,Smith,john.smith@university.edu,2023-08-15,3.75,Computer Science
+S002,Alice,Johnson,alice.johnson@university.edu,2023-08-15,3.92,Mathematics
+S003,Bob,Williams,bob.williams@university.edu,2022-08-15,3.45,Engineering
+S004,Carol,Brown,carol.brown@university.edu,2024-01-10,3.88,Physics
+S005,David,Davis,david.davis@university.edu,2023-08-15,2.95,Biology
+```
+
+Upload the CSV file to the S3 bucket using `awslocal`:
+
+{{< command >}}
+$ awslocal s3 cp student_data.csv s3://student-records-local/data/
+{{< / command >}}
+
+### Verify data ingestion
+
+Now that the CSV file has been uploaded, Snowpipe should automatically ingest the data into the table. Let's verify the data was loaded successfully:
+
+```sql
+USE DATABASE STUDENT_RECORDS_DEMO;
+USE SCHEMA PUBLIC;
+
+SELECT COUNT(*) as total_students FROM STUDENT_DATA;
+```
+
+The output should be:
+
+```bash
++----------------+
+| TOTAL_STUDENTS |
+|----------------|
+| 5              |
++----------------+
+```
+
+Similarly, you can query the student details based on their GPA:
+
+```sql
+SELECT first_name, last_name, major, gpa FROM STUDENT_DATA WHERE gpa >= 3.8;
+```
+
+The output should be:
+
+```bash
++---------------------------------------------+
+| FIRST_NAME | LAST_NAME | MAJOR       | GPA  |
+|------------+-----------+-------------+------|
+| Alice      | Johnson   | Mathematics | 3.92 |
+| Carol      | Brown     | Physics     | 3.88 |
+| Alice      | Johnson   | Mathematics | 3.92 |
+| Carol      | Brown     | Physics     | 3.88 |
++---------------------------------------------+
+```
+
+Optionally, you can also query your Snowflake resources & data using the LocalStack Web Application, that provides a **Worksheet** tab to run your SQL queries.
+
+<img src="snowflake-web-ui.png" alt="Running SQL queries using LocalStack Web Application" width="900"/>
 
 ### Destroy the local infrastructure
 
