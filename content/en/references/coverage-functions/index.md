@@ -21,6 +21,15 @@ The content will be updated as additional query features and functions are imple
 |ACOS|✅|
 |ACOSH|✅|
 |ADD_MONTHS|✅|
+|AI_AGG|❓|
+|AI_CLASSIFY|❓|
+|AI_COMPLETE (Prompt object)|❓|
+|AI_COMPLETE (Single image)|❓|
+|AI_COMPLETE (Single string)|❓|
+|AI_COMPLETE|❓|
+|AI_FILTER|❓|
+|AI_SIMILARITY|❓|
+|AI_SUMMARIZE_AGG|❓|
 |ALERT_HISTORY|❓|
 |ALL_USER_NAMES|❓|
 |ANY_VALUE|✅|
@@ -368,7 +377,7 @@ The content will be updated as additional query features and functions are imple
 |JSON_EXTRACT_PATH_TEXT|❓|
 |KURTOSIS|❓|
 |LAG|✅|
-|LAST_DAY|❓|
+|LAST_DAY|✅|
 |LAST_QUERY_ID|✅|
 |LAST_SUCCESSFUL_SCHEDULED_TIME|❓|
 |LAST_TRANSACTION|❓|
@@ -721,6 +730,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$SHOW_OAUTH_CLIENT_SECRETS|❓|
 |SYSTEM$SNOWPIPE_STREAMING_UPDATE_CHANNEL_OFFSET_TOKEN|❓|
 |SYSTEM$START_OAUTH_FLOW|❓|
+|SYSTEM$START_USER_EMAIL_VERIFICATION|❓|
 |SYSTEM$STREAM_BACKLOG|❓|
 |SYSTEM$STREAM_GET_TABLE_TIMESTAMP|❓|
 |SYSTEM$STREAM_HAS_DATA|❓|
@@ -779,7 +789,7 @@ The content will be updated as additional query features and functions are imple
 |TO_XML|❓|
 |TRANSFORM|❓|
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|
-|TRANSLATE|❓|
+|TRANSLATE (SNOWFLAKE.CORTEX)|❓|
 |TRIM|✅|
 |TRUNCATE, TRUNC|❓|
 |TRUNCATE, TRUNC|❓|
