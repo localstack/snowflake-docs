@@ -25,7 +25,7 @@ Before you begin, pull the Snowflake emulator image (`localstack/snowflake`) and
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ IMAGE_NAME=localstack/snowflake:latest localstack start
+$ localstack start --stack snowflake
 {{< / command >}}
 
 Check the emulator's availability by running:
