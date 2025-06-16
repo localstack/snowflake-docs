@@ -13,11 +13,11 @@ This guide explains how to set up the Snowflake emulator and use Snowflake CLI t
 
 ## Prerequisites
 
-- [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
 - [LocalStack for Snowflake]({{< ref "installation" >}})
-- [`awscli-local`](https://github.com/localstack/awscli-local) for interacting with LocalStack's S3 service
+- [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
+- [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}})
 
-LocalStack for Snowflake works with popular Snowflake integrations to run your SQL queries. This guide uses the [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}}), but you can also use [snowSQL]({{< ref "user-guide/integrations/snowsql" >}}), [DBeaver]({{< ref "user-guide/integrations/dbeaver" >}}) or the [LocalStack Web Application]({{< ref "user-guide/user-interface" >}}) for this purpose.
+LocalStack for Snowflake works with popular Snowflake integrations to run your SQL queries. This guide uses the [Snowflake CLI]({{< ref "user-guide/integrations/snow-cli" >}}), but you can also use [SnowSQL]({{< ref "user-guide/integrations/snowsql" >}}), [DBeaver]({{< ref "user-guide/integrations/dbeaver" >}}) or the [LocalStack Web Application]({{< ref "user-guide/user-interface" >}}) for this purpose.
 
 ## Instructions
 
@@ -37,12 +37,12 @@ $ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
 </disable-copy>
 {{< / command >}}
 
-In this quickstart, we'll create a student records pipeline that demonstrates how to:
+In this quickstart, we'll create a student records database that demonstrates how to:
 
 - Create databases, schemas, and tables
-- Set up S3 stages for data storage
-- Configure Snowpipe for automated data ingestion
-- Load sample student data from CSV files
+- Create stages and upload data using the PUT command
+- Load data from CSV files into tables
+- Query your data
 
 ### Create database, schema & table
 
@@ -127,14 +127,11 @@ The output should be:
 +----------------------------------------------+
 ```
 
-You can then create a stage pointing to the S3 bucket:
+Create a stage for uploading files:
 
 ```sql
 CREATE OR REPLACE STAGE student_data_stage
-    URL = 's3://student-records-local/data/'
-    CREDENTIALS = (AWS_KEY_ID='test' AWS_SECRET_KEY='test')
-    FILE_FORMAT = csv_format
-    AWS_ROLE = NULL;
+    FILE_FORMAT = csv_format;
 ```
 
 The output should be:
@@ -147,57 +144,7 @@ The output should be:
 +-----------------------------------------------------+
 ```
 
-Note that the S3 bucket is not created yet, we'll create it in the upcoming steps.
-
-### Create Snowpipe
-
-Create a Snowpipe for automated ingestion:
-
-```sql
-CREATE OR REPLACE PIPE student_data_pipe 
-  AUTO_INGEST = TRUE
-  AS
-  COPY INTO STUDENT_DATA
-    FROM @student_data_stage
-    PATTERN='.*[.]csv'
-    ON_ERROR = 'CONTINUE';
-```
-
-You can see the pipe details by running:
-
-```sql
-DESC PIPE student_data_pipe;
-```
-
-Copy the `notification_channel` value from the output, which will be used to setup the S3 bucket and event notifications.
-
-### Create a S3 bucket
-
-Create a S3 bucket named `student-records-local` using `awslocal`:
-
-{{< command >}}
-$ awslocal s3 mb s3://student-records-local
-{{< / command >}}
-
-You can then configure the S3 bucket notification for Snowpipe using `awslocal`:
-
-{{< command >}}
-$ awslocal s3api put-bucket-notification-configuration \
-    --bucket student-records-local \
-    --notification-configuration '{
-        "QueueConfigurations": [
-            {
-                "Id": "snowpipe-ingest-notification",
-                "QueueArn": "arn:aws:sqs:us-east-1:000000000000:sf-snowpipe-test",
-                "Events": ["s3:ObjectCreated:*"]
-            }
-        ]
-    }'
-{{< / command >}}
-
-Replace the `QueueArn` value with the `notification_channel` value from the Snowpipe details, if its different.
-
-### Upload sample data
+### Upload and load sample data
 
 Create a new file named `student_data.csv` with sample student records:
 
@@ -210,15 +157,33 @@ S004,Carol,Brown,carol.brown@university.edu,2024-01-10,3.88,Physics
 S005,David,Davis,david.davis@university.edu,2023-08-15,2.95,Biology
 ```
 
-Upload the CSV file to the S3 bucket using `awslocal`:
+Upload the CSV file to the stage using the PUT command:
 
-{{< command >}}
-$ awslocal s3 cp student_data.csv s3://student-records-local/data/
-{{< / command >}}
+```sql
+PUT file://student_data.csv @student_data_stage AUTO_COMPRESS=TRUE;
+```
 
-### Verify data ingestion
+{{< alert title="Note" >}}
+Adjust the file path to the location of your `student_data.csv` file.
+{{< /alert >}}
 
-Now that the CSV file has been uploaded, Snowpipe should automatically ingest the data into the table. Let's verify the data was loaded successfully:
+The output should show the file upload status:
+
+```bash
+source          |target             |source_size|target_size|source_compression|target_compression|status  |message|
+----------------+-------------------+-----------+-----------+------------------+------------------+--------+-------+
+student_data.csv|student_data.csv.gz|        425|        262|NONE              |GZIP              |UPLOADED|       |
+```
+
+Now load the data from the stage into the table:
+
+```sql
+COPY INTO STUDENT_DATA
+FROM @student_data_stage
+ON_ERROR = 'CONTINUE';
+```
+
+### Verify data loading
 
 ```sql
 USE DATABASE STUDENT_RECORDS_DEMO;
@@ -240,20 +205,19 @@ The output should be:
 Similarly, you can query the student details based on their GPA:
 
 ```sql
-SELECT first_name, last_name, major, gpa FROM STUDENT_DATA WHERE gpa >= 3.8;
+SELECT first_name, last_name, major, gpa 
+FROM STUDENT_DATA 
+WHERE gpa >= 3.8
+ORDER BY gpa DESC;
 ```
 
 The output should be:
 
 ```bash
-+---------------------------------------------+
-| FIRST_NAME | LAST_NAME | MAJOR       | GPA  |
-|------------+-----------+-------------+------|
-| Alice      | Johnson   | Mathematics | 3.92 |
-| Carol      | Brown     | Physics     | 3.88 |
-| Alice      | Johnson   | Mathematics | 3.92 |
-| Carol      | Brown     | Physics     | 3.88 |
-+---------------------------------------------+
+FIRST_NAME|LAST_NAME|MAJOR      |GPA |
+----------+---------+-----------+----+
+Alice     |Johnson  |Mathematics|3.92|
+Carol     |Brown    |Physics    |3.88|
 ```
 
 Optionally, you can also query your Snowflake resources & data using the LocalStack Web Application, that provides a **Worksheet** tab to run your SQL queries.
@@ -268,9 +232,17 @@ To stop LocalStack and remove locally created resources, use:
 $ localstack stop
 {{< / command >}}
 
-LocalStack is ephemeral and doesn't persist data across restarts. It runs inside a Docker container, and once it’s stopped, all locally created resources are automatically removed. To persist the state of your LocalStack for Snowflake instance, please check out our guide on [State Management]({{< ref "user-guide/state-management" >}}).
+LocalStack is ephemeral and doesn't persist data across restarts. It runs inside a Docker container, and once it's stopped, all locally created resources are automatically removed. To persist the state of your LocalStack for Snowflake instance, please check out our guide on [State Management]({{< ref "user-guide/state-management" >}}).
 
-## Next steps
+## Next Steps
+
+Now that you've completed the quickstart, here are some additional features you can explore:
+
+- **Load data from cloud storage**: You can load data through our [Storage Integrations]({{< ref "user-guide/storage-integrations" >}}) (currently supporting AWS S3) or using a script (see [Snowflake Drivers]({{< ref "user-guide/snowflake-drivers" >}}))
+- **Automate data ingestion**: You can configure [Snowpipe]({{< ref "user-guide/snowpipe" >}}) for automated data ingestion from external sources
+- **Use your favorite tools**: You can continue to work with your favorite tools to develop on LocalStack for Snowflake locally, see [Integrations]({{< ref "user-guide/integrations" >}})
+
+## Further Reading
 
 You can now explore the following resources to learn more about the Snowflake emulator:
 
