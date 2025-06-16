@@ -33,7 +33,7 @@ To start the Snowflake Docker container using the `localstack` CLI, execute the 
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ IMAGE_NAME=localstack/snowflake localstack start
+$ localstack start --stack snowflake
 {{< / command >}}
 
 ### `docker` CLI
@@ -100,7 +100,7 @@ When using `docker-compose` then simply add this variable to the `environment` s
 If you're starting up via the `localstack start` CLI, then make sure to start up via the following configuration: 
 
 {{< command >}}
-$ DOCKER_FLAGS='-e SF_LOG=trace' DEBUG=1 IMAGE_NAME=localstack/snowflake localstack start
+$ DOCKER_FLAGS='-e SF_LOG=trace' DEBUG=1 localstack start --stack snowflake
 {{< / command >}}
 
 ### The `snowflake.localhost.localstack.cloud` hostname doesn't resolve on my machine, what can I do?

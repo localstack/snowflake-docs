@@ -26,7 +26,7 @@ To start snapshot-based persistence, launch LocalStack with the configuration op
 
 {{< tabpane >}}
 {{< tab header="LocalStack CLI" lang="bash" >}}
-LOCALSTACK_AUTH_TOKEN=... PERSISTENCE=1 IMAGE_NAME=localstack/snowflake localstack start
+LOCALSTACK_AUTH_TOKEN=... PERSISTENCE=1 localstack start --stack snowflake
 {{< /tab >}}
 {{< tab header="Docker Compose" lang="yaml" >}}
     ...

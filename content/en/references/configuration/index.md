@@ -16,7 +16,7 @@ LocalStack exposes various configuration options to control its behaviour.
 These options can be passed to LocalStack as environment variables like so:
 
 {{< command >}}
-$ DEBUG=1 localstack start
+$ DEBUG=1 localstack start --stack snowflake
 {{< / command >}}
 
 ## Core
