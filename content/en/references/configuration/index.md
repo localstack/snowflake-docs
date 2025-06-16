@@ -95,7 +95,7 @@ You can load a profile by either setting the environment variable `CONFIG_PROFIL
 Let's take an example to load the `dev.env` profile file if it exists:
 
 {{< command >}}
-$ IMAGE_NAME=localstack/snowflake localstack --profile=dev start
+$ localstack --profile=dev start --stack snowflake
 {{< / command >}}
 
 If no profile is specified, the `default.env` profile will be loaded.
