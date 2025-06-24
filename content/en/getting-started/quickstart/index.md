@@ -9,7 +9,7 @@ description: Get started with LocalStack for Snowflake in a few simple steps
 
 ## Introduction
 
-This guide explains how to set up the Snowflake emulator and use Snowflake CLI to interact with Snowflake resources running on your local machine. You'll learn how to create databases, tables, set up automated data ingestion using Snowpipe, and work with S3 storage - all running locally with LocalStack.
+This guide explains how to set up the Snowflake emulator and use Snowflake CLI to interact with Snowflake resources running on your local machine. You'll learn how to create a Snowflake database, schema, and table, upload data to a stage, and load data into the table. This quickstart is designed to help you get familiar with the Snowflake emulator and its capabilities.
 
 ## Prerequisites
 
