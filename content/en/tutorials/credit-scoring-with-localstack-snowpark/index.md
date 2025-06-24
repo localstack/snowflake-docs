@@ -28,7 +28,7 @@ Start your LocalStack container in your preferred terminal/shell.
 
 {{< command >}}
 $ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ IMAGE_NAME=localstack/snowflake localstack start
+$ localstack start --stack snowflake
 {{< / command >}}
 
 ## Create a Snowpark session

@@ -44,12 +44,12 @@ jobs:
         run:
           docker pull localstack/snowflake:latest &
           pip install localstack
-          IMAGE_NAME=localstack/snowflake localstack start -d
+          localstack start --stack snowflake -d
           echo "Waiting for LocalStack startup..."
           localstack wait -t 15
           echo "Startup complete"
         env:
-          LOCALSTACK_API_KEY: ${{ secrets.LOCALSTACK_API_KEY }}
+          LOCALSTACK_AUTH_TOKEN: ${{ secrets.LOCALSTACK_AUTH_TOKEN }}
 {{< /tab >}}
 {{< tab header="CircleCI" lang="yaml" >}}
 version: 2.1
@@ -70,11 +70,11 @@ jobs:
           command: |
             pip3 install localstack
             docker pull localstack/snowflake
-            IMAGE_NAME=localstack/snowflake localstack start -d                     
+            localstack start --stack snowflake -d           
 
             echo "Waiting for LocalStack startup..."  
             localstack wait -t 30                     
-            echo "Startup complete"      
+            echo "Startup complete"
 
 workflows:
   version: 2
@@ -93,7 +93,7 @@ test:
   variables:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
-    LOCALSTACK_API_KEY: $LOCALSTACK_API_KEY
+    LOCALSTACK_AUTH_TOKEN: $LOCALSTACK_AUTH_TOKEN
 
   services:
     - name: docker:20.10.16-dind
@@ -108,7 +108,7 @@ test:
     - docker pull localstack/snowflake:latest
     - dind_ip="$(getent hosts docker | cut -d' ' -f1)"
     - echo "${dind_ip} localhost.localstack.cloud " >> /etc/hosts
-    - DOCKER_HOST="tcp://${dind_ip}:2375" IMAGE_NAME=localstack/snowflake localstack start -d
+    - DOCKER_HOST="tcp://${dind_ip}:2375" localstack start --stack snowflake -d
     - localstack wait -t 15
 {{< /tab >}}
 {{< /tabpane >}}

@@ -16,7 +16,7 @@ LocalStack exposes various configuration options to control its behaviour.
 These options can be passed to LocalStack as environment variables like so:
 
 {{< command >}}
-$ DEBUG=1 localstack start
+$ DEBUG=1 localstack start --stack snowflake
 {{< / command >}}
 
 ## Core
@@ -95,7 +95,7 @@ You can load a profile by either setting the environment variable `CONFIG_PROFIL
 Let's take an example to load the `dev.env` profile file if it exists:
 
 {{< command >}}
-$ IMAGE_NAME=localstack/snowflake localstack --profile=dev start
+$ localstack --profile=dev start --stack snowflake
 {{< / command >}}
 
 If no profile is specified, the `default.env` profile will be loaded.

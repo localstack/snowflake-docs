@@ -53,7 +53,7 @@ services:
 {{< tab header="CLI" lang="bash" >}}
 # DOCKER_FLAGS are additional parameters to the `docker run` command of localstack start
 
-DOCKER_FLAGS='-v /path/to/test.sf.sql:/etc/localstack/init/ready.d/test.sf.sql' DEBUG=1 localstack start
+DOCKER_FLAGS='-v /path/to/test.sf.sql:/etc/localstack/init/ready.d/test.sf.sql' DEBUG=1 localstack start --stack snowflake
 {{< /tab >}}
 {{< /tabpane >}}
 
