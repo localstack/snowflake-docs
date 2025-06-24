@@ -44,7 +44,7 @@ jobs:
         run:
           docker pull localstack/snowflake:latest &
           pip install localstack
-          localstack start --stack snowflake
+          localstack start --stack snowflake -d
           echo "Waiting for LocalStack startup..."
           localstack wait -t 15
           echo "Startup complete"
@@ -70,7 +70,7 @@ jobs:
           command: |
             pip3 install localstack
             docker pull localstack/snowflake
-            localstack start --stack snowflake              
+            localstack start --stack snowflake -d           
 
             echo "Waiting for LocalStack startup..."  
             localstack wait -t 30                     
@@ -108,7 +108,7 @@ test:
     - docker pull localstack/snowflake:latest
     - dind_ip="$(getent hosts docker | cut -d' ' -f1)"
     - echo "${dind_ip} localhost.localstack.cloud " >> /etc/hosts
-    - DOCKER_HOST="tcp://${dind_ip}:2375" localstack start --stack snowflake
+    - DOCKER_HOST="tcp://${dind_ip}:2375" localstack start --stack snowflake -d
     - localstack wait -t 15
 {{< /tab >}}
 {{< /tabpane >}}
