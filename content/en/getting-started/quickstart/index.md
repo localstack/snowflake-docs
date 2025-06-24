@@ -49,6 +49,7 @@ sf_conn_obj = sf.connect(
     account="test",
     database="test",
     host="snowflake.localhost.localstack.cloud",
+    port=4566,
 )
 ```
 
