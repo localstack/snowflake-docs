@@ -11,6 +11,44 @@ hide_readingtime: true
 
 {{< preview-notice >}}
 
+### 1.0.1
+- Implementation and migration to the new type system
+- Enhance persistence support for storing/reloading native apps
+- Add support for cross-db CTAS and CVAS statements
+- Enhance support for `ALTER DATABASE` statements
+- Add initial support for `COLLATE` table columns 
+- Add support for `DESCRIBE SCHEMA`
+- Enhance support for `ALTER SCHEMA` queries
+- Add support for suspending tasks
+- Add initial support for table change tracking
+- Implement `CONCAT` function
+- Miscellaneous fixes for Streamlit apps
+- Add support for secure functions
+- Add exception handler for REST API
+- Fix `TO_DATE` for JSON object attributes
+- Enhance parity for managing Users and Roles
+- Implement `LOWER` and `UPPER` functions
+- Fix `DROP TABLE` query
+- Add initial support for `GRANT OWNERSHIP` statements
+- Enhance CRUD support for `ROW ACCESS POLICIES` 
+- Support temporary views and dropping temp objects at session end
+- Enahance parity for `CREATE` and `DROP ROLE`
+- Fix for multi-account DB initialization
+- Fix for `TO_DATE` conversion with date format string
+- Fix insertion of numeric values from staged CSV files
+- Fix return value of `TO_DECIMAL` for int values
+- Fix parity with SnowSQL for `SHOW ROLES`
+- Fix create user or role response
+- Add support for `ALTER SESSION UNSET`
+- Native app deployment fixes
+- Add support for `SHOW TELEMETRY EVENT DEFINITIONS IN APPLICATION`
+- Support `ALTER` and `DESCRIBE APPLICATION`
+- Support `DESCRIBE PROCEDURE`
+- Add support for function `SYSTEM$VALIDATE_NATIVE_APP_SETUP`
+- Add dispatcher request deserialization for REST API
+- Enhance parity on metadata results for copy into command
+- Fix for numeric bool values
+
 ### 1.0.0
 - Add support for `SHOW/ALTER FUNCTION`
 - Fix incompatibilities with GO driver and SnowSQL client
