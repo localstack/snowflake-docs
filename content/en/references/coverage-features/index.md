@@ -1,3 +1,4 @@
+
 ---
 title: "Feature Coverage"
 linkTitle: "Feature Coverage"
@@ -34,6 +35,11 @@ The content will be updated as additional query features and functions are imple
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|USE|
 |----|----|----|----|----|----|----|----|
 |**DATABASE**|✅|✅|✅|✅|✅|❓|✅|
+
+### Data and File Operations
+| |COPY INTO|GET|LIST|PUT|REMOVE|
+|----|----|----|----|----|----|
+|**FILE OPERATIONS**|✅|✅|✅|✅|✅|
 
 ### Dynamic Tables
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|UNDROP|
@@ -164,3 +170,4 @@ The content will be updated as additional query features and functions are imple
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|USE|
 |----|----|----|----|----|----|----|
 |**WAREHOUSE**|✅|✅|✅|✅|✅|✅|
+

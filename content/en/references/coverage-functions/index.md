@@ -176,7 +176,7 @@ The content will be updated as additional query features and functions are imple
 |CURRENT_SECONDARY_ROLES|✅|
 |CURRENT_SESSION|✅|
 |CURRENT_STATEMENT|✅|
-|CURRENT_TASK_GRAPHS|❓|
+|CURRENT_TASK_GRAPHS|✅|
 |CURRENT_TIME|✅|
 |CURRENT_TIMESTAMP|✅|
 |CURRENT_TRANSACTION|✅|
@@ -252,7 +252,7 @@ The content will be updated as additional query features and functions are imple
 |FINETUNE ('DESCRIBE') (SNOWFLAKE.CORTEX)|❓|
 |FINETUNE ('SHOW') (SNOWFLAKE.CORTEX)|❓|
 |FINETUNE (SNOWFLAKE.CORTEX)|❓|
-|FIRST_VALUE|❓|
+|FIRST_VALUE|✅|
 |FL_GET_CONTENT_TYPE|❓|
 |FL_GET_ETAG|❓|
 |FL_GET_FILE_TYPE|❓|
@@ -336,7 +336,7 @@ The content will be updated as additional query features and functions are imple
 |HLL_ESTIMATE|❓|
 |HLL_EXPORT|❓|
 |HLL_IMPORT|❓|
-|HOUR / MINUTE / SECOND|❓|
+|HOUR, MINUTE, SECOND|✅|
 |ICEBERG_TABLE_FILES|❓|
 |ICEBERG_TABLE_SNAPSHOT_REFRESH_HISTORY|❓|
 |IFF|✅|
@@ -376,13 +376,13 @@ The content will be updated as additional query features and functions are imple
 |JAROWINKLER_SIMILARITY|❓|
 |JSON_EXTRACT_PATH_TEXT|❓|
 |KURTOSIS|❓|
-|LAG|❓|
+|LAG|✅|
 |LAST_DAY|✅|
 |LAST_QUERY_ID|✅|
 |LAST_SUCCESSFUL_SCHEDULED_TIME|❓|
 |LAST_TRANSACTION|❓|
 |LAST_VALUE|❓|
-|LEAD|❓|
+|LEAD|✅|
 |LEAST|✅|
 |LEAST_IGNORE_NULLS|✅|
 |LEFT|❓|
@@ -450,7 +450,7 @@ The content will be updated as additional query features and functions are imple
 |PARSE_JSON|✅|
 |PARSE_URL|❓|
 |PARSE_XML|❓|
-|PERCENT_RANK|❓|
+|PERCENT_RANK|✅|
 |PERCENTILE_CONT|❓|
 |PERCENTILE_DISC|❓|
 |PI|✅|
@@ -510,7 +510,7 @@ The content will be updated as additional query features and functions are imple
 |SEARCH_OPTIMIZATION_HISTORY|❓|
 |SEARCH_PREVIEW (SNOWFLAKE.CORTEX)|❓|
 |SENTIMENT (SNOWFLAKE.CORTEX)|❓|
-|SEQ1 / SEQ2 / SEQ4 / SEQ8|❓|
+|SEQ1, SEQ2, SEQ4, SEQ8|✅|
 |SERVERLESS_ALERT_HISTORY|❓|
 |SERVERLESS_TASK_HISTORY|❓|
 |SHA1, SHA1_HEX|❓|
@@ -609,6 +609,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$ADD_REFERENCE|❓|
 |SYSTEM$ALLOWLIST|❓|
 |SYSTEM$ALLOWLIST_PRIVATELINK|❓|
+|SYSTEM$APP_COMPATIBILITY_CHECK|❓|
 |SYSTEM$APPLICATION_GET_LOG_LEVEL|❓|
 |SYSTEM$APPLICATION_GET_METRIC_LEVEL|❓|
 |SYSTEM$APPLICATION_GET_TRACE_LEVEL|❓|
@@ -685,8 +686,11 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$GET_TAG_ON_CURRENT_TABLE|❓|
 |SYSTEM$GET_TASK_GRAPH_CONFIG|❓|
 |SYSTEM$GLOBAL_ACCOUNT_SET_PARAMETER|❓|
+|SYSTEM$HOLD_PRIVILEGE_ON_ACCOUNT|❓|
 |SYSTEM$INITIATE_MOVE_ORGANIZATION_ACCOUNT|❓|
 |SYSTEM$INTERNAL_STAGES_PUBLIC_ACCESS_STATUS|❓|
+|SYSTEM$IS_APPLICATION_ALL_MANDATORY_TELEMETRY_EVENT_DEFINITIONS_ENABLED|❓|
+|SYSTEM$IS_APPLICATION_AUTHORIZED_FOR_TELEMETRY_EVENT_SHARING|❓|
 |SYSTEM$IS_APPLICATION_INSTALLED_FROM_SAME_ACCOUNT|❓|
 |SYSTEM$IS_APPLICATION_SHARING_EVENTS_WITH_PROVIDER|❓|
 |SYSTEM$IS_GLOBAL_DATA_SHARING_ENABLED_FOR_ACCOUNT|❓|
@@ -754,7 +758,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$WHITELIST — Deprecated|❓|
 |SYSTEM$WHITELIST_PRIVATELINK — Deprecated|❓|
 |SYSTIMESTAMP|❓|
-|TAG_REFERENCES|❓|
+|TAG_REFERENCES|✅|
 |TAG_REFERENCES_ALL_COLUMNS|❓|
 |TAG_REFERENCES_WITH_LINEAGE|❓|
 |TAN|✅|
@@ -784,7 +788,7 @@ The content will be updated as additional query features and functions are imple
 |TO_OBJECT|✅|
 |TO_QUERY|❓|
 |TO_TIME, TIME|✅|
-|TO_TIMESTAMP / TO_TIMESTAMP_*|❓|
+|TO_TIMESTAMP, TO_TIMESTAMP_*|✅|
 |TO_VARIANT|✅|
 |TO_XML|❓|
 |TRANSFORM|❓|
@@ -811,7 +815,7 @@ The content will be updated as additional query features and functions are imple
 |TRY_TO_GEOGRAPHY|❓|
 |TRY_TO_GEOMETRY|❓|
 |TRY_TO_TIME|❓|
-|TRY_TO_TIMESTAMP / TRY_TO_TIMESTAMP_*|❓|
+|TRY_TO_TIMESTAMP, TRY_TO_TIMESTAMP_*|✅|
 |TYPEOF|❓|
 |UNICODE|❓|
 |UNIFORM|❓|
@@ -831,7 +835,7 @@ The content will be updated as additional query features and functions are imple
 |WAREHOUSE_METERING_HISTORY|❓|
 |WIDTH_BUCKET|❓|
 |XMLGET|❓|
-|YEAR* / DAY* / WEEK* / MONTH / QUARTER|❓|
+|YEAR*, DAY*, WEEK*, MONTH, QUARTER|✅|
 |ZEROIFNULL|✅|
 |ZIPF|❓|
 
