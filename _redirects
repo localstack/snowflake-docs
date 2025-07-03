@@ -47,4 +47,4 @@
 /user-guide/integrations/ https://localstack-docs.pages.dev/snowflake/integrations/ 301
 /user-guide/transaction-management/ https://localstack-docs.pages.dev/snowflake/features/transaction-management/ 301
 /user-guide/snowpark/ https://localstack-docs.pages.dev/snowflake/integrations/snowpark/ 301
-/tutorials/ https://localstack-docs.pages.dev/snowflake/tutorials/ 301
+/tutorials/ https://localstack-docs.pages.dev/snowflake/tutorials/aws-lambda-localstack-snowpark/ 301
